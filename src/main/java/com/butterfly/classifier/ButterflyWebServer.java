@@ -183,7 +183,8 @@ public class ButterflyWebServer {
             }
 
             byte[] bytes = Files.readAllBytes(file.toPath());
-            exchange.getResponseHeaders().set("Content-Type", "image/png");
+            String mime = (path.toLowerCase().endsWith(".jpg") || path.toLowerCase().endsWith(".jpeg")) ? "image/jpeg" : "image/png";
+            exchange.getResponseHeaders().set("Content-Type", mime);
             exchange.sendResponseHeaders(200, bytes.length);
             OutputStream os = exchange.getResponseBody();
             os.write(bytes);
@@ -221,24 +222,13 @@ public class ButterflyWebServer {
                     return;
                 }
 
-                // Match class prefix from filename or species name
-                String prefix = "001";
-                if (filename != null) {
-                    String lower = filename.toLowerCase();
-                    if (lower.startsWith("001") || lower.contains("monarch")) prefix = "001";
-                    else if (lower.startsWith("002") || lower.contains("zebra")) prefix = "002";
-                    else if (lower.startsWith("003") || lower.contains("red_passion") || lower.contains("erato")) prefix = "003";
-                    else if (lower.startsWith("004") || lower.contains("buckeye")) prefix = "004";
-                    else if (lower.startsWith("005") || lower.contains("small_copper") || lower.contains("copper")) prefix = "005";
-                    else if (lower.startsWith("006") || lower.contains("mourning") || lower.contains("cloak")) prefix = "006";
-                    else if (lower.startsWith("007") || lower.contains("swallowtail")) prefix = "007";
-                    else if (lower.startsWith("008") || lower.contains("cabbage") || lower.contains("white")) prefix = "008";
-                    else if (lower.startsWith("009") || lower.contains("red_admiral") || lower.contains("admiral")) prefix = "009";
-                    else if (lower.startsWith("010") || lower.contains("painted_lady") || lower.contains("lady")) prefix = "010";
+                // Preserve uploaded filename and extension
+                String cleanName = filename.replaceAll("[^a-zA-Z0-9._-]", "_");
+                if (!cleanName.toLowerCase().endsWith(".png") && !cleanName.toLowerCase().endsWith(".jpg") && !cleanName.toLowerCase().endsWith(".jpeg")) {
+                    cleanName += ".png";
                 }
 
-                // Create temp file with class prefix (e.g. 001_monarch.png)
-                File tempFile = File.createTempFile(prefix + "_upload_", "_" + filename);
+                File tempFile = File.createTempFile("bfly_", "_" + cleanName);
                 tempFile.deleteOnExit();
                 try (FileOutputStream fos = new FileOutputStream(tempFile)) {
                     fos.write(imageBytes);

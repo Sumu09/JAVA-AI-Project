@@ -64,6 +64,17 @@ butterfly_classifier/
 ### Prerequisites
 - JDK 21 or Java 17+ configured on PATH (`java`, `javac`).
 
+### Quick Start (macOS & Linux)
+1. Build the project:
+   ```bash
+   chmod +x build.sh run.sh
+   ./build.sh
+   ```
+2. Launch the app:
+   ```bash
+   ./run.sh
+   ```
+
 ### Quick Start (Windows)
 1. Build the project:
    ```cmd
