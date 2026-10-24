@@ -113,6 +113,8 @@ MIN_IMAGES_REQUIRED = 30
 TRAIN_RATIO = 0.80
 
 PROJECT_ROOT = Path(__file__).resolve().parent
+if PROJECT_ROOT.name == "scripts":
+    PROJECT_ROOT = PROJECT_ROOT.parent
 DATASET_DIR = PROJECT_ROOT / "dataset"
 TRAIN_DIR = DATASET_DIR / "train"
 TEST_DIR = DATASET_DIR / "test"

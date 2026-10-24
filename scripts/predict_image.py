@@ -19,6 +19,8 @@ def main():
         sys.exit(1)
 
     project_root = os.path.dirname(os.path.abspath(__file__))
+    if os.path.basename(project_root) == "scripts":
+        project_root = os.path.dirname(project_root)
     model_path_keras = os.path.join(project_root, "model", "butterfly_species_model.keras")
     model_path_h5 = os.path.join(project_root, "model", "butterfly_species_model.h5")
     labels_path = os.path.join(project_root, "model", "labels.txt")
