@@ -71,12 +71,15 @@ public class SpeciesModel {
                 pythonExecutable = "python3";
             }
 
-            File script = new File("predict_image.py");
+            File script = new File("scripts/predict_image.py");
+            if (!script.exists()) {
+                script = new File("predict_image.py");
+            }
             if (!script.exists()) {
                 return null;
             }
 
-            ProcessBuilder pb = new ProcessBuilder(pythonExecutable, "predict_image.py", imageFile.getAbsolutePath());
+            ProcessBuilder pb = new ProcessBuilder(pythonExecutable, script.getPath(), imageFile.getAbsolutePath());
             pb.redirectErrorStream(true);
             Process process = pb.start();
 
