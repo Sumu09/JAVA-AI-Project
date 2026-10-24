@@ -14,14 +14,9 @@ __pycache__/
 model/*.h5
 model/*.keras
 
-# Ignore all dataset images but preserve folder structure with .gitkeep
-dataset/train/**/*.jpg
-dataset/train/**/*.jpeg
-dataset/train/**/*.png
-dataset/train/**/*.webp
-dataset/test/**/*.jpg
-dataset/test/**/*.jpeg
-dataset/test/**/*.png
-dataset/test/**/*.webp
+# Keep only dataset/train and dataset/test folder structure
+dataset/train/*
+!dataset/train/.gitkeep
+dataset/test/*
+!dataset/test/.gitkeep
 dataset/_temp_downloads/
-!dataset/**/.gitkeep
