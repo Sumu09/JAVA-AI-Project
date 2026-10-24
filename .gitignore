@@ -1,13 +1,27 @@
-**/target/*.class
-**/model/*.h5
-**/model/*.keras
-**/model/*.txt
-**/com/butterfly/*.class
-**/target/classes/com/butterfly/*.class
-**/test
-**/train
-**/dataset
-**/*.class
-target/classes/com/butterfly/classifier/Species.class
-target/classes/com/butterfly/classifier/SpeciesInfo.class
+# Compiled binaries and target
+target/
+*.class
+
+# Python virtual environment & cache
+.venv/
+__pycache__/
+
+# IDE and OS files
 .DS_Store
+.idea/
+
+# Large model weights (keep labels.txt)
+model/*.h5
+model/*.keras
+
+# Ignore all dataset images but preserve folder structure with .gitkeep
+dataset/train/**/*.jpg
+dataset/train/**/*.jpeg
+dataset/train/**/*.png
+dataset/train/**/*.webp
+dataset/test/**/*.jpg
+dataset/test/**/*.jpeg
+dataset/test/**/*.png
+dataset/test/**/*.webp
+dataset/_temp_downloads/
+!dataset/**/.gitkeep
