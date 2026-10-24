@@ -80,7 +80,8 @@ public enum Species {
     SPECIES_077("077", "Telicota colon", "Pale Palm Dart"),
     SPECIES_078("078", "Thoressa cerata", "Northern Spangle"),
     SPECIES_079("079", "Troides aeacus", "Golden Birdwing"),
-    SPECIES_080("080", "Yasuda tripunctata tripunctata", "Three-spot Silverstreak");
+    SPECIES_080("080", "Yasuda tripunctata tripunctata", "Three-spot Silverstreak"),
+    SPECIES_081("081", "Euthalia zubeengargi", "Zubeen's Baron");
 
     private final String id;
     private final String scientificName;
