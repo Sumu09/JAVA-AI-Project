@@ -12,10 +12,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.*;
 
-/**
- * Embedded web server for ButterflyAI interactive frontend.
- * Built using JDK com.sun.net.httpserver.HttpServer (zero external dependencies).
- */
+// Embedded web server for ButterflyAI interactive frontend.
+// Built using JDK com.sun.net.httpserver.HttpServer (zero external dependencies).
+
 public class ButterflyWebServer {
 
     private final int port;
@@ -50,9 +49,7 @@ public class ButterflyWebServer {
         return port;
     }
 
-    /**
-     * Handler for static frontend assets (index.html, styles.css, app.js, images).
-     */
+    // Handler for static frontend assets (index.html, styles.css, app.js, images).
     private class StaticHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange exchange) throws IOException {

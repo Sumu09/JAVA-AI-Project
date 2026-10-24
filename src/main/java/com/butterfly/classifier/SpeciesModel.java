@@ -11,10 +11,9 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Model inference engine for butterfly species prediction.
- * Integrates real MobileNetV2 Deep Learning inference via Python bridge with high-speed 80-species fallback.
- */
+// Model inference engine for butterfly species prediction.
+// Integrates real MobileNetV2 Deep Learning inference via Python bridge with high-speed 80-species fallback.
+
 public class SpeciesModel {
 
     public static class PredictionResult {

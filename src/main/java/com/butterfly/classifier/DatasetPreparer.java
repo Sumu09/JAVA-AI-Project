@@ -7,10 +7,9 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.*;
 
-/**
- * Organizes the raw images in the 'images/' folder into an 80/20 train/test split
- * under 'dataset/train' and 'dataset/test'.
- */
+// Organizes the raw images in the 'images/' folder into an 80/20 train/test split
+// under 'dataset/train' and 'dataset/test'.
+
 public class DatasetPreparer {
 
     private static final String IMAGES_DIR = "images";

@@ -3,9 +3,8 @@ package com.butterfly.classifier;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Rich scientific metadata and classification details for all 80 supported butterfly species.
- */
+// NOTE: Rich scientific metadata part and classification details for all 80 supported butterfly species. More will be added, 
+// TODO: rare moths, beetles of assam
 public class SpeciesInfo {
 
     public static class Details {
@@ -148,7 +147,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/012_Ampittia_dioscorides/0120001.jpg"
+            "images/0120001.png"
         ));
 
         METADATA.put(Species.SPECIES_013, new Details(
@@ -193,7 +192,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Nymphalidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/017_Athyma_perius/0170001.jpg"
+            "images/0170001.png"
         ));
 
         METADATA.put(Species.SPECIES_018, new Details(
@@ -202,7 +201,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/018_Badamia_exclamationis/0180001.jpg"
+            "images/0180001.png"
         ));
 
         METADATA.put(Species.SPECIES_019, new Details(
@@ -310,7 +309,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Nymphalidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/030_Elymnias_hypermnestra_undularis/0300001.jpg"
+            "images/0300001.png"
         ));
 
         METADATA.put(Species.SPECIES_031, new Details(
@@ -328,7 +327,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Nymphalidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/032_Ethope_himachala/0320001.jpg"
+            "images/0320001.png"
         ));
 
         METADATA.put(Species.SPECIES_033, new Details(
@@ -373,7 +372,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/037_Halpe_porus_porus/0370001.jpg"
+            "images/0370001.png"
         ));
 
         METADATA.put(Species.SPECIES_038, new Details(
@@ -391,7 +390,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/039_Hasora_badra/0390001.jpg"
+            "images/0390001.png"
         ));
 
         METADATA.put(Species.SPECIES_040, new Details(
@@ -400,7 +399,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Lycaenidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/040_Heliophorus_epicles_latilimbata/0400001.jpg"
+            "images/0400001.png"
         ));
 
         METADATA.put(Species.SPECIES_041, new Details(
@@ -427,7 +426,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Lycaenidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/043_Jamides_elpis_pseudelpis/0430001.jpg"
+            "images/0430001.png"
         ));
 
         METADATA.put(Species.SPECIES_044, new Details(
@@ -445,7 +444,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Nymphalidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/045_Lethe_mekara_mekara/0450001.jpg"
+            "images/0450001.png"
         ));
 
         METADATA.put(Species.SPECIES_046, new Details(
@@ -472,7 +471,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Lycaenidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/048_Loxura_atymnus_continentalis/0480001.jpg"
+            "images/0480001.png"
         ));
 
         METADATA.put(Species.SPECIES_049, new Details(
@@ -535,7 +534,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/055_Ochus_subvittatus_subradiatus/0550001.jpg"
+            "images/0550001.png"
         ));
 
         METADATA.put(Species.SPECIES_056, new Details(
@@ -607,7 +606,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Lycaenidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/063_Prosotas_dubiosa_indica/0630001.jpg"
+            "images/0630001.png"
         ));
 
         METADATA.put(Species.SPECIES_064, new Details(
@@ -625,7 +624,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/065_Pseudocoladenia_dan_fabia/0650001.jpg"
+            "images/0650001.png"
         ));
 
         METADATA.put(Species.SPECIES_066, new Details(
@@ -724,7 +723,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "dataset/train/076_Telicota_bambusae_bambusae/0760001.jpg"
+            "images/0760001.png"
         ));
 
         METADATA.put(Species.SPECIES_077, new Details(
@@ -761,6 +760,15 @@ public class SpeciesInfo {
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Lycaenidae family. Exhibiting specialized wing markings and high visual acuity.",
             "dataset/train/080_Yasuda_tripunctata_tripunctata/0800001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_081, new Details(
+            "081", "Zubeen's Baron", "Euthalia zubeengargi", "Nymphalidae",
+            "Euthalia", "Euthalia zubeengargi",
+            "Tropical and subtropical forest edges, grasslands, and flowering canopies",
+            "Indo-Malayan, Oriental, and South Asian bioregions",
+            "Distinctive butterfly species belonging to the Nymphalidae family. Exhibiting specialized wing markings and high visual acuity.",
+            "dataset/train/081_Euthalia_zubeengargi/0810001.jpg"
         ));
     }
 
