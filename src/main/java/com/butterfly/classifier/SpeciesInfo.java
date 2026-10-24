@@ -762,6 +762,15 @@ public class SpeciesInfo {
             "Distinctive butterfly species belonging to the Lycaenidae family. Exhibiting specialized wing markings and high visual acuity.",
             "dataset/train/080_Yasuda_tripunctata_tripunctata/0800001.jpg"
         ));
+
+        METADATA.put(Species.SPECIES_081, new Details(
+            "081", "Basar Duke", "Euthalia zubeengargi", "Nymphalidae",
+            "Euthalia", "Euthalia zubeengargi",
+            "Montane subtropical rainforests, rocky streamsides, and moist evergreen canopies",
+            "Eastern Himalayas, Northeast India (Arunachal Pradesh, Assam)",
+            "A newly discovered Duke butterfly species (Basar Duke) discovered in Basar, Arunachal Pradesh, named in honor of cultural and musical icon Zubeen Garg. Features stunning olive-green forewings marked by prominent white arcs and dark apical shading.",
+            "dataset/train/081_Euthalia_zubeengargi/0810001.jpg"
+        ));
     }
 
     public static Details getDetails(Species species) {

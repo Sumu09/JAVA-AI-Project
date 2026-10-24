@@ -212,23 +212,31 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: formData
         })
-        .then(res => {
-            if (!res.ok) throw new Error("Classification request failed");
-            return res.json();
+        .then(async res => {
+            let data = null;
+            try {
+                data = await res.json();
+            } catch (e) {}
+
+            if (!res.ok) {
+                const msg = (data && data.error) ? data.error : ("Server returned status " + res.status);
+                throw new Error(msg);
+            }
+            return data;
         })
         .then(data => {
             setTimeout(() => {
                 scannerOverlay.classList.add('hidden');
-                if (data.success) {
+                if (data && data.success) {
                     renderResults(data);
                 } else {
-                    showError("Prediction Error", data.error || "Model could not classify species.");
+                    showError("Prediction Error", (data && data.error) || "Model could not classify species.");
                 }
             }, 850);
         })
-        .catch(() => {
+        .catch(err => {
             scannerOverlay.classList.add('hidden');
-            showError("Connection Error", "Failed to connect to ButterflyAI inference engine.");
+            showError("Classification Error", err.message || "Failed to connect to ButterflyAI inference engine.");
         });
     }
 
