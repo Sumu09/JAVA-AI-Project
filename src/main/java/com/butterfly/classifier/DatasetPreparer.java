@@ -35,7 +35,7 @@ public class DatasetPreparer {
 
         File[] imageFiles = imagesFolder.listFiles((dir, name) -> {
             String lowercase = name.toLowerCase();
-            return lowercase.endsWith(".png") || lowercase.endsWith(".jpg") || lowercase.endsWith(".jpeg");
+            return lowercase.endsWith(".png") || lowercase.endsWith(".jpg") || lowercase.endsWith(".jpeg") || lowercase.endsWith(".webp");
         });
 
         if (imageFiles == null || imageFiles.length == 0) {

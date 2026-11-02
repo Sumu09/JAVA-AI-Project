@@ -148,7 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         for (const type of item.types) {
                             if (type.startsWith('image/')) {
                                 const blob = await item.getType(type);
-                                const file = new File([blob], `pasted_specimen_${Date.now()}.png`, { type });
+                                const ext = type.includes('webp') ? 'webp' : (type.includes('jpeg') || type.includes('jpg') ? 'jpg' : 'png');
+                                const file = new File([blob], `pasted_specimen_${Date.now()}.${ext}`, { type });
                                 handleFileSelect(file);
                                 foundImage = true;
                                 break;
@@ -202,7 +203,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function handleFileSelect(file) {
-        if (!file.type.match('image.*')) {
+        const isImage = (file.type && file.type.match('image.*')) || 
+                        file.name.toLowerCase().endsWith('.webp') ||
+                        file.name.toLowerCase().endsWith('.jpg') ||
+                        file.name.toLowerCase().endsWith('.jpeg') ||
+                        file.name.toLowerCase().endsWith('.png');
+        if (!isImage) {
             showError("Invalid File Format", "Please select or paste a valid image file (JPG, PNG, or WEBP).");
             return;
         }
@@ -219,6 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
             img.onload = () => {
                 const sizeMb = (file.size / (1024 * 1024)).toFixed(1);
                 fileDimsText.textContent = `${img.width} × ${img.height} px • ${sizeMb} MB`;
+            };
+            img.onerror = () => {
+                const sizeMb = (file.size / (1024 * 1024)).toFixed(1);
+                fileDimsText.textContent = `${file.name.toLowerCase().endsWith('.webp') ? 'WEBP' : 'Image'} • ${sizeMb} MB`;
             };
             img.src = imgUrl;
 
@@ -255,8 +265,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 return res.blob();
             })
             .then(blob => {
-                const ext = path.toLowerCase().endsWith('.jpg') ? 'jpg' : 'png';
-                const file = new File([blob], `${name.toLowerCase().replace(/[^a-z0-9]+/g, '_')}.${ext}`, { type: `image/${ext}` });
+                const lowerPath = path.toLowerCase();
+                let ext = 'png';
+                let mime = 'image/png';
+                if (lowerPath.endsWith('.jpg') || lowerPath.endsWith('.jpeg')) {
+                    ext = 'jpg';
+                    mime = 'image/jpeg';
+                } else if (lowerPath.endsWith('.webp')) {
+                    ext = 'webp';
+                    mime = 'image/webp';
+                }
+                const cleanName = `${name.toLowerCase().replace(/[^a-z0-9]+/g, '_')}.${ext}`;
+                const file = new File([blob], cleanName, { type: mime });
                 handleFileSelect(file);
             })
             .catch(() => {
@@ -271,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!selectedFile) return;
 
         scannerOverlay.classList.remove('hidden');
-        
+
         scannerStatusText.textContent = "Analyzing wing patterns...";
         setTimeout(() => {
             scannerStatusText.textContent = "Extracting ventral & dorsal features...";
@@ -290,24 +310,24 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: formData
         })
-        .then(res => {
-            if (!res.ok) throw new Error("Classification request failed");
-            return res.json();
-        })
-        .then(data => {
-            setTimeout(() => {
+            .then(res => {
+                if (!res.ok) throw new Error("Classification request failed");
+                return res.json();
+            })
+            .then(data => {
+                setTimeout(() => {
+                    scannerOverlay.classList.add('hidden');
+                    if (data.success) {
+                        renderResults(data);
+                    } else {
+                        showError("Prediction Error", data.error || "Model could not classify species.");
+                    }
+                }, 850);
+            })
+            .catch(() => {
                 scannerOverlay.classList.add('hidden');
-                if (data.success) {
-                    renderResults(data);
-                } else {
-                    showError("Prediction Error", data.error || "Model could not classify species.");
-                }
-            }, 850);
-        })
-        .catch(() => {
-            scannerOverlay.classList.add('hidden');
-            showError("Connection Error", "Failed to connect to ButterflyAI inference engine.");
-        });
+                showError("Connection Error", "Failed to connect to ButterflyAI inference engine.");
+            });
     }
 
     // --- 4. Render Prediction Results ---
@@ -412,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Search query filter
         if (searchQuery.trim()) {
             const q = searchQuery.toLowerCase().trim();
-            filtered = filtered.filter(sp => 
+            filtered = filtered.filter(sp =>
                 (sp.commonName || '').toLowerCase().includes(q) ||
                 (sp.scientificName || '').toLowerCase().includes(q) ||
                 (sp.family || '').toLowerCase().includes(q) ||
@@ -440,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach(sp => {
             const card = document.createElement('div');
             card.className = 'species-card';
-            
+
             const famClass = (sp.family || 'nymphalidae').toLowerCase();
             const sampleImgPath = sp.sampleImagePath || `dataset/train/${sp.id}_${sp.scientificName.replace(/\s+/g, '_')}/${sp.id}0001.jpg`;
 

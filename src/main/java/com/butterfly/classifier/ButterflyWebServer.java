@@ -45,6 +45,19 @@ public class ButterflyWebServer {
         }
     }
 
+    public static void main(String[] args) throws Exception {
+        int port = 8080;
+        if (args.length > 0) {
+            try {
+                port = Integer.parseInt(args[0]);
+            } catch (NumberFormatException ignored) {}
+        }
+        SpeciesModel model = new SpeciesModel("model/butterfly_species_model.h5");
+        ButterflyWebServer server = new ButterflyWebServer(port, model);
+        server.start();
+        System.out.println("ButterflyAI Web Server listening on http://localhost:" + port);
+    }
+
     public int getPort() {
         return port;
     }
@@ -77,6 +90,8 @@ public class ButterflyWebServer {
                 contentType = "image/png";
             } else if (path.endsWith(".jpg") || path.endsWith(".jpeg")) {
                 contentType = "image/jpeg";
+            } else if (path.endsWith(".webp")) {
+                contentType = "image/webp";
             } else if (path.endsWith(".svg")) {
                 contentType = "image/svg+xml";
             }
@@ -178,17 +193,53 @@ public class ButterflyWebServer {
 
             File file = new File(path);
             if (!file.exists() || !file.isFile()) {
+                file = resolveFallbackImage(path);
+            }
+
+            if (file == null || !file.exists() || !file.isFile()) {
                 exchange.sendResponseHeaders(404, -1);
                 return;
             }
 
             byte[] bytes = Files.readAllBytes(file.toPath());
-            String mime = (path.toLowerCase().endsWith(".jpg") || path.toLowerCase().endsWith(".jpeg")) ? "image/jpeg" : "image/png";
+            String lower = file.getName().toLowerCase();
+            String mime = "image/png";
+            if (lower.endsWith(".jpg") || lower.endsWith(".jpeg")) {
+                mime = "image/jpeg";
+            } else if (lower.endsWith(".webp")) {
+                mime = "image/webp";
+            } else if (lower.endsWith(".svg")) {
+                mime = "image/svg+xml";
+            }
             exchange.getResponseHeaders().set("Content-Type", mime);
             exchange.sendResponseHeaders(200, bytes.length);
             OutputStream os = exchange.getResponseBody();
             os.write(bytes);
             os.close();
+        }
+
+        private File resolveFallbackImage(String path) {
+            if (path == null) return null;
+            java.util.regex.Matcher m = java.util.regex.Pattern.compile("(\\d{3})").matcher(path);
+            if (m.find()) {
+                String id = m.group(1);
+                File trainDir = new File("dataset/train");
+                if (trainDir.exists() && trainDir.isDirectory()) {
+                    File[] matches = trainDir.listFiles((dir, name) -> name.startsWith(id + "_") || name.equals(id));
+                    if (matches != null && matches.length > 0) {
+                        File speciesDir = matches[0];
+                        File[] imgs = speciesDir.listFiles((dir, name) -> {
+                            String lower = name.toLowerCase();
+                            return lower.endsWith(".jpg") || lower.endsWith(".jpeg") || lower.endsWith(".png") || lower.endsWith(".webp");
+                        });
+                        if (imgs != null && imgs.length > 0) {
+                            java.util.Arrays.sort(imgs);
+                            return imgs[0];
+                        }
+                    }
+                }
+            }
+            return null;
         }
     }
 
@@ -214,17 +265,38 @@ public class ButterflyWebServer {
 
                 byte[] imageBytes = extractImageBytes(bodyBytes, exchange.getRequestHeaders().getFirst("Content-Type"));
 
-                ByteArrayInputStream bais = new ByteArrayInputStream(imageBytes);
-                BufferedImage image = ImageIO.read(bais);
+                boolean isWebp = isWebP(imageBytes);
+                BufferedImage image = null;
+                int imgWidth = 224;
+                int imgHeight = 224;
 
-                if (image == null) {
-                    sendError(exchange, 400, "Unsupported or corrupt image format. Please upload a valid JPG, PNG, or WEBP image.");
-                    return;
+                if (isWebp) {
+                    int[] dims = getWebPDimensions(imageBytes);
+                    imgWidth = dims[0];
+                    imgHeight = dims[1];
+                } else {
+                    try {
+                        ByteArrayInputStream bais = new ByteArrayInputStream(imageBytes);
+                        image = ImageIO.read(bais);
+                    } catch (Exception ignored) {}
+
+                    if (image != null) {
+                        imgWidth = image.getWidth();
+                        imgHeight = image.getHeight();
+                    } else {
+                        sendError(exchange, 400, "Unsupported or corrupt image format. Please upload a valid JPG, PNG, or WEBP image.");
+                        return;
+                    }
                 }
 
                 // Preserve uploaded filename and extension
                 String cleanName = filename.replaceAll("[^a-zA-Z0-9._-]", "_");
-                if (!cleanName.toLowerCase().endsWith(".png") && !cleanName.toLowerCase().endsWith(".jpg") && !cleanName.toLowerCase().endsWith(".jpeg")) {
+                String lowerClean = cleanName.toLowerCase();
+                if (isWebp || lowerClean.endsWith(".webp")) {
+                    if (!lowerClean.endsWith(".webp")) {
+                        cleanName = cleanName.replaceAll("\\.[^.]+$", "") + ".webp";
+                    }
+                } else if (!lowerClean.endsWith(".png") && !lowerClean.endsWith(".jpg") && !lowerClean.endsWith(".jpeg")) {
                     cleanName += ".png";
                 }
 
@@ -247,7 +319,7 @@ public class ButterflyWebServer {
 
                 StringBuilder json = new StringBuilder("{");
                 json.append("\"success\":true,");
-                json.append("\"imageDimensions\":{\"width\":").append(image.getWidth()).append(",\"height\":").append(image.getHeight()).append("},");
+                json.append("\"imageDimensions\":{\"width\":").append(imgWidth).append(",\"height\":").append(imgHeight).append("},");
                 json.append("\"primary\":{")
                     .append("\"id\":\"").append(escapeJson(top1.species.getId())).append("\",")
                     .append("\"commonName\":\"").append(escapeJson(top1.species.getCommonName())).append("\",")
@@ -356,5 +428,45 @@ public class ButterflyWebServer {
                     .replace("\n", "\\n")
                     .replace("\r", "\\r")
                     .replace("\t", "\\t");
+    }
+
+    private static boolean isWebP(byte[] data) {
+        if (data == null || data.length < 16) return false;
+        boolean riff = (data[0] == 'R' || data[0] == 0x52) &&
+                       (data[1] == 'I' || data[1] == 0x49) &&
+                       (data[2] == 'F' || data[2] == 0x46) &&
+                       (data[3] == 'F' || data[3] == 0x46);
+        boolean webp = (data[8] == 'W' || data[8] == 0x57) &&
+                       (data[9] == 'E' || data[9] == 0x45) &&
+                       (data[10] == 'B' || data[10] == 0x42) &&
+                       (data[11] == 'P' || data[11] == 0x50);
+        return riff && webp;
+    }
+
+    private static int[] getWebPDimensions(byte[] data) {
+        if (!isWebP(data) || data.length < 30) {
+            return new int[]{224, 224};
+        }
+        try {
+            String chunk = new String(data, 12, 4, StandardCharsets.US_ASCII);
+            if ("VP8 ".equals(chunk) && data.length >= 30) {
+                int w = ((data[26] & 0xFF) | ((data[27] & 0xFF) << 8)) & 0x3FFF;
+                int h = ((data[28] & 0xFF) | ((data[29] & 0xFF) << 8)) & 0x3FFF;
+                return new int[]{w, h};
+            } else if ("VP8L".equals(chunk) && data.length >= 25) {
+                int b0 = data[21] & 0xFF;
+                int b1 = data[22] & 0xFF;
+                int b2 = data[23] & 0xFF;
+                int b3 = data[24] & 0xFF;
+                int w = 1 + (((b1 & 0x3F) << 8) | b0);
+                int h = 1 + (((b3 & 0x0F) << 10) | (b2 << 2) | ((b1 & 0xC0) >> 6));
+                return new int[]{w, h};
+            } else if ("VP8X".equals(chunk) && data.length >= 30) {
+                int w = 1 + ((data[24] & 0xFF) | ((data[25] & 0xFF) << 8) | ((data[26] & 0xFF) << 16));
+                int h = 1 + ((data[27] & 0xFF) | ((data[28] & 0xFF) << 8) | ((data[29] & 0xFF) << 16));
+                return new int[]{w, h};
+            }
+        } catch (Exception ignored) {}
+        return new int[]{224, 224};
     }
 }
