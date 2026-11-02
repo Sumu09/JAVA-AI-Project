@@ -102,8 +102,52 @@ TARGET_SPECIES = [
     "Lethe chandica flanona",
     "Lethe vindhya vindhya",
     "Lethe mekara mekara",
-    "Lethe satyavati"
-    "Euthalia zubeengargi"
+    "Lethe satyavati",
+    "Euthalia zubeengargi",
+    "Papilio elephenor",
+    "Papilio paradoxa",
+    "Papilio bootes",
+    "Papilio slateri",
+    "Lamproptera curius",
+    "Lamproptera meges",
+    "Meandrusa payeni",
+    "Meandrusa lachinus",
+    "Byasa crassipes",
+    "Byasa nevilli",
+    "Byasa polla",
+    "Graphium agetes",
+    "Graphium aristeus",
+    "Graphium macareus",
+    "Graphium xenocles",
+    "Losaria doubledayi",
+    "Teinopalpus imperialis",
+    "Elymnias peali",
+    "Euthalia telchinia",
+    "Charaxes delphis",
+    "Pantoporia assamica",
+    "Pantoporia bieti",
+    "Chersonesia rahria",
+    "Athyma ranga",
+    "Athyma pravara",
+    "Athyma punctata",
+    "Polyura schreiber",
+    "Tajuria maculata",
+    "Tajuria cippus",
+    "Pithecops fulgens",
+    "Shijimia moorei",
+    "Arhopala silhetensis",
+    "Arhopala oenea",
+    "Simiskina phalena",
+    "Udara selma",
+    "Poritia hewitsoni",
+    "Capila pieridoides",
+    "Pyroneura margherita",
+    "Darpa pteria",
+    "Hidari bhawani",
+    "Plastingia naga",
+    "Salanoemia sala",
+    "Scobura woolletti",
+    "Polytremis minuta"
 ]
 
 # Minimum valid images required per species for robust training
@@ -303,7 +347,9 @@ def update_labels_file():
 
 def update_java_and_recompile():
     """Runs generate_java_species.py and compiles Java application."""
-    gen_script = PROJECT_ROOT / "generate_java_species.py"
+    gen_script = PROJECT_ROOT / "scripts" / "generate_java_species.py"
+    if not gen_script.exists():
+        gen_script = PROJECT_ROOT / "generate_java_species.py"
     if gen_script.exists():
         print("[✓] Regenerating Java Species and metadata...")
         python_exec = sys.executable

@@ -11,8 +11,9 @@ __pycache__/
 .idea/
 
 # Large model weights (keep labels.txt)
-model/*.h5
 model/*.keras
+model/backup/
+images/
 
 # Keep only dataset/train and dataset/test folder structure
 dataset/train/*
@@ -20,3 +21,5 @@ dataset/train/*
 dataset/test/*
 !dataset/test/.gitkeep
 dataset/_temp_downloads/
+.DS_Store
+Next steps to take for our Final Year Project Jour 407f509216cd80bf871cc650f18c4c52.md
