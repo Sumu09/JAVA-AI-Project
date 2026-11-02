@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="/api/sample?path=${encodeURIComponent(sampleImgPath)}" 
                          alt="${sp.commonName}" 
                          class="species-card-img"
-                         onerror="this.onerror=null; this.src='/api/sample?path=dataset/train/081_Euthalia_zubeengargi/0810001.jpg';">
+                         onerror="this.onerror=null; this.src='/api/sample?path=dataset/train/081_Euthalia_zubeengargi/0810002.jpg';">
                 </div>
                 <div class="species-card-body">
                     <span class="species-card-family ${famClass}">${sp.family}</span>

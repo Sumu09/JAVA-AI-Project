@@ -769,7 +769,7 @@ public class SpeciesInfo {
             "Panbari Reserve Forest, lowland wet evergreen rainforest understorey, Golaghat / Kaziranga landscape",
             "Endemic to Assam, Northeast India (Indo-Burma biodiversity hotspot)",
             "Discovered and described in 2024 from the Panbari Reserve Forest in Assam. Named in honor of cultural icon Zubeen Garg. Cryptic understorey dweller with rapid flight and distinct dorsal-ventral pattern.",
-            "dataset/train/081_Euthalia_zubeengargi/0810001.jpg"
+            "dataset/train/081_Euthalia_zubeengargi/0810002.jpg"
         ));
 
         METADATA.put(Species.SPECIES_082, new Details(
