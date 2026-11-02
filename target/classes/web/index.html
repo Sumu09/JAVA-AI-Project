@@ -3,66 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ButterflyAI — AI-Powered Butterfly Species Identification</title>
+    <title>ButterflyAI — Rare Butterflies of Assam & Northeast India</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Subtle Ambient Top Glow -->
+    <!-- Ambient Silk Texture Glow -->
     <div class="bg-decoration"></div>
 
     <!-- Navigation Header -->
     <header class="navbar-header">
         <div class="container navbar-container">
             <a href="#home" class="logo-link" id="logoLink">
-                <div class="logo-icon">
-                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 17C16 17 12 8 5 8C2.5 8 1 10 1 12.5C1 17.5 7 24 16 27C25 24 31 17.5 31 12.5C31 10 29.5 8 27 8C20 8 16 17 16 17Z" fill="url(#wingGrad1)" opacity="0.9"/>
-                        <path d="M16 15C16 15 13 4 8 4C5.5 4 4 5.5 4 7.5C4 11.5 9 17 16 19C23 17 28 11.5 28 7.5C28 5.5 26.5 4 24 4C19 4 16 15 16 15Z" fill="url(#wingGrad2)"/>
-                        <path d="M16 23V8" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
-                        <circle cx="16" cy="7" r="2.2" fill="#34D399"/>
-                        <defs>
-                            <linearGradient id="wingGrad1" x1="1" y1="8" x2="31" y2="27" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#047857"/>
-                                <stop offset="1" stop-color="#10B981"/>
-                            </linearGradient>
-                            <linearGradient id="wingGrad2" x1="4" y1="4" x2="28" y2="19" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#34D399"/>
-                                <stop offset="1" stop-color="#059669"/>
-                            </linearGradient>
-                        </defs>
+                <div class="logo-jaapi-wrapper">
+                    <!-- Clean Vector Jaapi (জাপি) Icon -->
+                    <svg class="jaapi-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Outer conical rim in Muga Gold -->
+                        <path d="M24 5L4 37C4 37 12 43 24 43C36 43 44 37 44 37L24 5Z" fill="#FBF3DA" stroke="#C59B27" stroke-width="2" stroke-linejoin="round"/>
+                        <!-- Inner woven section -->
+                        <path d="M24 16L10 38C14 41 34 41 38 38L24 16Z" fill="#F4E6BC" stroke="#D4A017" stroke-width="1.2"/>
+                        <!-- Top red peak cone -->
+                        <path d="M24 5L18 19C21 20 27 20 30 19L24 5Z" fill="#D62828"/>
+                        <!-- Radial bamboo ribs -->
+                        <path d="M24 5V43M24 5L14 40M24 5L34 40M24 5L7 37M24 5L41 37" stroke="#9A7B1C" stroke-width="0.8" opacity="0.6"/>
+                        <!-- Traditional Gamusa-red & Emerald geometric diamond appliques -->
+                        <polygon points="24,24 21.5,28 24,32 26.5,28" fill="#D62828"/>
+                        <polygon points="17,30 14.5,33.5 17,37 19.5,33.5" fill="#1B4D3E"/>
+                        <polygon points="31,30 28.5,33.5 31,37 33.5,33.5" fill="#1B4D3E"/>
+                        <circle cx="24" cy="5.5" r="2.2" fill="#D62828"/>
                     </svg>
                 </div>
-                <span class="logo-text">Butterfly<span class="logo-accent">AI</span></span>
+                <div class="logo-brand-group">
+                    <span class="logo-text">Butterfly<span class="logo-accent">AI</span></span>
+                    <span class="logo-subtext">অসমৰ আপুৰুগীয়া পখিলা • Assam Biodiversity</span>
+                </div>
             </a>
 
             <nav class="nav-menu">
                 <a href="#home" class="nav-link active" data-target="home">Home</a>
                 <a href="#identify" class="nav-link" data-target="identify">Identify</a>
-                <a href="#species" class="nav-link" data-target="species">Species Catalog</a>
-                <a href="#about" class="nav-link" data-target="about">About AI</a>
+                <a href="#species" class="nav-link" data-target="species">Assam Catalog</a>
+                <a href="#about" class="nav-link" data-target="about">Ecological AI</a>
             </nav>
 
-            <a href="#identify" class="btn btn-emerald-nav" id="navCta">Identify Species</a>
+            <a href="#identify" class="btn btn-emerald-nav" id="navCta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Identify Species</span>
+            </a>
         </div>
+        <!-- Phulam Gamusa Classic Red Woven Border -->
+        <div class="gamusa-border-top"></div>
     </header>
 
     <main class="main-content">
         <!-- Section 1: Hero Landing Screen -->
         <section id="home" class="section hero-section active-section">
+            <!-- Watermark Jaapi Background Motif -->
+            <div class="hero-watermark-jaapi">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="48" stroke="#D4A017" stroke-width="0.8" stroke-dasharray="3 3"/>
+                    <path d="M50 10L10 80C25 90 75 90 90 80L50 10Z" stroke="#D4A017" stroke-width="1"/>
+                    <polygon points="50,45 42,57 50,69 58,57" stroke="#D62828" stroke-width="1"/>
+                </svg>
+            </div>
+
             <div class="container hero-container">
                 <div class="hero-text-col">
-                    <div class="hero-badge">
-                        <span class="pulse-dot"></span>
-                        MobileNetV2 Deep Neural Inference Engine
+                    <div class="hero-biodiversity-pill">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1B4D3E" stroke-width="2.2">
+                            <path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12A10 10 0 0 1 12 2z"/>
+                            <path d="M12 2v20"/>
+                            <path d="M12 8c2.5 0 5 1.5 5 4s-2.5 4-5 4"/>
+                        </svg>
+                        <span>Preserving Eastern Himalayan Biodiversity</span>
                     </div>
-                    <h1 class="hero-title">Discover the Butterfly Around You</h1>
+
+                    <h1 class="hero-title">Discover the Rare Butterflies of Assam</h1>
                     <p class="hero-description">
-                        Identify butterfly species instantly using computer vision and AI-powered image classification trained on ecological datasets.
+                        Identify elusive Lepidoptera species of Northeast India instantly using computer vision and deep learning. Dedicated to documenting the canopy dwellers, localized endemics, and cryptic fauna of the Brahmaputra valley.
                     </p>
 
                     <div class="hero-cta-group">
@@ -71,15 +93,20 @@
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
                         <a href="#species" class="btn btn-hero-secondary" id="catalogCta">
-                            <span>Browse 10 Species</span>
+                            <span>Explore 125+ Species Catalog</span>
                         </a>
                     </div>
 
-                    <!-- Metrics bar -->
+                    <!-- Metrics bar with Muga & Emerald accents -->
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-num">10</span>
+                            <span class="stat-num">125+</span>
                             <span class="stat-lbl">Species Classes</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-num">4,500+</span>
+                            <span class="stat-lbl">Field & Specimen Images</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
@@ -94,14 +121,26 @@
                     </div>
                 </div>
 
+                <!-- Featured Hero Showcase: Euthalia zubeengargi -->
                 <div class="hero-visual-col">
-                    <div class="hero-img-card">
-                        <img src="/api/sample?path=images/0010001.png" alt="Monarch Butterfly" id="heroButterflyImg">
-                        <div class="hero-prediction-chip">
-                            <div class="chip-dot"></div>
-                            <div class="chip-text">
-                                <div class="chip-title">Danaus plexippus</div>
-                                <div class="chip-sub">Monarch — 98.4% Confidence</div>
+                    <div class="hero-showcase-frame">
+                        <div class="showcase-gamusa-accent"></div>
+                        <div class="hero-img-card">
+                            <img src="/api/sample?path=dataset/train/081_Euthalia_zubeengargi/0810001.jpg" alt="Euthalia zubeengargi (Zubeen's Baron)" id="heroButterflyImg">
+                            
+                            <!-- Endemic Tag Badge -->
+                            <div class="showcase-endemic-badge">
+                                <span class="badge-dot"></span>
+                                Endemic & Newly Described (2024)
+                            </div>
+
+                            <!-- Prediction Overlay Chip -->
+                            <div class="hero-prediction-chip">
+                                <div class="chip-muga-accent"></div>
+                                <div class="chip-content">
+                                    <div class="chip-title">Euthalia zubeengargi</div>
+                                    <div class="chip-sub">Basar Duke / Zubeen's Baron — 99.1% Confidence</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -113,29 +152,40 @@
         <section id="identify" class="section identify-section">
             <div class="container">
                 <div class="section-header center">
-                    <span class="section-tag">AI Classifier</span>
+                    <span class="section-tag">Neural Vision Classifier</span>
                     <h2 class="section-title">Upload & Identify Species</h2>
-                    <p class="section-sub">Select or drag & drop a butterfly photograph to analyze visually.</p>
+                    <p class="section-sub">Select, drag & drop, or paste a butterfly photograph to analyze visually with our trained MobileNetV2 pipeline.</p>
                 </div>
 
                 <div class="classifier-grid">
                     <!-- Upload Column -->
                     <div class="upload-column">
                         <div class="upload-card" id="dropZone">
+                            <div class="gamusa-card-trim"></div>
                             <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" class="file-input-hidden">
                             
                             <!-- Initial Upload Prompt -->
                             <div class="upload-prompt" id="uploadPrompt">
                                 <div class="upload-icon-wrapper">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8">
+                                    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#1B4D3E" stroke-width="1.8">
                                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                                         <polyline points="17 8 12 3 7 8"/>
                                         <line x1="12" y1="3" x2="12" y2="15"/>
                                     </svg>
                                 </div>
-                                <h3 class="upload-title">Upload a Butterfly Image</h3>
-                                <p class="upload-subtitle">Drag & drop an image here or <span class="browse-link">browse from your device</span></p>
-                                <div class="upload-specs">Supported formats: JPG, PNG, WEBP (Max 20MB)</div>
+                                <h3 class="upload-title">Drop Butterfly Photograph Here</h3>
+                                <p class="upload-subtitle">Drag & drop an image, <span class="browse-link">browse from your computer</span>, or paste below:</p>
+                                
+                                <!-- Clipboard Paste Button -->
+                                <button type="button" class="btn btn-clipboard-paste" id="pasteBtn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                                    </svg>
+                                    <span>Paste from Clipboard (Ctrl+V / Cmd+V)</span>
+                                </button>
+
+                                <div class="upload-specs">Supported formats: JPG, JPEG, PNG, WEBP (Max 20MB)</div>
                             </div>
 
                             <!-- Selected Image Preview State -->
@@ -143,22 +193,22 @@
                                 <div class="image-preview-wrapper" id="previewWrapper">
                                     <img id="imagePreview" src="" alt="Selected Butterfly Preview">
                                     
-                                    <!-- AI Scanning Laser Beam -->
+                                    <!-- AI Scanning Laser Beam in Kaziranga Emerald -->
                                     <div class="scanner-overlay hidden" id="scannerOverlay">
                                         <div class="scanner-beam"></div>
                                         <div class="scanner-status-box">
                                             <div class="spinner-dots">
                                                 <span></span><span></span><span></span>
                                             </div>
-                                            <span id="scannerStatusText">Analyzing image...</span>
+                                            <span id="scannerStatusText">Analyzing visual patterns...</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="file-meta-bar">
                                     <div class="file-info-group">
-                                        <span class="file-name" id="fileNameText">image.png</span>
-                                        <span class="file-dims" id="fileDimsText">1920 × 1080 • 1.2 MB</span>
+                                        <span class="file-name" id="fileNameText">specimen.jpg</span>
+                                        <span class="file-dims" id="fileDimsText">1200 × 800 • 1.2 MB</span>
                                     </div>
                                     <div class="file-actions-group">
                                         <button type="button" class="btn-icon" id="replaceFileBtn" title="Replace Image">
@@ -171,31 +221,41 @@
                                 </div>
 
                                 <button type="button" class="btn btn-identify-submit" id="identifyBtn">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                                     <span>Identify Species</span>
                                 </button>
                             </div>
                         </div>
 
-                        <!-- Tactile Sample Image Selectors -->
+                        <!-- Tactile Assam Sample Image Selectors -->
                         <div class="samples-bar">
-                            <span class="samples-lbl">Or try a sample image:</span>
+                            <div class="samples-header">
+                                <span class="samples-lbl">Test with rare Assam field samples:</span>
+                            </div>
                             <div class="sample-chips">
-                                <button type="button" class="sample-chip-btn" data-img="images/0010001.png">
-                                    <img src="/api/sample?path=images/0010001.png" alt="Monarch" class="sample-thumb">
-                                    <span>Monarch</span>
+                                <button type="button" class="sample-chip-btn" data-img="dataset/train/081_Euthalia_zubeengargi/0810001.jpg">
+                                    <img src="/api/sample?path=dataset/train/081_Euthalia_zubeengargi/0810001.jpg" alt="Zubeen's Baron" class="sample-thumb">
+                                    <span>Zubeen's Baron</span>
                                 </button>
-                                <button type="button" class="sample-chip-btn" data-img="images/0020003.png">
-                                    <img src="/api/sample?path=images/0020003.png" alt="Zebra Longwing" class="sample-thumb">
-                                    <span>Zebra Longwing</span>
+                                <button type="button" class="sample-chip-btn" data-img="dataset/train/046_Lethe_satyavati/0460001.jpg">
+                                    <img src="/api/sample?path=dataset/train/046_Lethe_satyavati/0460001.jpg" alt="Pallid Forester" class="sample-thumb">
+                                    <span>Pallid Forester</span>
                                 </button>
-                                <button type="button" class="sample-chip-btn" data-img="images/0070001.png">
-                                    <img src="/api/sample?path=images/0070001.png" alt="Giant Swallowtail" class="sample-thumb">
-                                    <span>Swallowtail</span>
+                                <button type="button" class="sample-chip-btn" data-img="dataset/train/070_Seseria_sambara_sambara/0700001.png">
+                                    <img src="/api/sample?path=dataset/train/070_Seseria_sambara_sambara/0700001.png" alt="Notched Flat" class="sample-thumb">
+                                    <span>Notched Flat</span>
                                 </button>
-                                <button type="button" class="sample-chip-btn" data-img="images/0090001.png">
-                                    <img src="/api/sample?path=images/0090001.png" alt="Red Admiral" class="sample-thumb">
-                                    <span>Red Admiral</span>
+                                <button type="button" class="sample-chip-btn" data-img="dataset/train/086_Lamproptera_curius/0860001.jpg">
+                                    <img src="/api/sample?path=dataset/train/086_Lamproptera_curius/0860001.jpg" alt="White Dragontail" class="sample-thumb">
+                                    <span>Dragontail</span>
+                                </button>
+                                <button type="button" class="sample-chip-btn" data-img="dataset/train/098_Teinopalpus_imperialis/0980001.jpg">
+                                    <img src="/api/sample?path=dataset/train/098_Teinopalpus_imperialis/0980001.jpg" alt="Kaiser-i-Hind" class="sample-thumb">
+                                    <span>Kaiser-i-Hind</span>
+                                </button>
+                                <button type="button" class="sample-chip-btn" data-img="dataset/train/079_Troides_aeacus/0790001.jpg">
+                                    <img src="/api/sample?path=dataset/train/079_Troides_aeacus/0790001.jpg" alt="Golden Birdwing" class="sample-thumb">
+                                    <span>Golden Birdwing</span>
                                 </button>
                             </div>
                         </div>
@@ -205,14 +265,14 @@
                     <div class="result-column">
                         <!-- Empty State -->
                         <div class="empty-state-card" id="emptyState">
+                            <div class="gamusa-card-trim"></div>
                             <div class="empty-icon">
-                                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5">
-                                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
-                                    <path d="M12 6a6 6 0 0 0-6 6c0 3.3 2.7 6 6 6s6-2.7 6-6a6 6 0 0 0-6-6z"/>
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C59B27" stroke-width="1.5">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
                                 </svg>
                             </div>
-                            <h3>Awaiting Image Input</h3>
-                            <p>Select or drag a butterfly image on the left and click "Identify Species" to view AI predictions and scientific classification.</p>
+                            <h3>Awaiting Specimen Photograph</h3>
+                            <p>Select, drag, or paste a butterfly photo on the left and click "Identify Species" to view AI predictions and full ecological taxonomy.</p>
                         </div>
 
                         <!-- Error State Card -->
@@ -225,19 +285,20 @@
 
                         <!-- Active Prediction Result Card -->
                         <div class="result-card hidden" id="resultCard">
+                            <div class="gamusa-card-trim"></div>
                             <div class="result-header">
                                 <div class="result-species-info">
                                     <span class="prediction-badge">Primary Match</span>
-                                    <h2 class="species-title" id="resCommonName">Common Blue</h2>
-                                    <div class="species-scientific" id="resSciName">Polyommatus icarus</div>
+                                    <h2 class="species-title" id="resCommonName">Zubeen's Baron</h2>
+                                    <div class="species-scientific" id="resSciName">Euthalia zubeengargi</div>
                                 </div>
                                 <div class="confidence-box">
-                                    <div class="confidence-val" id="resConfidenceText">94.7%</div>
+                                    <div class="confidence-val" id="resConfidenceText">95.3%</div>
                                     <span class="confidence-lbl">Match Score</span>
                                 </div>
                             </div>
 
-                            <!-- Confidence Meter -->
+                            <!-- Confidence Meter with Emerald / Red Accents -->
                             <div class="confidence-bar-container">
                                 <div class="confidence-bar-fill" id="resConfidenceBar"></div>
                             </div>
@@ -248,16 +309,16 @@
                                     <span class="tag-val" id="resFamily">Nymphalidae</span>
                                 </div>
                                 <div class="tag-card">
-                                    <span class="tag-lbl">Habitat</span>
-                                    <span class="tag-val" id="resHabitat">Grasslands & Meadows</span>
+                                    <span class="tag-lbl">Assam Habitat</span>
+                                    <span class="tag-val" id="resHabitat">Panbari Reserve Forest, Kaziranga</span>
                                 </div>
                             </div>
 
                             <div class="result-description" id="resDescription">
-                                Famous for its long-distance annual migration across North America. Bright orange wings with black borders warn predators of toxicity.
+                                Discovered and described in 2024 from the Panbari Reserve Forest in Assam. Named in honor of cultural icon Zubeen Garg.
                             </div>
 
-                            <!-- Top Predictions List (Top 3-5) -->
+                            <!-- Top Predictions List (Top 1-5) -->
                             <div class="other-predictions-section">
                                 <h4 class="sub-heading">Top Model Predictions</h4>
                                 <div class="predictions-list" id="predictionsList">
@@ -267,15 +328,15 @@
 
                             <!-- Taxonomy Grid -->
                             <div class="taxonomy-section">
-                                <h4 class="sub-heading">Scientific Classification</h4>
+                                <h4 class="sub-heading">Biological Classification</h4>
                                 <div class="taxonomy-grid">
                                     <div class="tax-item"><span class="tax-k">Kingdom</span><span class="tax-v" id="taxKingdom">Animalia</span></div>
                                     <div class="tax-item"><span class="tax-k">Phylum</span><span class="tax-v" id="taxPhylum">Arthropoda</span></div>
                                     <div class="tax-item"><span class="tax-k">Class</span><span class="tax-v" id="taxClass">Insecta</span></div>
                                     <div class="tax-item"><span class="tax-k">Order</span><span class="tax-v" id="taxOrder">Lepidoptera</span></div>
                                     <div class="tax-item"><span class="tax-k">Family</span><span class="tax-v" id="taxFamily">Nymphalidae</span></div>
-                                    <div class="tax-item"><span class="tax-k">Genus</span><span class="tax-v" id="taxGenus">Danaus</span></div>
-                                    <div class="tax-item"><span class="tax-k">Species</span><span class="tax-v" id="taxSpecies">D. plexippus</span></div>
+                                    <div class="tax-item"><span class="tax-k">Genus</span><span class="tax-v" id="taxGenus">Euthalia</span></div>
+                                    <div class="tax-item"><span class="tax-k">Species</span><span class="tax-v" id="taxSpecies">E. zubeengargi</span></div>
                                 </div>
                             </div>
 
@@ -289,9 +350,24 @@
         <section id="species" class="section species-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Dataset Classes</span>
-                    <h2 class="section-title">Supported Butterfly Species</h2>
-                    <p class="section-sub">Explore the 80 butterfly species supported by our MobileNetV2 deep learning classifier.</p>
+                    <span class="section-tag">Biodiversity Archive</span>
+                    <h2 class="section-title">Assam & Northeast India Lepidoptera Catalog</h2>
+                    <p class="section-sub">Explore the catalog of rare, endangered, and Schedule-protected species classified by the neural inference pipeline.</p>
+                </div>
+
+                <!-- Catalog Search & Filter Controls -->
+                <div class="catalog-controls-bar">
+                    <div class="search-input-wrap">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="catalogSearchInput" placeholder="Search by common or scientific name (e.g. Baron, Kaiser, Papilio)...">
+                    </div>
+                    <div class="family-filter-chips">
+                        <button type="button" class="family-pill active" data-family="ALL">All Species (115+)</button>
+                        <button type="button" class="family-pill" data-family="PAPILIONIDAE">Papilionidae</button>
+                        <button type="button" class="family-pill" data-family="NYMPHALIDAE">Nymphalidae</button>
+                        <button type="button" class="family-pill" data-family="LYCAENIDAE">Lycaenidae</button>
+                        <button type="button" class="family-pill" data-family="HESPERIIDAE">Hesperiidae</button>
+                    </div>
                 </div>
 
                 <div class="species-catalog-grid" id="speciesCatalogGrid">
@@ -300,49 +376,70 @@
             </div>
         </section>
 
-        <!-- Section 4: About AI Architecture -->
+        <!-- Section 4: About AI Architecture & Assam Ecology -->
         <section id="about" class="section about-section">
             <div class="container">
                 <div class="section-header center">
-                    <span class="section-tag">Architecture</span>
-                    <h2 class="section-title">AI & Model Methodology</h2>
-                    <p class="section-sub">How our deep learning pipeline classifies butterfly images with precision.</p>
+                    <span class="section-tag">Conservation Technology</span>
+                    <h2 class="section-title">AI & Ecological Methodology</h2>
+                    <p class="section-sub">How our deep learning pipeline pairs computer vision with conservation biology in the Indo-Burma biodiversity hotspot.</p>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-card">
-                        <div class="about-icon">🧠</div>
+                        <div class="gamusa-card-trim"></div>
+                        <div class="about-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D62828" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
+                            </svg>
+                        </div>
+                        <h3>Indo-Burma Biodiversity Hotspot</h3>
+                        <p>Trained to prioritize endemic, rare, and high-canopy Lepidoptera across Dehing Patkai rainforest, Kaziranga floodplains, and the Barail hill ranges.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="gamusa-card-trim"></div>
+                        <div class="about-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C59B27" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
                         <h3>MobileNetV2 Transfer Learning</h3>
-                        <p>Leverages a lightweight convolutional neural network pre-trained on ImageNet and fine-tuned for high-accuracy species feature extraction.</p>
+                        <p>Fine-tuned across 125 distinct species classes with specialized convolutional filters that detect cryptic ventral bands, ocelli, and subtle wing markings.</p>
                     </div>
 
                     <div class="about-card">
-                        <div class="about-icon">📐</div>
-                        <h3>224×224 RGB Tensor Normalization</h3>
-                        <p>Input images are automatically rescaled and mapped to a normalized floating-point range <code>[-1.0, 1.0]</code> across 3 RGB color channels.</p>
-                    </div>
-
-                    <div class="about-card">
-                        <div class="about-icon">⚡</div>
-                        <h3>Asynchronous Inference Engine</h3>
-                        <p>Operates on an ONNX Runtime Java engine with a fallback multi-spectral color evaluator to ensure instant execution across all operating environments.</p>
+                        <div class="gamusa-card-trim"></div>
+                        <div class="about-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1B4D3E" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>Offline-First Java Architecture</h3>
+                        <p>Runs entirely offline on an embedded JVM HTTP server paired with a local Python AI bridge. Zero telemetry, zero cloud fees, and ready for field laptops.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Cultural Footer -->
     <footer class="footer-bar">
+        <div class="gamusa-border-top"></div>
         <div class="container footer-container">
             <div class="footer-brand">
-                <span class="logo-text">Butterfly<span class="logo-accent">AI</span></span>
-                <span class="footer-copy">© 2026 Leeds Butterfly Species Classifier • Java Edition</span>
+                <div class="footer-logo-row">
+                    <span class="logo-text">Butterfly<span class="logo-accent">AI</span></span>
+                    <span class="footer-assamese-tag">অসমৰ প্ৰকৃতি সংৰক্ষণ প্ৰকল্প</span>
+                </div>
+                <span class="footer-copy">Dedicated to Documenting and Preserving the Rare Lepidoptera of Assam and Northeast India</span>
             </div>
             <div class="footer-meta">
-                <span>MobileNetV2 Engine</span>
+                <span>125 Species Classes</span>
                 <span>•</span>
-                <span>ONNX Runtime 1.17</span>
+                <span>MobileNetV2 Deep Learning</span>
+                <span>•</span>
+                <span>Java Embedded Server</span>
             </div>
         </div>
     </footer>

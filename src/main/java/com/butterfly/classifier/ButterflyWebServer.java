@@ -166,6 +166,9 @@ public class ButterflyWebServer {
             String path = null;
             if (query != null && query.contains("path=")) {
                 path = query.split("path=")[1];
+                try {
+                    path = java.net.URLDecoder.decode(path, StandardCharsets.UTF_8);
+                } catch (Exception ignored) {}
             }
 
             if (path == null || path.trim().isEmpty()) {

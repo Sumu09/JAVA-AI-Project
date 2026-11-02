@@ -1,10 +1,13 @@
 /**
- * ButterflyAI — Senior UX Frontend Logic
+ * ButterflyAI — Assam Cultural & Ecological UX Logic
+ * Celebrating Rare Lepidoptera of Assam and Northeast India
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     let selectedFile = null;
-    let speciesData = [];
+    let allSpeciesData = [];
+    let currentFamilyFilter = 'ALL';
+    let searchQuery = '';
 
     // --- DOM Elements ---
     const dropZone = document.getElementById('dropZone');
@@ -17,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const replaceFileBtn = document.getElementById('replaceFileBtn');
     const removeFileBtn = document.getElementById('removeFileBtn');
     const identifyBtn = document.getElementById('identifyBtn');
+    const pasteBtn = document.getElementById('pasteBtn');
     const scannerOverlay = document.getElementById('scannerOverlay');
     const scannerStatusText = document.getElementById('scannerStatusText');
 
@@ -47,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const taxSpecies = document.getElementById('taxSpecies');
 
     const speciesCatalogGrid = document.getElementById('speciesCatalogGrid');
+    const catalogSearchInput = document.getElementById('catalogSearchInput');
+    const familyPills = document.querySelectorAll('.family-pill');
 
     // --- 1. Navigation Handling ---
     const navLinks = document.querySelectorAll('.nav-link');
@@ -92,8 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 2. File Upload & Drag-and-Drop ---
-    uploadPrompt.addEventListener('click', () => fileInput.click());
+    // --- 2. File Upload, Drag-and-Drop & Clipboard Paste ---
+    uploadPrompt.addEventListener('click', (e) => {
+        if (e.target.closest('#pasteBtn')) return;
+        fileInput.click();
+    });
     replaceFileBtn.addEventListener('click', () => fileInput.click());
 
     fileInput.addEventListener('change', (e) => {
@@ -127,14 +136,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
     removeFileBtn.addEventListener('click', clearSelectedFile);
 
+    // Clipboard Paste Button Click Handler
+    if (pasteBtn) {
+        pasteBtn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            try {
+                if (navigator.clipboard && navigator.clipboard.read) {
+                    const clipboardItems = await navigator.clipboard.read();
+                    let foundImage = false;
+                    for (const item of clipboardItems) {
+                        for (const type of item.types) {
+                            if (type.startsWith('image/')) {
+                                const blob = await item.getType(type);
+                                const file = new File([blob], `pasted_specimen_${Date.now()}.png`, { type });
+                                handleFileSelect(file);
+                                foundImage = true;
+                                break;
+                            }
+                        }
+                        if (foundImage) break;
+                    }
+                    if (!foundImage) {
+                        alert("No image data found in clipboard. Copy an image to your clipboard first, or press Ctrl+V / Cmd+V!");
+                    }
+                } else {
+                    alert("Press Ctrl+V (or Cmd+V on Mac) to paste an image directly from your clipboard!");
+                }
+            } catch (err) {
+                alert("Please press Ctrl+V or Cmd+V to paste your copied butterfly image.");
+            }
+        });
+    }
+
+    // Global Window Paste Event Listener
+    window.addEventListener('paste', (e) => {
+        const clipboardData = e.clipboardData;
+        if (!clipboardData) return;
+
+        // Check files in clipboard
+        if (clipboardData.files && clipboardData.files.length > 0) {
+            for (let i = 0; i < clipboardData.files.length; i++) {
+                const file = clipboardData.files[i];
+                if (file.type.startsWith('image/')) {
+                    switchSection('identify');
+                    handleFileSelect(file);
+                    return;
+                }
+            }
+        }
+
+        // Check items in clipboard
+        if (clipboardData.items && clipboardData.items.length > 0) {
+            for (let i = 0; i < clipboardData.items.length; i++) {
+                const item = clipboardData.items[i];
+                if (item.kind === 'file' && item.type.startsWith('image/')) {
+                    const file = item.getAsFile();
+                    if (file) {
+                        switchSection('identify');
+                        handleFileSelect(file);
+                        return;
+                    }
+                }
+            }
+        }
+    });
+
     function handleFileSelect(file) {
         if (!file.type.match('image.*')) {
-            showError("Invalid File Format", "Please select a valid image file (JPG, PNG, or WEBP).");
+            showError("Invalid File Format", "Please select or paste a valid image file (JPG, PNG, or WEBP).");
             return;
         }
 
         selectedFile = file;
-        fileNameText.textContent = file.name;
+        fileNameText.textContent = file.name || "pasted_specimen.jpg";
 
         const reader = new FileReader();
         reader.onload = (e) => {
@@ -164,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showEmptyState();
     }
 
-    // Sample Thumbnail Chips
+    // Sample Thumbnail Chips for Assam Species
     document.querySelectorAll('.sample-chip-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const path = btn.dataset.img;
@@ -176,13 +250,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function fetchSampleImage(path, name) {
         const sampleUrl = `/api/sample?path=${encodeURIComponent(path)}`;
         fetch(sampleUrl)
-            .then(res => res.blob())
+            .then(res => {
+                if (!res.ok) throw new Error("Could not load sample");
+                return res.blob();
+            })
             .then(blob => {
-                const file = new File([blob], `${name.toLowerCase().replace(/\s+/g, '_')}.png`, { type: 'image/png' });
+                const ext = path.toLowerCase().endsWith('.jpg') ? 'jpg' : 'png';
+                const file = new File([blob], `${name.toLowerCase().replace(/[^a-z0-9]+/g, '_')}.${ext}`, { type: `image/${ext}` });
                 handleFileSelect(file);
             })
             .catch(() => {
-                showError("Sample Load Failed", "Could not load sample butterfly image.");
+                showError("Sample Load Failed", "Could not load sample field photograph from the dataset.");
             });
     }
 
@@ -194,21 +272,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         scannerOverlay.classList.remove('hidden');
         
-        scannerStatusText.textContent = "Analyzing image...";
+        scannerStatusText.textContent = "Analyzing wing patterns...";
         setTimeout(() => {
-            scannerStatusText.textContent = "Detecting visual features...";
+            scannerStatusText.textContent = "Extracting ventral & dorsal features...";
         }, 350);
         setTimeout(() => {
-            scannerStatusText.textContent = "Identifying species...";
+            scannerStatusText.textContent = "Matching Assam Lepidoptera taxonomy...";
         }, 700);
 
         const formData = new FormData();
-        formData.append("image", selectedFile, selectedFile.name);
+        formData.append("image", selectedFile, selectedFile.name || "specimen.jpg");
 
         fetch('/api/classify', {
             method: 'POST',
             headers: {
-                'X-File-Name': selectedFile.name
+                'X-File-Name': selectedFile.name || "specimen.jpg"
             },
             body: formData
         })
@@ -243,8 +321,8 @@ document.addEventListener('DOMContentLoaded', () => {
         resCommonName.textContent = primary.commonName;
         resSciName.textContent = primary.scientificName;
         resFamily.textContent = primary.family || 'Nymphalidae';
-        resHabitat.textContent = primary.habitat || 'Forests & Meadows';
-        resDescription.textContent = primary.description || 'Butterfly species identified by mobile vision tensor model.';
+        resHabitat.textContent = primary.habitat || 'Tropical rainforests & hill tracts of Assam';
+        resDescription.textContent = primary.description || 'Rare Lepidoptera species identified by MobileNetV2 neural vision pipeline.';
 
         animateConfidenceCount(primary.confidence);
 
@@ -253,8 +331,8 @@ document.addEventListener('DOMContentLoaded', () => {
         taxClass.textContent = primary.className || 'Insecta';
         taxOrder.textContent = primary.order || 'Lepidoptera';
         taxFamily.textContent = primary.family || 'Nymphalidae';
-        taxGenus.textContent = primary.genus || 'Danaus';
-        taxSpecies.textContent = primary.speciesName || 'D. plexippus';
+        taxGenus.textContent = primary.genus || primary.scientificName.split(' ')[0] || 'Euthalia';
+        taxSpecies.textContent = primary.speciesName || primary.scientificName || 'E. zubeengargi';
 
         predictionsList.innerHTML = '';
         if (data.predictions) {
@@ -280,7 +358,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function animateConfidenceCount(targetConfidence) {
-        let current = 0;
         const duration = 800;
         const startTime = performance.now();
 
@@ -290,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const easeProgress = 1 - Math.pow(1 - progress, 3);
-            current = easeProgress * targetConfidence;
+            const current = easeProgress * targetConfidence;
 
             resConfidenceText.textContent = `${current.toFixed(1)}%`;
             resConfidenceBar.style.width = `${current.toFixed(1)}%`;
@@ -306,32 +383,80 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(updateCount);
     }
 
-    // --- 5. Species Catalog ---
+    // --- 5. Species Catalog Loading & Filtering (Assam & NE Fauna) ---
     function loadSpeciesCatalog() {
         fetch('/api/species')
             .then(res => res.json())
             .then(data => {
-                speciesData = data;
-                renderSpeciesCatalog(data);
+                // Filter out baseline North American species (IDs 001 through 010)
+                // Keep only Assam and Northeast India regional species (IDs 011 through 125)
+                allSpeciesData = data.filter(sp => {
+                    const idNum = parseInt(sp.id, 10);
+                    return idNum > 10;
+                });
+                applyCatalogFilters();
             })
             .catch(err => {
                 console.error("Error fetching species catalog:", err);
             });
     }
 
+    function applyCatalogFilters() {
+        let filtered = allSpeciesData;
+
+        // Family filter
+        if (currentFamilyFilter !== 'ALL') {
+            filtered = filtered.filter(sp => (sp.family || '').toUpperCase() === currentFamilyFilter);
+        }
+
+        // Search query filter
+        if (searchQuery.trim()) {
+            const q = searchQuery.toLowerCase().trim();
+            filtered = filtered.filter(sp => 
+                (sp.commonName || '').toLowerCase().includes(q) ||
+                (sp.scientificName || '').toLowerCase().includes(q) ||
+                (sp.family || '').toLowerCase().includes(q) ||
+                (sp.habitat || '').toLowerCase().includes(q) ||
+                (sp.description || '').toLowerCase().includes(q)
+            );
+        }
+
+        renderSpeciesCatalog(filtered);
+    }
+
     function renderSpeciesCatalog(items) {
         speciesCatalogGrid.innerHTML = '';
+
+        if (items.length === 0) {
+            speciesCatalogGrid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--charcoal-600);">
+                    <p style="font-size: 1.1rem; font-weight: 700;">No species found matching your search.</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Try another keyword or select "All Species".</p>
+                </div>
+            `;
+            return;
+        }
+
         items.forEach(sp => {
             const card = document.createElement('div');
             card.className = 'species-card';
+            
+            const famClass = (sp.family || 'nymphalidae').toLowerCase();
+            const sampleImgPath = sp.sampleImagePath || `dataset/train/${sp.id}_${sp.scientificName.replace(/\s+/g, '_')}/${sp.id}0001.jpg`;
+
             card.innerHTML = `
-                <img src="/api/sample?path=${encodeURIComponent(sp.sampleImagePath)}" alt="${sp.commonName}" class="species-card-img">
+                <div class="species-card-img-wrap">
+                    <img src="/api/sample?path=${encodeURIComponent(sampleImgPath)}" 
+                         alt="${sp.commonName}" 
+                         class="species-card-img"
+                         onerror="this.onerror=null; this.src='/api/sample?path=dataset/train/081_Euthalia_zubeengargi/0810001.jpg';">
+                </div>
                 <div class="species-card-body">
-                    <span class="species-card-family">${sp.family}</span>
+                    <span class="species-card-family ${famClass}">${sp.family}</span>
                     <h3 class="species-card-name">${sp.commonName}</h3>
                     <div class="species-card-sci">${sp.scientificName}</div>
-                    <p class="species-card-desc">${sp.description}</p>
-                    <button type="button" class="btn-test-sample" data-img="${sp.sampleImagePath}" data-name="${sp.commonName}">
+                    <p class="species-card-desc">${sp.description || sp.habitat || 'Rare butterfly species of Assam and Northeast India.'}</p>
+                    <button type="button" class="btn-test-sample" data-img="${sampleImgPath}" data-name="${sp.commonName}">
                         Test Sample Image →
                     </button>
                 </div>
@@ -346,6 +471,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 switchSection('identify');
                 fetchSampleImage(imgPath, name);
             });
+        });
+    }
+
+    // Family filter chip event listeners
+    familyPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            familyPills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+            currentFamilyFilter = pill.dataset.family;
+            applyCatalogFilters();
+        });
+    });
+
+    // Real-time search event listener
+    if (catalogSearchInput) {
+        catalogSearchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            applyCatalogFilters();
         });
     }
 
@@ -369,5 +512,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     errorDismissBtn.addEventListener('click', showEmptyState);
 
+    // Initial catalog load
     loadSpeciesCatalog();
 });
