@@ -3,8 +3,9 @@ package com.butterfly.classifier;
 import java.util.HashMap;
 import java.util.Map;
 
-// NOTE: Rich scientific metadata part and classification details for all 80 supported butterfly species. More will be added, 
-// TODO: rare moths, beetles of assam
+/**
+ * Rich scientific metadata and classification details for all supported species.
+ */
 public class SpeciesInfo {
 
     public static class Details {
@@ -201,7 +202,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "images/0180001.png"
+            "dataset/train/018_Badamia_exclamationis/0180001.jpg"
         ));
 
         METADATA.put(Species.SPECIES_019, new Details(
@@ -624,7 +625,7 @@ public class SpeciesInfo {
             "Tropical and subtropical forest edges, grasslands, and flowering canopies",
             "Indo-Malayan, Oriental, and South Asian bioregions",
             "Distinctive butterfly species belonging to the Hesperiidae family. Exhibiting specialized wing markings and high visual acuity.",
-            "images/0650001.png"
+            "dataset/train/065_Pseudocoladenia_dan_fabia/0650001.jpg"
         ));
 
         METADATA.put(Species.SPECIES_066, new Details(
@@ -765,10 +766,406 @@ public class SpeciesInfo {
         METADATA.put(Species.SPECIES_081, new Details(
             "081", "Zubeen's Baron", "Euthalia zubeengargi", "Nymphalidae",
             "Euthalia", "Euthalia zubeengargi",
-            "Tropical and subtropical forest edges, grasslands, and flowering canopies",
-            "Indo-Malayan, Oriental, and South Asian bioregions",
-            "Distinctive butterfly species belonging to the Nymphalidae family. Exhibiting specialized wing markings and high visual acuity.",
+            "Panbari Reserve Forest, lowland wet evergreen rainforest understorey, Golaghat / Kaziranga landscape",
+            "Endemic to Assam, Northeast India (Indo-Burma biodiversity hotspot)",
+            "Discovered and described in 2024 from the Panbari Reserve Forest in Assam. Named in honor of cultural icon Zubeen Garg. Cryptic understorey dweller with rapid flight and distinct dorsal-ventral pattern.",
             "dataset/train/081_Euthalia_zubeengargi/0810001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_082, new Details(
+            "082", "Yellow-crested Spangle", "Papilio elephenor", "Papilionidae",
+            "Papilio", "Papilio elephenor",
+            "Primary tropical rainforests, foothills, and damp river banks of Assam",
+            "Endemic to Northeast India (Assam, Meghalaya) and adjacent Myanmar",
+            "Extremely rare swallowtail featuring prominent yellow-crested scaling on dark forewings and spatulate hindwing tails.",
+            "dataset/train/082_Papilio_elephenor/0820001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_083, new Details(
+            "083", "Great Blue Mime", "Papilio paradoxa", "Papilionidae",
+            "Papilio", "Papilio paradoxa",
+            "Dense evergreen rainforest canopies and wet lowland forest corridors",
+            "Assam, Northeast India, Sundaland, and Indo-China",
+            "Magnificent mimic of Euploea crows, displaying deep iridescent blue gloss across its broad wings.",
+            "dataset/train/083_Papilio_paradoxa/0830001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_084, new Details(
+            "084", "Tailed Redbreast", "Papilio bootes", "Papilionidae",
+            "Papilio", "Papilio bootes",
+            "Subtropical montane forests, moist stream beds, and bamboo thickets",
+            "Eastern Himalayas, Assam, Nagaland, and northern Myanmar",
+            "Distinctive swallowtail with bright red basal patches on ventral surfaces and spatulate tails.",
+            "dataset/train/084_Papilio_bootes/0840001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_085, new Details(
+            "085", "Blue-striped Mime", "Papilio slateri", "Papilionidae",
+            "Papilio", "Papilio slateri",
+            "Dense evergreen forests and forest paths, mimics Danaine crows",
+            "Assam, Meghalaya, Northeast India to Vietnam and Sundaland",
+            "Remarkable mimic of Euploea radamanthus featuring crisp blue-white radial stripes on velvety black wings.",
+            "dataset/train/085_Papilio_slateri/0850001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_086, new Details(
+            "086", "White Dragontail", "Lamproptera curius", "Papilionidae",
+            "Lamproptera", "Lamproptera curius",
+            "Fast-flowing rocky streams and clearings in humid tropical rainforests",
+            "Assam, Arunachal Pradesh, Northeast India, Southeast Asia",
+            "Peculiar miniature swallowtail with transparent glass-like wing windows and elongated dragonfly-like tails.",
+            "dataset/train/086_Lamproptera_curius/0860001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_087, new Details(
+            "087", "Green Dragontail", "Lamproptera meges", "Papilionidae",
+            "Lamproptera", "Lamproptera meges",
+            "Sunlit riparian corridors and gravel shores of forest streams",
+            "Northeast India (Assam, Cachar), Myanmar, Malaysia, Indonesia",
+            "Brilliant emerald-banded dragontail adapted for high-speed hovering and rapid darting over forest rapids.",
+            "dataset/train/087_Lamproptera_meges/0870001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_088, new Details(
+            "088", "Yellow Gorgon", "Meandrusa payeni", "Papilionidae",
+            "Meandrusa", "Meandrusa payeni",
+            "High sub-Himalayan forest canopies, ridge tops, and sun-warmed peaks",
+            "Assam, Sikkim, Arunachal Pradesh, Southeast Asia",
+            "Striking sickle-winged swallowtail with bright saffron-yellow ground color and jagged wing outlines.",
+            "dataset/train/088_Meandrusa_payeni/0880001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_089, new Details(
+            "089", "Brown Gorgon", "Meandrusa lachinus", "Papilionidae",
+            "Meandrusa", "Meandrusa lachinus",
+            "Dense oak-laurel forests and cloud forest ridges",
+            "Eastern Himalayas, Assam hill tracts, Myanmar",
+            "Cryptic brown swallowtail mimicking dried leaves when at rest in deep montane forest canopies.",
+            "dataset/train/089_Meandrusa_lachinus/0890001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_090, new Details(
+            "090", "Black Windmill", "Byasa crassipes", "Papilionidae",
+            "Byasa", "Byasa crassipes",
+            "Moist montane forests and steep wooded valleys",
+            "Assam, Manipur, Nagaland, northern Myanmar",
+            "Heavy-bodied black windmill swallowtail with crimson body markings and spatulate tails.",
+            "dataset/train/090_Byasa_crassipes/0900001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_091, new Details(
+            "091", "Nevill's Windmill", "Byasa nevilli", "Papilionidae",
+            "Byasa", "Byasa nevilli",
+            "Deep riverine gorges, primary evergreen forests",
+            "Assam, Arunachal Pradesh, SW China, Myanmar",
+            "Rare windmill species documented along isolated forest river corridors in Upper Assam.",
+            "dataset/train/091_Byasa_nevilli/0910001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_092, new Details(
+            "092", "De Nicéville's Windmill", "Byasa polla", "Papilionidae",
+            "Byasa", "Byasa polla",
+            "Subtropical forest tracts and flowering ravines",
+            "Assam, Nagaland, Manipur, Myanmar",
+            "Rare aristolochia-feeding windmill with bright white submarginal spots on velvety wings.",
+            "dataset/train/092_Byasa_polla/0920001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_093, new Details(
+            "093", "Fourbar Swallowtail", "Graphium agetes", "Papilionidae",
+            "Graphium", "Graphium agetes",
+            "Sandy riverbeds, damp forest clearings, and riparian margins",
+            "Assam, Sikkim, Northeast India, Indo-China",
+            "Elongated swordtail with pale greenish-white wings traversed by four distinct dark transverse bars.",
+            "dataset/train/093_Graphium_agetes/0930001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_094, new Details(
+            "094", "Chain Swordtail", "Graphium aristeus", "Papilionidae",
+            "Graphium", "Graphium aristeus",
+            "Deciduous to semi-evergreen forest margins and river banks",
+            "Assam, Western Ghats, Indo-Malayan realm to Australasia",
+            "Fast-flying swordtail decorated with chained rows of dark spots and needle-sharp hindwing tails.",
+            "dataset/train/094_Graphium_aristeus/0940001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_095, new Details(
+            "095", "Lesser Zebra", "Graphium macareus", "Papilionidae",
+            "Graphium", "Graphium macareus",
+            "Lowland evergreen and semi-evergreen forests, damp patches on paths",
+            "Assam, Sikkim, Southeast Asia",
+            "Zebra-patterned swallowtail mimicking milkweed butterflies while mud-puddling on wet sand.",
+            "dataset/train/095_Graphium_macareus/0950001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_096, new Details(
+            "096", "Great Zebra", "Graphium xenocles", "Papilionidae",
+            "Graphium", "Graphium xenocles",
+            "Subtropical forest riverbeds, mud-puddling sites in sunny clearings",
+            "Assam, Eastern Himalayas, Myanmar, Thailand",
+            "Large, striking black and cream-striped zebra swallowtail of sub-Himalayan forest streams.",
+            "dataset/train/096_Graphium_xenocles/0960001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_097, new Details(
+            "097", "Common Clubtail", "Losaria doubledayi", "Papilionidae",
+            "Losaria", "Losaria doubledayi",
+            "Humid lowland rainforests, forest understorey, and stream courses",
+            "Assam, Northeast India, Myanmar, Malay Peninsula",
+            "Clubtail swallowtail displaying crimson thoracic patches and prominent spatulate wing clubs.",
+            "dataset/train/097_Losaria_doubledayi/0970001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_098, new Details(
+            "098", "Kaiser-i-Hind", "Teinopalpus imperialis", "Papilionidae",
+            "Teinopalpus", "Teinopalpus imperialis",
+            "High montane broadleaf canopy, cloud forest ridges above 2,000 meters",
+            "Eastern Himalayas, Assam hill ranges, Arunachal Pradesh, Vietnam",
+            "The legendary Kaiser-i-Hind, one of the world's most revered swallowtails with brilliant iridescent green scales and double tails.",
+            "dataset/train/098_Teinopalpus_imperialis/0980001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_099, new Details(
+            "099", "Peal's Palmfly", "Elymnias peali", "Nymphalidae",
+            "Elymnias", "Elymnias peali",
+            "Deep shade of bamboo brakes, riverine evergreen forests of Upper Assam",
+            "Extremely rare endemic to Assam (Sibsagar, Margherita) and Nagaland",
+            "One of the rarest butterflies in the world, discovered in Margherita, Assam by S.E. Peal. Highly shade-loving.",
+            "dataset/train/099_Elymnias_peali/0990001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_100, new Details(
+            "100", "Blue Baron", "Euthalia telchinia", "Nymphalidae",
+            "Euthalia", "Euthalia telchinia",
+            "Wet evergreen forest undergrowth, decaying fruit along shaded trails",
+            "Assam, Sikkim, Meghalaya, Myanmar",
+            "Magnificent forest nymphalid where the male possesses an intense electric cobalt-blue border on deep brown wings.",
+            "dataset/train/100_Euthalia_telchinia/1000001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_101, new Details(
+            "101", "Jewelled Nawab", "Charaxes delphis", "Nymphalidae",
+            "Charaxes", "Charaxes delphis",
+            "Dense tropical rainforest canopy, sap oozing trees and ridge tops",
+            "Assam, Meghalaya, Southeast Asia to Borneo and Sumatra",
+            "The Jewelled Nawab features shimmering mother-of-pearl undersides with delicate crimson and yellow markings.",
+            "dataset/train/101_Charaxes_delphis/1010001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_102, new Details(
+            "102", "Conjoined Lascar", "Pantoporia assamica", "Nymphalidae",
+            "Pantoporia", "Pantoporia assamica",
+            "Shaded stream corridors, primary evergreen forest undergrowth",
+            "Endemic to Assam and neighbouring tracts of Northeast India",
+            "Rare endemic lascar featuring joined orange bands on the forewing, adapted for low gliding flight.",
+            "dataset/train/102_Pantoporia_assamica/1020001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_103, new Details(
+            "103", "Tytler's Lascar", "Pantoporia bieti", "Nymphalidae",
+            "Pantoporia", "Pantoporia bieti",
+            "Montane forest paths and bamboo clearings",
+            "Assam, Nagaland, Manipur, SW China",
+            "High-elevation lascar with crisp black-and-white bands and delicate yellow margins.",
+            "dataset/train/103_Pantoporia_bieti/1030001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_104, new Details(
+            "104", "Wavy Maplet", "Chersonesia rahria", "Nymphalidae",
+            "Chersonesia", "Chersonesia rahria",
+            "Subcanopy of lowland dipterocarp and wet evergreen rainforests of Assam",
+            "Assam, Northeast India, Sundaland",
+            "Exquisite orange maplet with undulating transverse lines resembling delicate contour maps.",
+            "dataset/train/104_Chersonesia_rahria/1040001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_105, new Details(
+            "105", "Blackvein Sergeant", "Athyma ranga", "Nymphalidae",
+            "Athyma", "Athyma ranga",
+            "Damp forest clearings, waterfalls, and sunlit stream rocks",
+            "Assam, Western Ghats, Eastern Himalayas, Indo-China",
+            "Blackvein Sergeant with crisp white longitudinal bands framed by rich velvet black margins.",
+            "dataset/train/105_Athyma_ranga/1050001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_106, new Details(
+            "106", "Unbroken Sergeant", "Athyma pravara", "Nymphalidae",
+            "Athyma", "Athyma pravara",
+            "Evergreen forest trails and forest margins",
+            "Assam, Northeast India, Southeast Asia",
+            "Unbroken Sergeant distinguished by a continuous, unbroken white discal band across both wings.",
+            "dataset/train/106_Athyma_pravara/1060001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_107, new Details(
+            "107", "White-bordered Sergeant", "Athyma punctata", "Nymphalidae",
+            "Athyma", "Athyma punctata",
+            "Primary sub-Himalayan forest trails and wet understory",
+            "Assam, Eastern Himalayas, Myanmar, Southern China",
+            "Rare sergeant characterized by wide white borders and distinct postdiscal white spots.",
+            "dataset/train/107_Athyma_punctata/1070001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_108, new Details(
+            "108", "Blue Nawab", "Polyura schreiber", "Nymphalidae",
+            "Polyura", "Polyura schreiber",
+            "High rainforest canopy and sunlit tree crowns",
+            "Assam, Western Ghats, Indo-Malayan bioregions",
+            "Blue Nawab with a heavy, robust build, turquoise-blue central patch, and powerful, aggressive flight.",
+            "dataset/train/108_Polyura_schreiber/1080001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_109, new Details(
+            "109", "Spotted Royal", "Tajuria maculata", "Lycaenidae",
+            "Tajuria", "Tajuria maculata",
+            "Tree tops with mistletoe (Loranthaceae), subcanopy in dense forests",
+            "Assam, Sikkim, Myanmar, Peninsular Malaysia, Borneo",
+            "Rare spotted lycaenid royal with bold black spots beneath gleaming silver-grey undersides.",
+            "dataset/train/109_Tajuria_maculata/1090001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_110, new Details(
+            "110", "Peacock Royal", "Tajuria cippus", "Lycaenidae",
+            "Tajuria", "Tajuria cippus",
+            "Forest canopy, gardens with mistletoe and flowering trees",
+            "Throughout Assam and South/Southeast Asia",
+            "Peacock Royal displays shimmering peacock-blue uppersides and delicate orange-crowned tails.",
+            "dataset/train/110_Tajuria_cippus/1100001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_111, new Details(
+            "111", "Blue Quaker", "Pithecops fulgens", "Lycaenidae",
+            "Pithecops", "Pithecops fulgens",
+            "Deep shaded understorey in primary evergreen rainforest",
+            "Assam, Meghalaya, Nagaland, Myanmar",
+            "Tiny, elusive lycaenid characterized by brilliant shining blue dorsal scales and spotless pure white ventral surfaces.",
+            "dataset/train/111_Pithecops_fulgens/1110001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_112, new Details(
+            "112", "Moore's Cupid", "Shijimia moorei", "Lycaenidae",
+            "Shijimia", "Shijimia moorei",
+            "Rocky stream beds, damp sandbanks in subtropical forests",
+            "Assam, Eastern Himalayas, China, Japan",
+            "Delicate cupid lycaenid adapted to rocky riparian clearings with complex ventral ocelli.",
+            "dataset/train/112_Shijimia_moorei/1120001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_113, new Details(
+            "113", "Sylhet Oakblue", "Arhopala silhetensis", "Lycaenidae",
+            "Arhopala", "Arhopala silhetensis",
+            "Lowland wet evergreen forests, oak and dipterocarp undergrowth",
+            "Assam (Sylhet historical tract, Cachar), Bangladesh, Myanmar",
+            "Cryptic oakblue named after the historical Sylhet/Cachar tract of Assam, displaying deep purple gloss.",
+            "dataset/train/113_Arhopala_silhetensis/1130001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_114, new Details(
+            "114", "Hewitson's Dull Oakblue", "Arhopala oenea", "Lycaenidae",
+            "Arhopala", "Arhopala oenea",
+            "Shaded evergreen understorey, wet forest ravines",
+            "Assam, Sikkim, Myanmar",
+            "Dull oakblue adapted for deep camouflage amongst fallen leaves, with bronze-tinged dorsal reflection.",
+            "dataset/train/114_Arhopala_oenea/1140001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_115, new Details(
+            "115", "Broad-branded Brilliant", "Simiskina phalena", "Lycaenidae",
+            "Simiskina", "Simiskina phalena",
+            "Dense tropical rainforest undergrowth, shaded ravines",
+            "Assam, Myanmar, Thailand, Malaysia",
+            "Poritiine lycaenid with broad velvety scent brands in males and intense metallic blue-purple reflection.",
+            "dataset/train/115_Simiskina_phalena/1150001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_116, new Details(
+            "116", "Bi-coloured Hedge Blue", "Udara selma", "Lycaenidae",
+            "Udara", "Udara selma",
+            "Subtropical forest paths, damp gravel beside mountain brooks",
+            "Assam, Eastern Himalayas, Southeast Asia",
+            "Bi-coloured Hedge Blue with delicate frosted blue uppersides and fine peppered ventral speckling.",
+            "dataset/train/116_Udara_selma/1160001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_117, new Details(
+            "117", "Common Gem", "Poritia hewitsoni", "Lycaenidae",
+            "Poritia", "Poritia hewitsoni",
+            "Sunlit clearings, forest borders, and secondary evergreen growth",
+            "Assam, Eastern Himalayas, Indo-China",
+            "Brilliant gem lycaenid whose emerald-green or sky-blue dorsal luster flashes when basking.",
+            "dataset/train/117_Poritia_hewitsoni/1170001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_118, new Details(
+            "118", "White Dawnfly", "Capila pieridoides", "Hesperiidae",
+            "Capila", "Capila pieridoides",
+            "Deep evergreen forest undergrowth, crepuscular flights at dawn/dusk",
+            "Assam, Meghalaya, Eastern Himalayas, Indo-China",
+            "Large, striking skipper flying actively at dusk and dawn with broad white-bordered wings.",
+            "dataset/train/118_Capila_pieridoides/1180001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_119, new Details(
+            "119", "Yellow-vein Lancer", "Pyroneura margherita", "Hesperiidae",
+            "Pyroneura", "Pyroneura margherita",
+            "Dense lowland rainforests, bamboo brakes in Upper Assam",
+            "Endemic type locality Margherita (Assam), Arunachal Pradesh",
+            "Discovered at Margherita in Upper Assam, featuring distinctive radiant yellow wing veins.",
+            "dataset/train/119_Pyroneura_margherita/1190001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_120, new Details(
+            "120", "Snowy Angle", "Darpa pteria", "Hesperiidae",
+            "Darpa", "Darpa pteria",
+            "Moist shady forest tracks, resting beneath broad leaves",
+            "Assam, Eastern Himalayas, Southeast Asia",
+            "Snowy Angle skipper with stark snow-white ventral patches providing disruptive shadow camouflage.",
+            "dataset/train/120_Darpa_pteria/1200001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_121, new Details(
+            "121", "Veined Palmer", "Hidari bhawani", "Hesperiidae",
+            "Hidari", "Hidari bhawani",
+            "Lowland riverine forests, marshes, and bamboo groves",
+            "Rare endemic of Assam (Golaghat, Kaziranga), Indo-China",
+            "Veined Palmer skipper documented in the Brahmaputra floodplains, displaying stark pale veins on chocolate ground.",
+            "dataset/train/121_Hidari_bhawani/1210001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_122, new Details(
+            "122", "Chequered Lancer", "Plastingia naga", "Hesperiidae",
+            "Plastingia", "Plastingia naga",
+            "Dense forest clearings, damp leaf litter along streams",
+            "Assam, Nagaland, Southeast Asia to Borneo",
+            "Chequered Lancer adorned with neat golden-yellow chequered spots across dark chocolate wings.",
+            "dataset/train/122_Plastingia_naga/1220001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_123, new Details(
+            "123", "Maculate Lancer", "Salanoemia sala", "Hesperiidae",
+            "Salanoemia", "Salanoemia sala",
+            "Evergreen rainforest fringes, bamboo thickets",
+            "Assam, Southern India, Southeast Asia",
+            "Maculate Lancer with crisp hyaline spots and rapid skipping flight around bamboo fringes.",
+            "dataset/train/123_Salanoemia_sala/1230001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_124, new Details(
+            "124", "Brown Forest Bob", "Scobura woolletti", "Hesperiidae",
+            "Scobura", "Scobura woolletti",
+            "Dark forest understorey, resting on low foliage",
+            "Assam, Northeast India, Myanmar, Borneo",
+            "Forest bob skipper dwelling in the lowest, darkest stratum of the wet evergreen jungle.",
+            "dataset/train/124_Scobura_woolletti/1240001.jpg"
+        ));
+
+        METADATA.put(Species.SPECIES_125, new Details(
+            "125", "Baby Swift", "Polytremis minuta", "Hesperiidae",
+            "Polytremis", "Polytremis minuta",
+            "Grassy forest openings, damp soil along streams",
+            "Assam, Eastern Himalayas, Indo-China",
+            "Miniature swift skipper with pale hyaline markings, completing the regional Assam Lepidoptera survey.",
+            "dataset/train/125_Polytremis_minuta/1250001.jpg"
         ));
     }
 

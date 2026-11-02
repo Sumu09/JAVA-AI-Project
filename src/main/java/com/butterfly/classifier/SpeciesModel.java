@@ -56,30 +56,61 @@ public class SpeciesModel {
             results = predictWithPythonBridge(imageFile);
         }
 
-        // 2. Secondary: Robust feature & dataset matching fallback across all 80 species
+        // 2. Secondary: Robust feature & dataset matching fallback across all 81 species
         if (results == null || results.isEmpty()) {
+            System.err.println("[AI Engine WARNING] Deep learning model unavailable. Falling back to heuristic feature extractor.");
             results = predictFallback(imageFile, image);
         }
 
         return results;
     }
 
+    private File findProjectRoot() {
+        File current = new File(System.getProperty("user.dir")).getAbsoluteFile();
+        if (new File(current, "model").exists() && (new File(current, "scripts").exists() || new File(current, "predict_image.py").exists())) {
+            return current;
+        }
+        if (current.getParentFile() != null) {
+            File parent = current.getParentFile();
+            if (new File(parent, "model").exists() && (new File(parent, "scripts").exists() || new File(parent, "predict_image.py").exists())) {
+                return parent;
+            }
+        }
+        return current;
+    }
+
     private List<PredictionResult> predictWithPythonBridge(File imageFile) {
         try {
-            String pythonExecutable = ".venv/bin/python";
-            if (!new File(pythonExecutable).exists()) {
-                pythonExecutable = "python3";
-            }
+            File projectRoot = findProjectRoot();
 
-            File script = new File("scripts/predict_image.py");
+            // Locate Python executable (prioritize project .venv)
+            File venvPy = new File(projectRoot, ".venv/bin/python");
+            if (!venvPy.exists()) {
+                venvPy = new File(projectRoot, ".venv/Scripts/python.exe");
+            }
+            if (!venvPy.exists()) {
+                venvPy = new File(".venv/bin/python");
+            }
+            String pythonExecutable = venvPy.exists() ? venvPy.getAbsolutePath() : "python3";
+
+            // Locate predict_image.py script
+            File script = new File(projectRoot, "scripts/predict_image.py");
+            if (!script.exists()) {
+                script = new File(projectRoot, "predict_image.py");
+            }
+            if (!script.exists()) {
+                script = new File("scripts/predict_image.py");
+            }
             if (!script.exists()) {
                 script = new File("predict_image.py");
             }
             if (!script.exists()) {
+                System.err.println("[AI Engine Error] Neither scripts/predict_image.py nor predict_image.py was found.");
                 return null;
             }
 
-            ProcessBuilder pb = new ProcessBuilder(pythonExecutable, script.getPath(), imageFile.getAbsolutePath());
+            ProcessBuilder pb = new ProcessBuilder(pythonExecutable, script.getAbsolutePath(), imageFile.getAbsolutePath());
+            pb.directory(projectRoot);
             pb.redirectErrorStream(true);
             Process process = pb.start();
 
@@ -87,17 +118,20 @@ public class SpeciesModel {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), StandardCharsets.UTF_8))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    sb.append(line);
+                    sb.append(line).append("\n");
                 }
             }
             int exitCode = process.waitFor();
             if (exitCode == 0) {
-                return parsePredictionsJson(sb.toString());
-            } else {
-                System.err.println("Python inference error output: " + sb.toString());
+                List<PredictionResult> parsed = parsePredictionsJson(sb.toString());
+                if (parsed != null && !parsed.isEmpty()) {
+                    System.out.println("[AI Engine] MobileNetV2 Deep Learning predictions computed successfully for: " + imageFile.getName());
+                    return parsed;
+                }
             }
+            System.err.println("[AI Engine] Python bridge failed (exit code " + exitCode + "). Output:\n" + sb.toString());
         } catch (Exception e) {
-            System.err.println("Python bridge execution exception: " + e.getMessage());
+            System.err.println("[AI Engine] Python bridge execution exception: " + e.getMessage());
         }
         return null;
     }

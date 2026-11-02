@@ -67,15 +67,16 @@ def main():
 
         predictions_list = []
         for idx in top_indices:
-            label = labels[idx]
-            class_id = label.split("_")[0]
-            conf = float(preds[idx]) * 100.0
-            predictions_list.append({
-                "index": int(idx),
-                "id": class_id,
-                "label": label,
-                "confidence": round(conf, 2)
-            })
+            if idx < len(labels):
+                label = labels[idx]
+                class_id = label.split("_")[0]
+                conf = float(preds[idx]) * 100.0
+                predictions_list.append({
+                    "index": int(idx),
+                    "id": class_id,
+                    "label": label,
+                    "confidence": round(conf, 2)
+                })
 
         output = {
             "success": True,
