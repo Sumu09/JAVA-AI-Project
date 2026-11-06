@@ -4,22 +4,53 @@ target/
 
 # Python virtual environment & cache
 .venv/
+venv/
+env/
+ENV/
 __pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
 
 # IDE and OS files
 .DS_Store
+**/.DS_Store
+*.DS_Store
+Thumbs.db
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Archive and compressed files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
 
 # Large model weights (keep labels.txt)
 model/*.keras
 model/backup/
 images/
 
+# Dataset backups and quarantine holding
+backups/
+dataset_backup/
+dataset/quarantine/
+dataset/_temp_downloads/
+
 # Keep only dataset/train and dataset/test folder structure
 dataset/train/*
 !dataset/train/.gitkeep
 dataset/test/*
 !dataset/test/.gitkeep
-dataset/_temp_downloads/
-.DS_Store
+
+# Logs
+*.log
+
+# Project documentation scratch / personal notes
 Next steps to take for our Final Year Project Jour 407f509216cd80bf871cc650f18c4c52.md

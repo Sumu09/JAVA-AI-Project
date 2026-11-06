@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ButterflyAI — Cross-Species Conflicts Visual Contact Sheets</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f8f9fa; color: #212529; margin: 0; padding: 24px; }
+    header { background: #1b4d3e; color: #fff; padding: 20px 30px; border-radius: 8px; margin-bottom: 24px; }
+    header h1 { margin: 0 0 8px 0; font-size: 24px; }
+    header p { margin: 0; opacity: 0.9; font-size: 14px; }
+    .stats-bar { display: flex; gap: 20px; background: #fff; padding: 15px 20px; border-radius: 8px; margin-bottom: 24px; border: 1px solid #e2e8f0; }
+    .stat-box { flex: 1; text-align: center; }
+    .stat-val { font-size: 22px; font-weight: bold; color: #1b4d3e; }
+    .stat-label { font-size: 12px; text-transform: uppercase; color: #64748b; }
+    .cluster-card { background: #fff; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 20px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .cluster-header { background: #f1f5f9; padding: 12px 20px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #e2e8f0; }
+    .cluster-badge { color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+    .cluster-id { font-weight: bold; font-family: monospace; font-size: 14px; }
+    .cluster-meta { color: #64748b; font-size: 13px; margin-left: auto; }
+    .cluster-body { display: flex; padding: 20px; gap: 24px; }
+    .img-preview { width: 280px; flex-shrink: 0; text-align: center; }
+    .img-preview img { width: 100%; height: 220px; object-fit: contain; background: #000; border-radius: 6px; }
+    .img-caption { font-size: 11px; color: #64748b; margin-top: 6px; word-break: break-all; }
+    .conflicts-pane { flex: 1; }
+    .conflicts-pane h4 { margin: 0 0 12px 0; font-size: 14px; color: #334155; text-transform: uppercase; }
+    .taxa-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; margin-bottom: 16px; }
+    .taxon-card { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px 14px; }
+    .taxon-header { font-size: 14px; color: #0f172a; margin-bottom: 4px; }
+    .taxon-header .cid { background: #e2e8f0; padding: 1px 5px; border-radius: 3px; font-family: monospace; font-size: 11px; margin-right: 4px; }
+    .taxon-meta { font-size: 12px; color: #64748b; margin-bottom: 4px; }
+    .taxon-files { font-size: 11px; color: #475569; }
+    .fam { font-weight: 500; color: #1b4d3e; }
+    .review-controls { background: #fff8e6; border: 1px solid #fed7aa; padding: 12px 16px; border-radius: 6px; display: flex; align-items: center; gap: 12px; }
+    .decision-select { padding: 6px 10px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 13px; }
+    .notes-input { flex: 1; padding: 6px 10px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ButterflyAI — Cross-Species Conflicts Visual Contact Sheets</h1>
+    <p>Human-in-the-Loop Biological Review &bull; 60 Duplicate Hash Clusters &bull; 146 Multi-Labeled Files</p>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat-box"><div class="stat-val">60</div><div class="stat-label">Total Duplicate Clusters</div></div>
+    <div class="stat-box"><div class="stat-val">146</div><div class="stat-label">Total Conflicting Files</div></div>
+    <div class="stat-box"><div class="stat-val">5</div><div class="stat-label">Mega-Clusters (&ge; 3 taxa)</div></div>
+    <div class="stat-box"><div class="stat-val">12</div><div class="stat-label">Congeneric Pairs (Same genus)</div></div>
+    <div class="stat-box"><div class="stat-val">43</div><div class="stat-label">Intergeneric Pairs (Cross-genus)</div></div>
+  </div>
+
+  <div class="clusters-container">
+    
+        <div class="cluster-card" id="CSD-001">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #e63946;">MULTI SPECIES MEGA CLUSTER</span>
+            <span class="cluster-id">CSD-001</span>
+            <span class="cluster-meta">11 Conflicting Species &bull; 11 Total Duplicate Files &bull; Hash: <code>ec3757e316e2...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/090_Byasa_crassipes/0900017.jpg" alt="CSD-001" loading="lazy" />
+              <div class="img-caption">dataset/train/090_Byasa_crassipes/0900017.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#090</span> <strong><em>Byasa crassipes</em></strong></div>
+              <div class="taxon-meta">Black Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#100</span> <strong><em>Euthalia telchinia</em></strong></div>
+              <div class="taxon-meta">Blue Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#103</span> <strong><em>Pantoporia bieti</em></strong></div>
+              <div class="taxon-meta">Tytler's Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#107</span> <strong><em>Athyma punctata</em></strong></div>
+              <div class="taxon-meta">White-bordered Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#111</span> <strong><em>Pithecops fulgens</em></strong></div>
+              <div class="taxon-meta">Blue Quaker &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#115</span> <strong><em>Simiskina phalena</em></strong></div>
+              <div class="taxon-meta">Broad-branded Brilliant &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#116</span> <strong><em>Udara selma</em></strong></div>
+              <div class="taxon-meta">Bi-coloured Hedge Blue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#119</span> <strong><em>Pyroneura margherita</em></strong></div>
+              <div class="taxon-meta">Yellow-vein Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#120</span> <strong><em>Darpa pteria</em></strong></div>
+              <div class="taxon-meta">Snowy Angle &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#122</span> <strong><em>Plastingia naga</em></strong></div>
+              <div class="taxon-meta">Chequered Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#124</span> <strong><em>Scobura woolletti</em></strong></div>
+              <div class="taxon-meta">Brown Forest Bob &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-002">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #e63946;">MULTI SPECIES MEGA CLUSTER</span>
+            <span class="cluster-id">CSD-002</span>
+            <span class="cluster-meta">5 Conflicting Species &bull; 5 Total Duplicate Files &bull; Hash: <code>9b83cd4326f8...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/099_Elymnias_peali/0990017.jpg" alt="CSD-002" loading="lazy" />
+              <div class="img-caption">dataset/train/099_Elymnias_peali/0990017.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#099</span> <strong><em>Elymnias peali</em></strong></div>
+              <div class="taxon-meta">Peal's Palmfly &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#102</span> <strong><em>Pantoporia assamica</em></strong></div>
+              <div class="taxon-meta">Conjoined Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#115</span> <strong><em>Simiskina phalena</em></strong></div>
+              <div class="taxon-meta">Broad-branded Brilliant &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#116</span> <strong><em>Udara selma</em></strong></div>
+              <div class="taxon-meta">Bi-coloured Hedge Blue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-003">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-003</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 4 Total Duplicate Files &bull; Hash: <code>f33986bbf9f0...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/035_Halpe_aucma/0350006.jpg" alt="CSD-003" loading="lazy" />
+              <div class="img-caption">dataset/train/035_Halpe_aucma/0350006.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#035</span> <strong><em>Halpe aucma</em></strong></div>
+              <div class="taxon-meta">Gold-spotted Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#038</span> <strong><em>Halpe zema zema</em></strong></div>
+              <div class="taxon-meta">Zema Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-004">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-004</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 4 Total Duplicate Files &bull; Hash: <code>222470c6a3a3...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/036_Halpe_kusala/0360001.jpg" alt="CSD-004" loading="lazy" />
+              <div class="img-caption">dataset/train/036_Halpe_kusala/0360001.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#036</span> <strong><em>Halpe kusala</em></strong></div>
+              <div class="taxon-meta">Plain Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>2</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#038</span> <strong><em>Halpe zema zema</em></strong></div>
+              <div class="taxon-meta">Zema Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-005">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-005</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 4 Total Duplicate Files &bull; Hash: <code>e0ef5ce668d9...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/036_Halpe_kusala/0360007.jpg" alt="CSD-005" loading="lazy" />
+              <div class="img-caption">dataset/train/036_Halpe_kusala/0360007.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#036</span> <strong><em>Halpe kusala</em></strong></div>
+              <div class="taxon-meta">Plain Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#037</span> <strong><em>Halpe porus porus</em></strong></div>
+              <div class="taxon-meta">Moore's Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-006">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-006</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 4 Total Duplicate Files &bull; Hash: <code>ee1ffadefc99...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/038_Halpe_zema_zema/0380040.jpg" alt="CSD-006" loading="lazy" />
+              <div class="img-caption">dataset/train/038_Halpe_zema_zema/0380040.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#038</span> <strong><em>Halpe zema zema</em></strong></div>
+              <div class="taxon-meta">Zema Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#078</span> <strong><em>Thoressa cerata</em></strong></div>
+              <div class="taxon-meta">Northern Spangle &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>2</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-007">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-007</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 4 Total Duplicate Files &bull; Hash: <code>9a3ff9e578b9...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/055_Ochus_subvittatus_subradiatus/0550015.jpg" alt="CSD-007" loading="lazy" />
+              <div class="img-caption">dataset/train/055_Ochus_subvittatus_subradiatus/0550015.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#055</span> <strong><em>Ochus subvittatus subradiatus</em></strong></div>
+              <div class="taxon-meta">Tiger Hopper &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#059</span> <strong><em>Pithauria stramineipennis</em></strong></div>
+              <div class="taxon-meta">Light Straw Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-008">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #e63946;">MULTI SPECIES MEGA CLUSTER</span>
+            <span class="cluster-id">CSD-008</span>
+            <span class="cluster-meta">4 Conflicting Species &bull; 4 Total Duplicate Files &bull; Hash: <code>5906b80b585f...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/119_Pyroneura_margherita/1190025.jpg" alt="CSD-008" loading="lazy" />
+              <div class="img-caption">dataset/train/119_Pyroneura_margherita/1190025.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#100</span> <strong><em>Euthalia telchinia</em></strong></div>
+              <div class="taxon-meta">Blue Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#119</span> <strong><em>Pyroneura margherita</em></strong></div>
+              <div class="taxon-meta">Yellow-vein Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#124</span> <strong><em>Scobura woolletti</em></strong></div>
+              <div class="taxon-meta">Brown Forest Bob &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-009">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #e63946;">MULTI SPECIES MEGA CLUSTER</span>
+            <span class="cluster-id">CSD-009</span>
+            <span class="cluster-meta">3 Conflicting Species &bull; 3 Total Duplicate Files &bull; Hash: <code>bad15e057e4c...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/093_Graphium_agetes/0930023.jpg" alt="CSD-009" loading="lazy" />
+              <div class="img-caption">dataset/train/093_Graphium_agetes/0930023.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#093</span> <strong><em>Graphium agetes</em></strong></div>
+              <div class="taxon-meta">Fourbar Swallowtail &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#095</span> <strong><em>Graphium macareus</em></strong></div>
+              <div class="taxon-meta">Lesser Zebra &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#096</span> <strong><em>Graphium xenocles</em></strong></div>
+              <div class="taxon-meta">Great Zebra &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-010">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #e63946;">MULTI SPECIES MEGA CLUSTER</span>
+            <span class="cluster-id">CSD-010</span>
+            <span class="cluster-meta">3 Conflicting Species &bull; 3 Total Duplicate Files &bull; Hash: <code>2e090123be42...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/105_Athyma_ranga/1050023.jpg" alt="CSD-010" loading="lazy" />
+              <div class="img-caption">dataset/train/105_Athyma_ranga/1050023.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#105</span> <strong><em>Athyma ranga</em></strong></div>
+              <div class="taxon-meta">Blackvein Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#106</span> <strong><em>Athyma pravara</em></strong></div>
+              <div class="taxon-meta">Unbroken Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#107</span> <strong><em>Athyma punctata</em></strong></div>
+              <div class="taxon-meta">White-bordered Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-011">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-011</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>ea80daac4eb0...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/013_Ancema_blanka_minturna/0130004.jpg" alt="CSD-011" loading="lazy" />
+              <div class="img-caption">dataset/train/013_Ancema_blanka_minturna/0130004.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#013</span> <strong><em>Ancema blanka minturna</em></strong></div>
+              <div class="taxon-meta">Minturn Silverstreak &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#054</span> <strong><em>Notocrypta paralysos asawa</em></strong></div>
+              <div class="taxon-meta">Grass Demon &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-012">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-012</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>999fe7f434dd...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/035_Halpe_aucma/0350005.jpg" alt="CSD-012" loading="lazy" />
+              <div class="img-caption">dataset/train/035_Halpe_aucma/0350005.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#035</span> <strong><em>Halpe aucma</em></strong></div>
+              <div class="taxon-meta">Gold-spotted Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#036</span> <strong><em>Halpe kusala</em></strong></div>
+              <div class="taxon-meta">Plain Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-013">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-013</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>e2bd76e88d29...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/035_Halpe_aucma/0350014.jpg" alt="CSD-013" loading="lazy" />
+              <div class="img-caption">dataset/train/035_Halpe_aucma/0350014.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#035</span> <strong><em>Halpe aucma</em></strong></div>
+              <div class="taxon-meta">Gold-spotted Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#036</span> <strong><em>Halpe kusala</em></strong></div>
+              <div class="taxon-meta">Plain Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-014">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-014</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>d52098f12391...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/045_Lethe_mekara_mekara/0450014.jpeg" alt="CSD-014" loading="lazy" />
+              <div class="img-caption">dataset/train/045_Lethe_mekara_mekara/0450014.jpeg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#044</span> <strong><em>Lethe chandica flanona</em></strong></div>
+              <div class="taxon-meta">Angled Red Forester &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#045</span> <strong><em>Lethe mekara mekara</em></strong></div>
+              <div class="taxon-meta">Common Treebrown &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-015">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-015</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>d2b66f40e341...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/046_Lethe_satyavati/0460019.jpg" alt="CSD-015" loading="lazy" />
+              <div class="img-caption">dataset/train/046_Lethe_satyavati/0460019.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#046</span> <strong><em>Lethe satyavati</em></strong></div>
+              <div class="taxon-meta">Pallid Forester &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#047</span> <strong><em>Lethe vindhya vindhya</em></strong></div>
+              <div class="taxon-meta">Black Forester &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-016">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-016</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>c1209e10487b...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/081_Euthalia_zubeengargi/0810004.jpg" alt="CSD-016" loading="lazy" />
+              <div class="img-caption">dataset/train/081_Euthalia_zubeengargi/0810004.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#081</span> <strong><em>Euthalia zubeengargi</em></strong></div>
+              <div class="taxon-meta">Zubeen's Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#100</span> <strong><em>Euthalia telchinia</em></strong></div>
+              <div class="taxon-meta">Blue Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-017">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-017</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>0113fb9c0b5d...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/081_Euthalia_zubeengargi/0810023.jpg" alt="CSD-017" loading="lazy" />
+              <div class="img-caption">dataset/train/081_Euthalia_zubeengargi/0810023.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#081</span> <strong><em>Euthalia zubeengargi</em></strong></div>
+              <div class="taxon-meta">Zubeen's Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#100</span> <strong><em>Euthalia telchinia</em></strong></div>
+              <div class="taxon-meta">Blue Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-018">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-018</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>9364335d3d89...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/081_Euthalia_zubeengargi/0810093.jpg" alt="CSD-018" loading="lazy" />
+              <div class="img-caption">dataset/train/081_Euthalia_zubeengargi/0810093.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#081</span> <strong><em>Euthalia zubeengargi</em></strong></div>
+              <div class="taxon-meta">Zubeen's Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#100</span> <strong><em>Euthalia telchinia</em></strong></div>
+              <div class="taxon-meta">Blue Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-019">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-019</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>a414c3eee203...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/081_Euthalia_zubeengargi/0810102.jpg" alt="CSD-019" loading="lazy" />
+              <div class="img-caption">dataset/train/081_Euthalia_zubeengargi/0810102.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#081</span> <strong><em>Euthalia zubeengargi</em></strong></div>
+              <div class="taxon-meta">Zubeen's Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#100</span> <strong><em>Euthalia telchinia</em></strong></div>
+              <div class="taxon-meta">Blue Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-020">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-020</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>7c5a9a4b93ec...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/082_Papilio_elephenor/0820006.jpg" alt="CSD-020" loading="lazy" />
+              <div class="img-caption">dataset/train/082_Papilio_elephenor/0820006.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#082</span> <strong><em>Papilio elephenor</em></strong></div>
+              <div class="taxon-meta">Yellow-crested Spangle &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-021">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-021</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>f981f23e04bc...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/082_Papilio_elephenor/0820009.jpg" alt="CSD-021" loading="lazy" />
+              <div class="img-caption">dataset/train/082_Papilio_elephenor/0820009.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#082</span> <strong><em>Papilio elephenor</em></strong></div>
+              <div class="taxon-meta">Yellow-crested Spangle &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#084</span> <strong><em>Papilio bootes</em></strong></div>
+              <div class="taxon-meta">Tailed Redbreast &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-022">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-022</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>a14a3ecdcaf5...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/082_Papilio_elephenor/0820019.jpg" alt="CSD-022" loading="lazy" />
+              <div class="img-caption">dataset/train/082_Papilio_elephenor/0820019.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#082</span> <strong><em>Papilio elephenor</em></strong></div>
+              <div class="taxon-meta">Yellow-crested Spangle &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#083</span> <strong><em>Papilio paradoxa</em></strong></div>
+              <div class="taxon-meta">Great Blue Mime &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-023">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-023</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>189bdb6e4b7a...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/083_Papilio_paradoxa/0830007.jpg" alt="CSD-023" loading="lazy" />
+              <div class="img-caption">dataset/train/083_Papilio_paradoxa/0830007.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#083</span> <strong><em>Papilio paradoxa</em></strong></div>
+              <div class="taxon-meta">Great Blue Mime &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#085</span> <strong><em>Papilio slateri</em></strong></div>
+              <div class="taxon-meta">Blue-striped Mime &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-024">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-024</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>0b1e98ee2a6a...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/083_Papilio_paradoxa/0830010.jpg" alt="CSD-024" loading="lazy" />
+              <div class="img-caption">dataset/train/083_Papilio_paradoxa/0830010.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#083</span> <strong><em>Papilio paradoxa</em></strong></div>
+              <div class="taxon-meta">Great Blue Mime &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#084</span> <strong><em>Papilio bootes</em></strong></div>
+              <div class="taxon-meta">Tailed Redbreast &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-025">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-025</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>6a463d82b347...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/083_Papilio_paradoxa/0830023.jpg" alt="CSD-025" loading="lazy" />
+              <div class="img-caption">dataset/train/083_Papilio_paradoxa/0830023.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#083</span> <strong><em>Papilio paradoxa</em></strong></div>
+              <div class="taxon-meta">Great Blue Mime &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#085</span> <strong><em>Papilio slateri</em></strong></div>
+              <div class="taxon-meta">Blue-striped Mime &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-026">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-026</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>f09f90c6b34f...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/088_Meandrusa_payeni/0880003.jpg" alt="CSD-026" loading="lazy" />
+              <div class="img-caption">dataset/train/088_Meandrusa_payeni/0880003.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#088</span> <strong><em>Meandrusa payeni</em></strong></div>
+              <div class="taxon-meta">Yellow Gorgon &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#089</span> <strong><em>Meandrusa lachinus</em></strong></div>
+              <div class="taxon-meta">Brown Gorgon &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-027">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-027</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>eb414e6ab936...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/088_Meandrusa_payeni/0880012.jpg" alt="CSD-027" loading="lazy" />
+              <div class="img-caption">dataset/train/088_Meandrusa_payeni/0880012.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#088</span> <strong><em>Meandrusa payeni</em></strong></div>
+              <div class="taxon-meta">Yellow Gorgon &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#089</span> <strong><em>Meandrusa lachinus</em></strong></div>
+              <div class="taxon-meta">Brown Gorgon &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-028">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-028</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>3677435d5a34...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/090_Byasa_crassipes/0900003.jpg" alt="CSD-028" loading="lazy" />
+              <div class="img-caption">dataset/train/090_Byasa_crassipes/0900003.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#090</span> <strong><em>Byasa crassipes</em></strong></div>
+              <div class="taxon-meta">Black Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#092</span> <strong><em>Byasa polla</em></strong></div>
+              <div class="taxon-meta">De Nicéville's Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-029">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-029</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>0e30afd4cc6a...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/090_Byasa_crassipes/0900004.jpg" alt="CSD-029" loading="lazy" />
+              <div class="img-caption">dataset/train/090_Byasa_crassipes/0900004.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#090</span> <strong><em>Byasa crassipes</em></strong></div>
+              <div class="taxon-meta">Black Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#092</span> <strong><em>Byasa polla</em></strong></div>
+              <div class="taxon-meta">De Nicéville's Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-030">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-030</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>3a30d958e277...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/090_Byasa_crassipes/0900005.jpg" alt="CSD-030" loading="lazy" />
+              <div class="img-caption">dataset/train/090_Byasa_crassipes/0900005.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#090</span> <strong><em>Byasa crassipes</em></strong></div>
+              <div class="taxon-meta">Black Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#092</span> <strong><em>Byasa polla</em></strong></div>
+              <div class="taxon-meta">De Nicéville's Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-031">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-031</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>40ed5ea0b22a...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/090_Byasa_crassipes/0900015.jpg" alt="CSD-031" loading="lazy" />
+              <div class="img-caption">dataset/train/090_Byasa_crassipes/0900015.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#090</span> <strong><em>Byasa crassipes</em></strong></div>
+              <div class="taxon-meta">Black Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#092</span> <strong><em>Byasa polla</em></strong></div>
+              <div class="taxon-meta">De Nicéville's Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-032">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-032</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>433808102fbd...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/090_Byasa_crassipes/0900022.jpg" alt="CSD-032" loading="lazy" />
+              <div class="img-caption">dataset/train/090_Byasa_crassipes/0900022.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#090</span> <strong><em>Byasa crassipes</em></strong></div>
+              <div class="taxon-meta">Black Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#092</span> <strong><em>Byasa polla</em></strong></div>
+              <div class="taxon-meta">De Nicéville's Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-033">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-033</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>07c29ba4066b...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/090_Byasa_crassipes/0900025.jpg" alt="CSD-033" loading="lazy" />
+              <div class="img-caption">dataset/train/090_Byasa_crassipes/0900025.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#090</span> <strong><em>Byasa crassipes</em></strong></div>
+              <div class="taxon-meta">Black Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#092</span> <strong><em>Byasa polla</em></strong></div>
+              <div class="taxon-meta">De Nicéville's Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-034">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-034</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>f9cf4bd522d5...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/092_Byasa_polla/0920010.jpg" alt="CSD-034" loading="lazy" />
+              <div class="img-caption">dataset/train/092_Byasa_polla/0920010.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#092</span> <strong><em>Byasa polla</em></strong></div>
+              <div class="taxon-meta">De Nicéville's Windmill &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#124</span> <strong><em>Scobura woolletti</em></strong></div>
+              <div class="taxon-meta">Brown Forest Bob &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-035">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-035</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>73ce17f188f6...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/095_Graphium_macareus/0950003.jpg" alt="CSD-035" loading="lazy" />
+              <div class="img-caption">dataset/train/095_Graphium_macareus/0950003.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#095</span> <strong><em>Graphium macareus</em></strong></div>
+              <div class="taxon-meta">Lesser Zebra &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#096</span> <strong><em>Graphium xenocles</em></strong></div>
+              <div class="taxon-meta">Great Zebra &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-036">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-036</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>d48ff4aa17fb...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/095_Graphium_macareus/0950012.jpg" alt="CSD-036" loading="lazy" />
+              <div class="img-caption">dataset/train/095_Graphium_macareus/0950012.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#095</span> <strong><em>Graphium macareus</em></strong></div>
+              <div class="taxon-meta">Lesser Zebra &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#096</span> <strong><em>Graphium xenocles</em></strong></div>
+              <div class="taxon-meta">Great Zebra &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-037">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-037</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>5f5aaf9e4139...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/095_Graphium_macareus/0950016.jpg" alt="CSD-037" loading="lazy" />
+              <div class="img-caption">dataset/train/095_Graphium_macareus/0950016.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#095</span> <strong><em>Graphium macareus</em></strong></div>
+              <div class="taxon-meta">Lesser Zebra &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#096</span> <strong><em>Graphium xenocles</em></strong></div>
+              <div class="taxon-meta">Great Zebra &bull; <span class="fam">Papilionidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-038">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-038</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>3a6088c02241...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/100_Euthalia_telchinia/1000006.jpg" alt="CSD-038" loading="lazy" />
+              <div class="img-caption">dataset/train/100_Euthalia_telchinia/1000006.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#081</span> <strong><em>Euthalia zubeengargi</em></strong></div>
+              <div class="taxon-meta">Zubeen's Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#100</span> <strong><em>Euthalia telchinia</em></strong></div>
+              <div class="taxon-meta">Blue Baron &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-039">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-039</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>01af609606f2...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/102_Pantoporia_assamica/1020006.jpg" alt="CSD-039" loading="lazy" />
+              <div class="img-caption">dataset/train/102_Pantoporia_assamica/1020006.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#102</span> <strong><em>Pantoporia assamica</em></strong></div>
+              <div class="taxon-meta">Conjoined Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#116</span> <strong><em>Udara selma</em></strong></div>
+              <div class="taxon-meta">Bi-coloured Hedge Blue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-040">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-040</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>24f7a01d71d4...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/102_Pantoporia_assamica/1020016.jpg" alt="CSD-040" loading="lazy" />
+              <div class="img-caption">dataset/train/102_Pantoporia_assamica/1020016.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#102</span> <strong><em>Pantoporia assamica</em></strong></div>
+              <div class="taxon-meta">Conjoined Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#103</span> <strong><em>Pantoporia bieti</em></strong></div>
+              <div class="taxon-meta">Tytler's Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-041">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-041</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>f2cae82a05ff...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/102_Pantoporia_assamica/1020019.jpg" alt="CSD-041" loading="lazy" />
+              <div class="img-caption">dataset/train/102_Pantoporia_assamica/1020019.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#102</span> <strong><em>Pantoporia assamica</em></strong></div>
+              <div class="taxon-meta">Conjoined Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#103</span> <strong><em>Pantoporia bieti</em></strong></div>
+              <div class="taxon-meta">Tytler's Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-042">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-042</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>4479d534b1e3...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/102_Pantoporia_assamica/1020021.jpg" alt="CSD-042" loading="lazy" />
+              <div class="img-caption">dataset/train/102_Pantoporia_assamica/1020021.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#102</span> <strong><em>Pantoporia assamica</em></strong></div>
+              <div class="taxon-meta">Conjoined Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#103</span> <strong><em>Pantoporia bieti</em></strong></div>
+              <div class="taxon-meta">Tytler's Lascar &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-043">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-043</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>dbd28ae15208...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/105_Athyma_ranga/1050024.jpg" alt="CSD-043" loading="lazy" />
+              <div class="img-caption">dataset/train/105_Athyma_ranga/1050024.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#105</span> <strong><em>Athyma ranga</em></strong></div>
+              <div class="taxon-meta">Blackvein Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#107</span> <strong><em>Athyma punctata</em></strong></div>
+              <div class="taxon-meta">White-bordered Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-044">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-044</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>d304e8421689...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/107_Athyma_punctata/1070011.jpg" alt="CSD-044" loading="lazy" />
+              <div class="img-caption">dataset/train/107_Athyma_punctata/1070011.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#106</span> <strong><em>Athyma pravara</em></strong></div>
+              <div class="taxon-meta">Unbroken Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#107</span> <strong><em>Athyma punctata</em></strong></div>
+              <div class="taxon-meta">White-bordered Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-045">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-045</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>bb889b8a85ab...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/107_Athyma_punctata/1070024.jpg" alt="CSD-045" loading="lazy" />
+              <div class="img-caption">dataset/train/107_Athyma_punctata/1070024.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#106</span> <strong><em>Athyma pravara</em></strong></div>
+              <div class="taxon-meta">Unbroken Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#107</span> <strong><em>Athyma punctata</em></strong></div>
+              <div class="taxon-meta">White-bordered Sergeant &bull; <span class="fam">Nymphalidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-046">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-046</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>977784e88f98...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/111_Pithecops_fulgens/1110005.jpg" alt="CSD-046" loading="lazy" />
+              <div class="img-caption">dataset/train/111_Pithecops_fulgens/1110005.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#111</span> <strong><em>Pithecops fulgens</em></strong></div>
+              <div class="taxon-meta">Blue Quaker &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#113</span> <strong><em>Arhopala silhetensis</em></strong></div>
+              <div class="taxon-meta">Sylhet Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-047">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-047</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>d6b869dd00f4...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/111_Pithecops_fulgens/1110011.jpg" alt="CSD-047" loading="lazy" />
+              <div class="img-caption">dataset/train/111_Pithecops_fulgens/1110011.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#111</span> <strong><em>Pithecops fulgens</em></strong></div>
+              <div class="taxon-meta">Blue Quaker &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#121</span> <strong><em>Hidari bhawani</em></strong></div>
+              <div class="taxon-meta">Veined Palmer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-048">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-048</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>cf0d9e887edc...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/113_Arhopala_silhetensis/1130001.jpg" alt="CSD-048" loading="lazy" />
+              <div class="img-caption">dataset/train/113_Arhopala_silhetensis/1130001.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#113</span> <strong><em>Arhopala silhetensis</em></strong></div>
+              <div class="taxon-meta">Sylhet Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#114</span> <strong><em>Arhopala oenea</em></strong></div>
+              <div class="taxon-meta">Hewitson's Dull Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-049">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-049</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>1dd446b3d1df...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/113_Arhopala_silhetensis/1130015.jpg" alt="CSD-049" loading="lazy" />
+              <div class="img-caption">dataset/train/113_Arhopala_silhetensis/1130015.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#113</span> <strong><em>Arhopala silhetensis</em></strong></div>
+              <div class="taxon-meta">Sylhet Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#114</span> <strong><em>Arhopala oenea</em></strong></div>
+              <div class="taxon-meta">Hewitson's Dull Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-050">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-050</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>ac46c4a4dce4...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/113_Arhopala_silhetensis/1130019.jpg" alt="CSD-050" loading="lazy" />
+              <div class="img-caption">dataset/train/113_Arhopala_silhetensis/1130019.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#113</span> <strong><em>Arhopala silhetensis</em></strong></div>
+              <div class="taxon-meta">Sylhet Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#114</span> <strong><em>Arhopala oenea</em></strong></div>
+              <div class="taxon-meta">Hewitson's Dull Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-051">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-051</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>1c827ab8f19c...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/113_Arhopala_silhetensis/1130023.jpg" alt="CSD-051" loading="lazy" />
+              <div class="img-caption">dataset/train/113_Arhopala_silhetensis/1130023.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#113</span> <strong><em>Arhopala silhetensis</em></strong></div>
+              <div class="taxon-meta">Sylhet Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#114</span> <strong><em>Arhopala oenea</em></strong></div>
+              <div class="taxon-meta">Hewitson's Dull Oakblue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-052">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-052</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>c297d3667b59...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/119_Pyroneura_margherita/1190016.jpg" alt="CSD-052" loading="lazy" />
+              <div class="img-caption">dataset/train/119_Pyroneura_margherita/1190016.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#119</span> <strong><em>Pyroneura margherita</em></strong></div>
+              <div class="taxon-meta">Yellow-vein Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-053">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-053</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>aea95cf4aa0a...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/119_Pyroneura_margherita/1190023.jpg" alt="CSD-053" loading="lazy" />
+              <div class="img-caption">dataset/train/119_Pyroneura_margherita/1190023.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#119</span> <strong><em>Pyroneura margherita</em></strong></div>
+              <div class="taxon-meta">Yellow-vein Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-054">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-054</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>f1179f7fad38...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/119_Pyroneura_margherita/1190028.jpg" alt="CSD-054" loading="lazy" />
+              <div class="img-caption">dataset/train/119_Pyroneura_margherita/1190028.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#119</span> <strong><em>Pyroneura margherita</em></strong></div>
+              <div class="taxon-meta">Yellow-vein Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-055">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-055</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>6b180fb7c583...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/120_Darpa_pteria/1200005.jpg" alt="CSD-055" loading="lazy" />
+              <div class="img-caption">dataset/train/120_Darpa_pteria/1200005.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#116</span> <strong><em>Udara selma</em></strong></div>
+              <div class="taxon-meta">Bi-coloured Hedge Blue &bull; <span class="fam">Lycaenidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#120</span> <strong><em>Darpa pteria</em></strong></div>
+              <div class="taxon-meta">Snowy Angle &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-056">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-056</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>2839e0b44cd6...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/120_Darpa_pteria/1200006.jpg" alt="CSD-056" loading="lazy" />
+              <div class="img-caption">dataset/train/120_Darpa_pteria/1200006.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#120</span> <strong><em>Darpa pteria</em></strong></div>
+              <div class="taxon-meta">Snowy Angle &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#121</span> <strong><em>Hidari bhawani</em></strong></div>
+              <div class="taxon-meta">Veined Palmer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-057">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-057</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>4af8dee2467f...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/123_Salanoemia_sala/1230002.jpg" alt="CSD-057" loading="lazy" />
+              <div class="img-caption">dataset/train/123_Salanoemia_sala/1230002.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#124</span> <strong><em>Scobura woolletti</em></strong></div>
+              <div class="taxon-meta">Brown Forest Bob &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-058">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-058</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>e5362b2dbab3...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/train/123_Salanoemia_sala/1230020.jpg" alt="CSD-058" loading="lazy" />
+              <div class="img-caption">dataset/train/123_Salanoemia_sala/1230020.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#122</span> <strong><em>Plastingia naga</em></strong></div>
+              <div class="taxon-meta">Chequered Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>1</strong> in train, <strong>0</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-059">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #f4a261;">CONGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-059</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>b9e499ed4075...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/test/035_Halpe_aucma/0350020.jpg" alt="CSD-059" loading="lazy" />
+              <div class="img-caption">dataset/test/035_Halpe_aucma/0350020.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#035</span> <strong><em>Halpe aucma</em></strong></div>
+              <div class="taxon-meta">Gold-spotted Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#036</span> <strong><em>Halpe kusala</em></strong></div>
+              <div class="taxon-meta">Plain Ace &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cluster-card" id="CSD-060">
+          <div class="cluster-header">
+            <span class="cluster-badge" style="background-color: #457b9d;">INTERGENERIC SPECIES PAIR</span>
+            <span class="cluster-id">CSD-060</span>
+            <span class="cluster-meta">2 Conflicting Species &bull; 2 Total Duplicate Files &bull; Hash: <code>77e71fe8c8bd...</code></span>
+          </div>
+          <div class="cluster-body">
+            <div class="img-preview">
+              <img src="../../dataset/test/119_Pyroneura_margherita/1190035.jpg" alt="CSD-060" loading="lazy" />
+              <div class="img-caption">dataset/test/119_Pyroneura_margherita/1190035.jpg (Active specimen)</div>
+            </div>
+            <div class="conflicts-pane">
+              <h4>Conflicting Species Folders:</h4>
+              <div class="taxa-grid">
+                
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#119</span> <strong><em>Pyroneura margherita</em></strong></div>
+              <div class="taxon-meta">Yellow-vein Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+            <div class="taxon-card">
+              <div class="taxon-header"><span class="cid">#123</span> <strong><em>Salanoemia sala</em></strong></div>
+              <div class="taxon-meta">Maculate Lancer &bull; <span class="fam">Hesperiidae</span></div>
+              <div class="taxon-files">Assigned files: <strong>0</strong> in train, <strong>1</strong> in test</div>
+            </div>
+            
+              </div>
+              <div class="review-controls">
+                <label><strong>Review Decision:</strong></label>
+                <select class="decision-select">
+                  <option value="">-- Choose Reviewer Action --</option>
+                  <option value="PURGE_ALL">Purge All (Definite Non-Butterfly Junk / Scraping Artifact)</option>
+                  <option value="REASSIGN">Keep for ONE confirmed species, purge others</option>
+                  <option value="EXPERT">Send to Taxonomist / Specialist</option>
+                </select>
+                <input type="text" placeholder="Correct Species or Reason..." class="notes-input" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+  </div>
+</body>
+</html>

@@ -1,0 +1,3300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ButterflyAI — MobileNetV2 Flagged Images Visual Review</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f8f9fa; color: #212529; margin: 0; padding: 24px; }
+    header { background: #0f382c; color: #fff; padding: 20px 30px; border-radius: 8px; margin-bottom: 24px; }
+    header h1 { margin: 0 0 8px 0; font-size: 24px; }
+    header p { margin: 0; opacity: 0.9; font-size: 14px; }
+    .stats-bar { display: flex; gap: 20px; background: #fff; padding: 15px 20px; border-radius: 8px; margin-bottom: 24px; border: 1px solid #e2e8f0; }
+    .stat-box { flex: 1; text-align: center; }
+    .stat-val { font-size: 22px; font-weight: bold; color: #0f382c; }
+    .stat-label { font-size: 12px; text-transform: uppercase; color: #64748b; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .mb-card { background: #fff; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+    .mb-img-wrap { position: relative; width: 100%; height: 180px; background: #000; }
+    .mb-img-wrap img { width: 100%; height: 100%; object-fit: contain; }
+    .mb-badge { position: absolute; top: 8px; right: 8px; color: #fff; font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 3px; text-transform: uppercase; }
+    .mb-info { padding: 12px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+    .mb-pred { font-size: 13px; color: #0f172a; }
+    .mb-species { font-size: 12px; color: #1b4d3e; font-weight: 500; }
+    .mb-folder { font-size: 11px; color: #64748b; }
+    .mb-path { font-size: 10px; color: #94a3b8; font-family: monospace; word-break: break-all; margin-top: auto; padding-top: 6px; }
+    .mb-action select { width: 100%; margin-top: 6px; padding: 4px; font-size: 12px; border-radius: 4px; border: 1px solid #cbd5e1; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ButterflyAI — MobileNetV2 Flagged Images Visual Review</h1>
+    <p>Visual Screening of 155 Images Flagged with Non-Insect Labels (&ge; 45% confidence)</p>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat-box"><div class="stat-val">155</div><div class="stat-label">Total Flagged Images</div></div>
+    <div class="stat-box"><div class="stat-val" style="color: #2a9d8f;">35</div><div class="stat-label">Specimen Context False Alarms</div></div>
+    <div class="stat-box"><div class="stat-val" style="color: #e76f51;">120</div><div class="stat-label">Probable Non-Butterfly Junk</div></div>
+    <div class="stat-box"><div class="stat-val">77</div><div class="stat-label">Distinct Predicted Labels</div></div>
+  </div>
+
+  <div class="cards-grid">
+    
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/056_Odontoptilum_angulata_angulata/0560010.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (86.8%)</div>
+                <div class="mb-species"><em>Odontoptilum angulata angulata</em></div>
+                <div class="mb-folder"><code>056_Odontoptilum_angulata_angulata</code> (train)</div>
+                <div class="mb-path">0560010.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/056_Odontoptilum_angulata_angulata/0560016.png" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (51.1%)</div>
+                <div class="mb-species"><em>Odontoptilum angulata angulata</em></div>
+                <div class="mb-folder"><code>056_Odontoptilum_angulata_angulata</code> (train)</div>
+                <div class="mb-path">0560016.png &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/081_Euthalia_zubeengargi/0810063.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (84.7%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (train)</div>
+                <div class="mb-path">0810063.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/085_Papilio_slateri/0850002.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (73.1%)</div>
+                <div class="mb-species"><em>Papilio slateri</em></div>
+                <div class="mb-folder"><code>085_Papilio_slateri</code> (train)</div>
+                <div class="mb-path">0850002.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/103_Pantoporia_bieti/1030018.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (58.7%)</div>
+                <div class="mb-species"><em>Pantoporia bieti</em></div>
+                <div class="mb-folder"><code>103_Pantoporia_bieti</code> (train)</div>
+                <div class="mb-path">1030018.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/112_Shijimia_moorei/1120021.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (64.8%)</div>
+                <div class="mb-species"><em>Shijimia moorei</em></div>
+                <div class="mb-folder"><code>112_Shijimia_moorei</code> (train)</div>
+                <div class="mb-path">1120021.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/116_Udara_selma/1160012.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (89.2%)</div>
+                <div class="mb-species"><em>Udara selma</em></div>
+                <div class="mb-folder"><code>116_Udara_selma</code> (train)</div>
+                <div class="mb-path">1160012.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/120_Darpa_pteria/1200006.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (74.2%)</div>
+                <div class="mb-species"><em>Darpa pteria</em></div>
+                <div class="mb-folder"><code>120_Darpa_pteria</code> (train)</div>
+                <div class="mb-path">1200006.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/120_Darpa_pteria/1200021.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (57.7%)</div>
+                <div class="mb-species"><em>Darpa pteria</em></div>
+                <div class="mb-folder"><code>120_Darpa_pteria</code> (train)</div>
+                <div class="mb-path">1200021.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/121_Hidari_bhawani/1210019.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (74.2%)</div>
+                <div class="mb-species"><em>Hidari bhawani</em></div>
+                <div class="mb-folder"><code>121_Hidari_bhawani</code> (train)</div>
+                <div class="mb-path">1210019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/121_Hidari_bhawani/1210021.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (83.5%)</div>
+                <div class="mb-species"><em>Hidari bhawani</em></div>
+                <div class="mb-folder"><code>121_Hidari_bhawani</code> (train)</div>
+                <div class="mb-path">1210021.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/092_Byasa_polla/0920034.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (95.3%)</div>
+                <div class="mb-species"><em>Byasa polla</em></div>
+                <div class="mb-folder"><code>092_Byasa_polla</code> (test)</div>
+                <div class="mb-path">0920034.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/103_Pantoporia_bieti/1030031.jpg" alt="web_site" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>web_site</strong> (68.4%)</div>
+                <div class="mb-species"><em>Pantoporia bieti</em></div>
+                <div class="mb-folder"><code>103_Pantoporia_bieti</code> (test)</div>
+                <div class="mb-path">1030031.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/069_Sebastonyma_dolopia/0690007.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (91.6%)</div>
+                <div class="mb-species"><em>Sebastonyma dolopia</em></div>
+                <div class="mb-folder"><code>069_Sebastonyma_dolopia</code> (train)</div>
+                <div class="mb-path">0690007.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/078_Thoressa_cerata/0780010.png" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (57.5%)</div>
+                <div class="mb-species"><em>Thoressa cerata</em></div>
+                <div class="mb-folder"><code>078_Thoressa_cerata</code> (train)</div>
+                <div class="mb-path">0780010.png &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/quarantine/train/078_Thoressa_cerata/0780030.png" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (57.5%)</div>
+                <div class="mb-species"><em>Thoressa cerata</em></div>
+                <div class="mb-folder"><code>078_Thoressa_cerata</code> (train)</div>
+                <div class="mb-path">0780030.png &bull; Quarantined</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/082_Papilio_elephenor/0820019.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (92.0%)</div>
+                <div class="mb-species"><em>Papilio elephenor</em></div>
+                <div class="mb-folder"><code>082_Papilio_elephenor</code> (train)</div>
+                <div class="mb-path">0820019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/083_Papilio_paradoxa/0830017.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (92.0%)</div>
+                <div class="mb-species"><em>Papilio paradoxa</em></div>
+                <div class="mb-folder"><code>083_Papilio_paradoxa</code> (train)</div>
+                <div class="mb-path">0830017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/097_Losaria_doubledayi/0970022.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (54.8%)</div>
+                <div class="mb-species"><em>Losaria doubledayi</em></div>
+                <div class="mb-folder"><code>097_Losaria_doubledayi</code> (train)</div>
+                <div class="mb-path">0970022.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/097_Losaria_doubledayi/0970026.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (53.4%)</div>
+                <div class="mb-species"><em>Losaria doubledayi</em></div>
+                <div class="mb-folder"><code>097_Losaria_doubledayi</code> (train)</div>
+                <div class="mb-path">0970026.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/114_Arhopala_oenea/1140012.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (89.0%)</div>
+                <div class="mb-species"><em>Arhopala oenea</em></div>
+                <div class="mb-folder"><code>114_Arhopala_oenea</code> (train)</div>
+                <div class="mb-path">1140012.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/054_Notocrypta_paralysos_asawa/0540019.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (72.5%)</div>
+                <div class="mb-species"><em>Notocrypta paralysos asawa</em></div>
+                <div class="mb-folder"><code>054_Notocrypta_paralysos_asawa</code> (test)</div>
+                <div class="mb-path">0540019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/090_Byasa_crassipes/0900032.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (49.0%)</div>
+                <div class="mb-species"><em>Byasa crassipes</em></div>
+                <div class="mb-folder"><code>090_Byasa_crassipes</code> (test)</div>
+                <div class="mb-path">0900032.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/099_Elymnias_peali/0990029.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (69.9%)</div>
+                <div class="mb-species"><em>Elymnias peali</em></div>
+                <div class="mb-folder"><code>099_Elymnias_peali</code> (test)</div>
+                <div class="mb-path">0990029.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/107_Athyma_punctata/1070031.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (58.0%)</div>
+                <div class="mb-species"><em>Athyma punctata</em></div>
+                <div class="mb-folder"><code>107_Athyma_punctata</code> (test)</div>
+                <div class="mb-path">1070031.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/117_Poritia_hewitsoni/1170035.jpg" alt="hair_slide" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hair_slide</strong> (72.9%)</div>
+                <div class="mb-species"><em>Poritia hewitsoni</em></div>
+                <div class="mb-folder"><code>117_Poritia_hewitsoni</code> (test)</div>
+                <div class="mb-path">1170035.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/090_Byasa_crassipes/0900017.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Byasa crassipes</em></div>
+                <div class="mb-folder"><code>090_Byasa_crassipes</code> (train)</div>
+                <div class="mb-path">0900017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/100_Euthalia_telchinia/1000017.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Euthalia telchinia</em></div>
+                <div class="mb-folder"><code>100_Euthalia_telchinia</code> (train)</div>
+                <div class="mb-path">1000017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/103_Pantoporia_bieti/1030010.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Pantoporia bieti</em></div>
+                <div class="mb-folder"><code>103_Pantoporia_bieti</code> (train)</div>
+                <div class="mb-path">1030010.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/107_Athyma_punctata/1070017.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Athyma punctata</em></div>
+                <div class="mb-folder"><code>107_Athyma_punctata</code> (train)</div>
+                <div class="mb-path">1070017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/111_Pithecops_fulgens/1110004.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Pithecops fulgens</em></div>
+                <div class="mb-folder"><code>111_Pithecops_fulgens</code> (train)</div>
+                <div class="mb-path">1110004.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/115_Simiskina_phalena/1150019.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Simiskina phalena</em></div>
+                <div class="mb-folder"><code>115_Simiskina_phalena</code> (train)</div>
+                <div class="mb-path">1150019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/116_Udara_selma/1160017.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Udara selma</em></div>
+                <div class="mb-folder"><code>116_Udara_selma</code> (train)</div>
+                <div class="mb-path">1160017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/119_Pyroneura_margherita/1190027.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Pyroneura margherita</em></div>
+                <div class="mb-folder"><code>119_Pyroneura_margherita</code> (train)</div>
+                <div class="mb-path">1190027.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/120_Darpa_pteria/1200019.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Darpa pteria</em></div>
+                <div class="mb-folder"><code>120_Darpa_pteria</code> (train)</div>
+                <div class="mb-path">1200019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/122_Plastingia_naga/1220019.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Plastingia naga</em></div>
+                <div class="mb-folder"><code>122_Plastingia_naga</code> (train)</div>
+                <div class="mb-path">1220019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/124_Scobura_woolletti/1240027.jpg" alt="electric_guitar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>electric_guitar</strong> (53.3%)</div>
+                <div class="mb-species"><em>Scobura woolletti</em></div>
+                <div class="mb-folder"><code>124_Scobura_woolletti</code> (train)</div>
+                <div class="mb-path">1240027.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/031_Elymnias_nesaea/0310017.jpg" alt="barn_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>barn_spider</strong> (46.6%)</div>
+                <div class="mb-species"><em>Elymnias nesaea</em></div>
+                <div class="mb-folder"><code>031_Elymnias_nesaea</code> (train)</div>
+                <div class="mb-path">0310017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/086_Lamproptera_curius/0860013.jpg" alt="barn_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>barn_spider</strong> (63.0%)</div>
+                <div class="mb-species"><em>Lamproptera curius</em></div>
+                <div class="mb-folder"><code>086_Lamproptera_curius</code> (train)</div>
+                <div class="mb-path">0860013.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/086_Lamproptera_curius/0860021.jpg" alt="barn_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>barn_spider</strong> (78.7%)</div>
+                <div class="mb-species"><em>Lamproptera curius</em></div>
+                <div class="mb-folder"><code>086_Lamproptera_curius</code> (train)</div>
+                <div class="mb-path">0860021.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/086_Lamproptera_curius/0860023.jpg" alt="barn_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>barn_spider</strong> (70.3%)</div>
+                <div class="mb-species"><em>Lamproptera curius</em></div>
+                <div class="mb-folder"><code>086_Lamproptera_curius</code> (train)</div>
+                <div class="mb-path">0860023.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/087_Lamproptera_meges/0870004.jpg" alt="barn_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>barn_spider</strong> (73.7%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (train)</div>
+                <div class="mb-path">0870004.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/087_Lamproptera_meges/0870020.jpg" alt="barn_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>barn_spider</strong> (59.3%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (train)</div>
+                <div class="mb-path">0870020.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/086_Lamproptera_curius/0860031.jpg" alt="barn_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>barn_spider</strong> (63.4%)</div>
+                <div class="mb-species"><em>Lamproptera curius</em></div>
+                <div class="mb-folder"><code>086_Lamproptera_curius</code> (test)</div>
+                <div class="mb-path">0860031.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/125_Polytremis_minuta/1250034.jpg" alt="barn_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>barn_spider</strong> (95.3%)</div>
+                <div class="mb-species"><em>Polytremis minuta</em></div>
+                <div class="mb-folder"><code>125_Polytremis_minuta</code> (test)</div>
+                <div class="mb-path">1250034.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/068_Sarangesa_dasahara_dasahara/0680017.jpg" alt="rule" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>rule</strong> (57.9%)</div>
+                <div class="mb-species"><em>Sarangesa dasahara dasahara</em></div>
+                <div class="mb-folder"><code>068_Sarangesa_dasahara_dasahara</code> (train)</div>
+                <div class="mb-path">0680017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/quarantine/train/068_Sarangesa_dasahara_dasahara/0680020.jpg" alt="rule" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>rule</strong> (57.9%)</div>
+                <div class="mb-species"><em>Sarangesa dasahara dasahara</em></div>
+                <div class="mb-folder"><code>068_Sarangesa_dasahara_dasahara</code> (train)</div>
+                <div class="mb-path">0680020.jpg &bull; Quarantined</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/110_Tajuria_cippus/1100010.jpg" alt="rule" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>rule</strong> (85.7%)</div>
+                <div class="mb-species"><em>Tajuria cippus</em></div>
+                <div class="mb-folder"><code>110_Tajuria_cippus</code> (train)</div>
+                <div class="mb-path">1100010.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/114_Arhopala_oenea/1140011.jpg" alt="rule" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>rule</strong> (51.7%)</div>
+                <div class="mb-species"><em>Arhopala oenea</em></div>
+                <div class="mb-folder"><code>114_Arhopala_oenea</code> (train)</div>
+                <div class="mb-path">1140011.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/121_Hidari_bhawani/1210032.jpg" alt="rule" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>rule</strong> (46.8%)</div>
+                <div class="mb-species"><em>Hidari bhawani</em></div>
+                <div class="mb-folder"><code>121_Hidari_bhawani</code> (test)</div>
+                <div class="mb-path">1210032.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/081_Euthalia_zubeengargi/0810045.jpg" alt="bow_tie" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bow_tie</strong> (96.5%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (train)</div>
+                <div class="mb-path">0810045.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/101_Charaxes_delphis/1010023.jpg" alt="bow_tie" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bow_tie</strong> (72.4%)</div>
+                <div class="mb-species"><em>Charaxes delphis</em></div>
+                <div class="mb-folder"><code>101_Charaxes_delphis</code> (train)</div>
+                <div class="mb-path">1010023.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/102_Pantoporia_assamica/1020022.jpg" alt="bow_tie" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bow_tie</strong> (99.8%)</div>
+                <div class="mb-species"><em>Pantoporia assamica</em></div>
+                <div class="mb-folder"><code>102_Pantoporia_assamica</code> (train)</div>
+                <div class="mb-path">1020022.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/041_Jamides_caerulea/0410024.jpg" alt="bow_tie" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bow_tie</strong> (98.8%)</div>
+                <div class="mb-species"><em>Jamides caerulea</em></div>
+                <div class="mb-folder"><code>041_Jamides_caerulea</code> (test)</div>
+                <div class="mb-path">0410024.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/096_Graphium_xenocles/0960034.jpg" alt="bow_tie" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bow_tie</strong> (95.0%)</div>
+                <div class="mb-species"><em>Graphium xenocles</em></div>
+                <div class="mb-folder"><code>096_Graphium_xenocles</code> (test)</div>
+                <div class="mb-path">0960034.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/quarantine/train/081_Euthalia_zubeengargi/0810101.jpg" alt="jersey" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>jersey</strong> (57.9%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (train)</div>
+                <div class="mb-path">0810101.jpg &bull; Quarantined</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/quarantine/train/081_Euthalia_zubeengargi/0810103.jpg" alt="jersey" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>jersey</strong> (46.6%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (train)</div>
+                <div class="mb-path">0810103.jpg &bull; Quarantined</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/106_Athyma_pravara/1060008.jpg" alt="jersey" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>jersey</strong> (90.5%)</div>
+                <div class="mb-species"><em>Athyma pravara</em></div>
+                <div class="mb-folder"><code>106_Athyma_pravara</code> (train)</div>
+                <div class="mb-path">1060008.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/quarantine/test/081_Euthalia_zubeengargi/0810143.jpg" alt="jersey" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>jersey</strong> (58.6%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (test)</div>
+                <div class="mb-path">0810143.jpg &bull; Quarantined</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/087_Lamproptera_meges/0870010.jpg" alt="wolf_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>wolf_spider</strong> (81.6%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (train)</div>
+                <div class="mb-path">0870010.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/087_Lamproptera_meges/0870016.jpg" alt="wolf_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>wolf_spider</strong> (80.7%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (train)</div>
+                <div class="mb-path">0870016.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/087_Lamproptera_meges/0870028.jpg" alt="wolf_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>wolf_spider</strong> (65.2%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (train)</div>
+                <div class="mb-path">0870028.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/087_Lamproptera_meges/0870032.jpg" alt="wolf_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>wolf_spider</strong> (56.0%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (test)</div>
+                <div class="mb-path">0870032.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/102_Pantoporia_assamica/1020007.jpg" alt="envelope" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>envelope</strong> (45.5%)</div>
+                <div class="mb-species"><em>Pantoporia assamica</em></div>
+                <div class="mb-folder"><code>102_Pantoporia_assamica</code> (train)</div>
+                <div class="mb-path">1020007.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/118_Capila_pieridoides/1180012.jpg" alt="envelope" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>envelope</strong> (54.9%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (train)</div>
+                <div class="mb-path">1180012.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/123_Salanoemia_sala/1230002.jpg" alt="envelope" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>envelope</strong> (49.5%)</div>
+                <div class="mb-species"><em>Salanoemia sala</em></div>
+                <div class="mb-folder"><code>123_Salanoemia_sala</code> (train)</div>
+                <div class="mb-path">1230002.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/124_Scobura_woolletti/1240022.jpg" alt="envelope" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>envelope</strong> (49.5%)</div>
+                <div class="mb-species"><em>Scobura woolletti</em></div>
+                <div class="mb-folder"><code>124_Scobura_woolletti</code> (train)</div>
+                <div class="mb-path">1240022.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/104_Chersonesia_rahria/1040023.jpg" alt="flatworm" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>flatworm</strong> (86.5%)</div>
+                <div class="mb-species"><em>Chersonesia rahria</em></div>
+                <div class="mb-folder"><code>104_Chersonesia_rahria</code> (train)</div>
+                <div class="mb-path">1040023.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/106_Athyma_pravara/1060017.jpg" alt="flatworm" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>flatworm</strong> (66.0%)</div>
+                <div class="mb-species"><em>Athyma pravara</em></div>
+                <div class="mb-folder"><code>106_Athyma_pravara</code> (train)</div>
+                <div class="mb-path">1060017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/120_Darpa_pteria/1200028.jpg" alt="flatworm" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>flatworm</strong> (76.1%)</div>
+                <div class="mb-species"><em>Darpa pteria</em></div>
+                <div class="mb-folder"><code>120_Darpa_pteria</code> (train)</div>
+                <div class="mb-path">1200028.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/070_Seseria_sambara_sambara/0700024.jpg" alt="flatworm" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>flatworm</strong> (61.2%)</div>
+                <div class="mb-species"><em>Seseria sambara sambara</em></div>
+                <div class="mb-folder"><code>070_Seseria_sambara_sambara</code> (test)</div>
+                <div class="mb-path">0700024.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/023_Celaenorrhinus_leucocera/0230037.jpg" alt="centipede" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>centipede</strong> (60.8%)</div>
+                <div class="mb-species"><em>Celaenorrhinus leucocera</em></div>
+                <div class="mb-folder"><code>023_Celaenorrhinus_leucocera</code> (train)</div>
+                <div class="mb-path">0230037.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/100_Euthalia_telchinia/1000012.jpg" alt="centipede" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>centipede</strong> (73.1%)</div>
+                <div class="mb-species"><em>Euthalia telchinia</em></div>
+                <div class="mb-folder"><code>100_Euthalia_telchinia</code> (train)</div>
+                <div class="mb-path">1000012.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/028_Choaspes_benjaminii_japonica/0280042.jpg" alt="centipede" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>centipede</strong> (85.7%)</div>
+                <div class="mb-species"><em>Choaspes benjaminii japonica</em></div>
+                <div class="mb-folder"><code>028_Choaspes_benjaminii_japonica</code> (test)</div>
+                <div class="mb-path">0280042.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/002_Heliconius_charitonius_Zebra_Longwing/0020143.png" alt="daisy" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>daisy</strong> (66.8%)</div>
+                <div class="mb-species"><em>Heliconius charitonius</em></div>
+                <div class="mb-folder"><code>002_Heliconius_charitonius_Zebra_Longwing</code> (train)</div>
+                <div class="mb-path">0020143.png &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/093_Graphium_agetes/0930022.jpg" alt="daisy" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>daisy</strong> (48.4%)</div>
+                <div class="mb-species"><em>Graphium agetes</em></div>
+                <div class="mb-folder"><code>093_Graphium_agetes</code> (train)</div>
+                <div class="mb-path">0930022.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/046_Lethe_satyavati/0460019.jpg" alt="hatchet" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hatchet</strong> (68.8%)</div>
+                <div class="mb-species"><em>Lethe satyavati</em></div>
+                <div class="mb-folder"><code>046_Lethe_satyavati</code> (train)</div>
+                <div class="mb-path">0460019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/047_Lethe_vindhya_vindhya/0470008.jpg" alt="hatchet" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hatchet</strong> (68.8%)</div>
+                <div class="mb-species"><em>Lethe vindhya vindhya</em></div>
+                <div class="mb-folder"><code>047_Lethe_vindhya_vindhya</code> (train)</div>
+                <div class="mb-path">0470008.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/056_Odontoptilum_angulata_angulata/0560003.webp" alt="comic_book" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>comic_book</strong> (57.4%)</div>
+                <div class="mb-species"><em>Odontoptilum angulata angulata</em></div>
+                <div class="mb-folder"><code>056_Odontoptilum_angulata_angulata</code> (train)</div>
+                <div class="mb-path">0560003.webp &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/081_Euthalia_zubeengargi/0810036.jpg" alt="comic_book" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>comic_book</strong> (88.8%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (train)</div>
+                <div class="mb-path">0810036.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/056_Odontoptilum_angulata_angulata/0560034.jpg" alt="gown" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>gown</strong> (65.3%)</div>
+                <div class="mb-species"><em>Odontoptilum angulata angulata</em></div>
+                <div class="mb-folder"><code>056_Odontoptilum_angulata_angulata</code> (train)</div>
+                <div class="mb-path">0560034.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/121_Hidari_bhawani/1210026.jpg" alt="gown" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>gown</strong> (77.6%)</div>
+                <div class="mb-species"><em>Hidari bhawani</em></div>
+                <div class="mb-folder"><code>121_Hidari_bhawani</code> (train)</div>
+                <div class="mb-path">1210026.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/068_Sarangesa_dasahara_dasahara/0680024.jpg" alt="bolete" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bolete</strong> (55.9%)</div>
+                <div class="mb-species"><em>Sarangesa dasahara dasahara</em></div>
+                <div class="mb-folder"><code>068_Sarangesa_dasahara_dasahara</code> (train)</div>
+                <div class="mb-path">0680024.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/quarantine/test/068_Sarangesa_dasahara_dasahara/0680023.jpg" alt="bolete" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bolete</strong> (55.9%)</div>
+                <div class="mb-species"><em>Sarangesa dasahara dasahara</em></div>
+                <div class="mb-folder"><code>068_Sarangesa_dasahara_dasahara</code> (test)</div>
+                <div class="mb-path">0680023.jpg &bull; Quarantined</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/073_Tagiades_dynamicus_ravi/0730026.jpg" alt="hummingbird" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hummingbird</strong> (72.3%)</div>
+                <div class="mb-species"><em>Tagiades dynamicus ravi</em></div>
+                <div class="mb-folder"><code>073_Tagiades_dynamicus_ravi</code> (train)</div>
+                <div class="mb-path">0730026.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/quarantine/test/073_Tagiades_dynamicus_ravi/0730043.jpg" alt="hummingbird" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hummingbird</strong> (72.3%)</div>
+                <div class="mb-species"><em>Tagiades dynamicus ravi</em></div>
+                <div class="mb-folder"><code>073_Tagiades_dynamicus_ravi</code> (test)</div>
+                <div class="mb-path">0730043.jpg &bull; Quarantined</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/077_Telicota_colon/0770029.jpg" alt="snail" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>snail</strong> (47.3%)</div>
+                <div class="mb-species"><em>Telicota colon</em></div>
+                <div class="mb-folder"><code>077_Telicota_colon</code> (train)</div>
+                <div class="mb-path">0770029.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/quarantine/test/077_Telicota_colon/0770020.jpg" alt="snail" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>snail</strong> (47.3%)</div>
+                <div class="mb-species"><em>Telicota colon</em></div>
+                <div class="mb-folder"><code>077_Telicota_colon</code> (test)</div>
+                <div class="mb-path">0770020.jpg &bull; Quarantined</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/090_Byasa_crassipes/0900003.jpg" alt="pretzel" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>pretzel</strong> (45.2%)</div>
+                <div class="mb-species"><em>Byasa crassipes</em></div>
+                <div class="mb-folder"><code>090_Byasa_crassipes</code> (train)</div>
+                <div class="mb-path">0900003.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/092_Byasa_polla/0920024.jpg" alt="pretzel" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>pretzel</strong> (45.2%)</div>
+                <div class="mb-species"><em>Byasa polla</em></div>
+                <div class="mb-folder"><code>092_Byasa_polla</code> (train)</div>
+                <div class="mb-path">0920024.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/091_Byasa_nevilli/0910011.jpg" alt="hook" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hook</strong> (51.7%)</div>
+                <div class="mb-species"><em>Byasa nevilli</em></div>
+                <div class="mb-folder"><code>091_Byasa_nevilli</code> (train)</div>
+                <div class="mb-path">0910011.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/118_Capila_pieridoides/1180001.jpg" alt="hook" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>hook</strong> (50.1%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (train)</div>
+                <div class="mb-path">1180001.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/091_Byasa_nevilli/0910017.jpg" alt="safe" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>safe</strong> (58.0%)</div>
+                <div class="mb-species"><em>Byasa nevilli</em></div>
+                <div class="mb-folder"><code>091_Byasa_nevilli</code> (train)</div>
+                <div class="mb-path">0910017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/091_Byasa_nevilli/0910025.jpg" alt="safe" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>safe</strong> (57.9%)</div>
+                <div class="mb-species"><em>Byasa nevilli</em></div>
+                <div class="mb-folder"><code>091_Byasa_nevilli</code> (train)</div>
+                <div class="mb-path">0910025.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/098_Teinopalpus_imperialis/0980005.jpg" alt="vestment" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>vestment</strong> (71.3%)</div>
+                <div class="mb-species"><em>Teinopalpus imperialis</em></div>
+                <div class="mb-folder"><code>098_Teinopalpus_imperialis</code> (train)</div>
+                <div class="mb-path">0980005.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/098_Teinopalpus_imperialis/0980025.jpg" alt="vestment" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>vestment</strong> (87.9%)</div>
+                <div class="mb-species"><em>Teinopalpus imperialis</em></div>
+                <div class="mb-folder"><code>098_Teinopalpus_imperialis</code> (train)</div>
+                <div class="mb-path">0980025.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/104_Chersonesia_rahria/1040019.jpg" alt="nematode" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>nematode</strong> (54.6%)</div>
+                <div class="mb-species"><em>Chersonesia rahria</em></div>
+                <div class="mb-folder"><code>104_Chersonesia_rahria</code> (train)</div>
+                <div class="mb-path">1040019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/107_Athyma_punctata/1070028.jpg" alt="nematode" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>nematode</strong> (53.3%)</div>
+                <div class="mb-species"><em>Athyma punctata</em></div>
+                <div class="mb-folder"><code>107_Athyma_punctata</code> (train)</div>
+                <div class="mb-path">1070028.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/118_Capila_pieridoides/1180003.jpg" alt="oxygen_mask" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>oxygen_mask</strong> (72.4%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (train)</div>
+                <div class="mb-path">1180003.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/124_Scobura_woolletti/1240024.jpg" alt="oxygen_mask" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>oxygen_mask</strong> (67.3%)</div>
+                <div class="mb-species"><em>Scobura woolletti</em></div>
+                <div class="mb-folder"><code>124_Scobura_woolletti</code> (train)</div>
+                <div class="mb-path">1240024.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/121_Hidari_bhawani/1210006.jpg" alt="isopod" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>isopod</strong> (90.0%)</div>
+                <div class="mb-species"><em>Hidari bhawani</em></div>
+                <div class="mb-folder"><code>121_Hidari_bhawani</code> (train)</div>
+                <div class="mb-path">1210006.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/122_Plastingia_naga/1220033.jpg" alt="isopod" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>isopod</strong> (83.4%)</div>
+                <div class="mb-species"><em>Plastingia naga</em></div>
+                <div class="mb-folder"><code>122_Plastingia_naga</code> (test)</div>
+                <div class="mb-path">1220033.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/124_Scobura_woolletti/1240012.jpg" alt="black_and_gold_garden_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>black_and_gold_garden_spider</strong> (64.6%)</div>
+                <div class="mb-species"><em>Scobura woolletti</em></div>
+                <div class="mb-folder"><code>124_Scobura_woolletti</code> (train)</div>
+                <div class="mb-path">1240012.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/087_Lamproptera_meges/0870035.jpg" alt="black_and_gold_garden_spider" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>black_and_gold_garden_spider</strong> (51.3%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (test)</div>
+                <div class="mb-path">0870035.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/020_Caleta_elna_noliteia/0200003.jpg" alt="Gila_monster" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>Gila_monster</strong> (52.3%)</div>
+                <div class="mb-species"><em>Caleta elna noliteia</em></div>
+                <div class="mb-folder"><code>020_Caleta_elna_noliteia</code> (train)</div>
+                <div class="mb-path">0200003.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/056_Odontoptilum_angulata_angulata/0560023.jpg" alt="vine_snake" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>vine_snake</strong> (58.1%)</div>
+                <div class="mb-species"><em>Odontoptilum angulata angulata</em></div>
+                <div class="mb-folder"><code>056_Odontoptilum_angulata_angulata</code> (train)</div>
+                <div class="mb-path">0560023.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/056_Odontoptilum_angulata_angulata/0560031.png" alt="packet" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>packet</strong> (74.9%)</div>
+                <div class="mb-species"><em>Odontoptilum angulata angulata</em></div>
+                <div class="mb-folder"><code>056_Odontoptilum_angulata_angulata</code> (train)</div>
+                <div class="mb-path">0560031.png &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/065_Pseudocoladenia_dan_fabia/0650017.jpg" alt="maraca" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>maraca</strong> (98.6%)</div>
+                <div class="mb-species"><em>Pseudocoladenia dan fabia</em></div>
+                <div class="mb-folder"><code>065_Pseudocoladenia_dan_fabia</code> (train)</div>
+                <div class="mb-path">0650017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/070_Seseria_sambara_sambara/0700025.jpg" alt="jigsaw_puzzle" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>jigsaw_puzzle</strong> (58.0%)</div>
+                <div class="mb-species"><em>Seseria sambara sambara</em></div>
+                <div class="mb-folder"><code>070_Seseria_sambara_sambara</code> (train)</div>
+                <div class="mb-path">0700025.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/081_Euthalia_zubeengargi/0810026.jpg" alt="sax" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>sax</strong> (46.2%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (train)</div>
+                <div class="mb-path">0810026.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/081_Euthalia_zubeengargi/0810060.jpg" alt="tree_frog" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>tree_frog</strong> (60.8%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (train)</div>
+                <div class="mb-path">0810060.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/081_Euthalia_zubeengargi/0810074.jpg" alt="stage" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>stage</strong> (60.9%)</div>
+                <div class="mb-species"><em>Euthalia zubeengargi</em></div>
+                <div class="mb-folder"><code>081_Euthalia_zubeengargi</code> (train)</div>
+                <div class="mb-path">0810074.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/086_Lamproptera_curius/0860015.jpg" alt="harvestman" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>harvestman</strong> (59.5%)</div>
+                <div class="mb-species"><em>Lamproptera curius</em></div>
+                <div class="mb-folder"><code>086_Lamproptera_curius</code> (train)</div>
+                <div class="mb-path">0860015.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/087_Lamproptera_meges/0870003.jpg" alt="bolo_tie" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bolo_tie</strong> (47.5%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (train)</div>
+                <div class="mb-path">0870003.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/087_Lamproptera_meges/0870007.jpg" alt="scorpion" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>scorpion</strong> (50.9%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (train)</div>
+                <div class="mb-path">0870007.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/089_Meandrusa_lachinus/0890025.jpg" alt="spotted_salamander" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>spotted_salamander</strong> (55.7%)</div>
+                <div class="mb-species"><em>Meandrusa lachinus</em></div>
+                <div class="mb-folder"><code>089_Meandrusa_lachinus</code> (train)</div>
+                <div class="mb-path">0890025.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/091_Byasa_nevilli/0910002.jpg" alt="ocarina" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>ocarina</strong> (91.4%)</div>
+                <div class="mb-species"><em>Byasa nevilli</em></div>
+                <div class="mb-folder"><code>091_Byasa_nevilli</code> (train)</div>
+                <div class="mb-path">0910002.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/091_Byasa_nevilli/0910008.jpg" alt="mousetrap" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>mousetrap</strong> (51.7%)</div>
+                <div class="mb-species"><em>Byasa nevilli</em></div>
+                <div class="mb-folder"><code>091_Byasa_nevilli</code> (train)</div>
+                <div class="mb-path">0910008.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/091_Byasa_nevilli/0910012.jpg" alt="puck" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>puck</strong> (68.0%)</div>
+                <div class="mb-species"><em>Byasa nevilli</em></div>
+                <div class="mb-folder"><code>091_Byasa_nevilli</code> (train)</div>
+                <div class="mb-path">0910012.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/092_Byasa_polla/0920025.jpg" alt="umbrella" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>umbrella</strong> (81.8%)</div>
+                <div class="mb-species"><em>Byasa polla</em></div>
+                <div class="mb-folder"><code>092_Byasa_polla</code> (train)</div>
+                <div class="mb-path">0920025.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/093_Graphium_agetes/0930016.jpg" alt="tray" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>tray</strong> (71.8%)</div>
+                <div class="mb-species"><em>Graphium agetes</em></div>
+                <div class="mb-folder"><code>093_Graphium_agetes</code> (train)</div>
+                <div class="mb-path">0930016.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/097_Losaria_doubledayi/0970005.jpg" alt="freight_car" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>freight_car</strong> (65.5%)</div>
+                <div class="mb-species"><em>Losaria doubledayi</em></div>
+                <div class="mb-folder"><code>097_Losaria_doubledayi</code> (train)</div>
+                <div class="mb-path">0970005.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/097_Losaria_doubledayi/0970008.jpg" alt="quill" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>quill</strong> (50.0%)</div>
+                <div class="mb-species"><em>Losaria doubledayi</em></div>
+                <div class="mb-folder"><code>097_Losaria_doubledayi</code> (train)</div>
+                <div class="mb-path">0970008.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/098_Teinopalpus_imperialis/0980007.jpg" alt="pajama" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>pajama</strong> (60.7%)</div>
+                <div class="mb-species"><em>Teinopalpus imperialis</em></div>
+                <div class="mb-folder"><code>098_Teinopalpus_imperialis</code> (train)</div>
+                <div class="mb-path">0980007.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/098_Teinopalpus_imperialis/0980010.jpg" alt="sunglass" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>sunglass</strong> (56.8%)</div>
+                <div class="mb-species"><em>Teinopalpus imperialis</em></div>
+                <div class="mb-folder"><code>098_Teinopalpus_imperialis</code> (train)</div>
+                <div class="mb-path">0980010.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/101_Charaxes_delphis/1010028.jpg" alt="sandal" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>sandal</strong> (78.9%)</div>
+                <div class="mb-species"><em>Charaxes delphis</em></div>
+                <div class="mb-folder"><code>101_Charaxes_delphis</code> (train)</div>
+                <div class="mb-path">1010028.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/102_Pantoporia_assamica/1020003.jpg" alt="alligator_lizard" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>alligator_lizard</strong> (62.0%)</div>
+                <div class="mb-species"><em>Pantoporia assamica</em></div>
+                <div class="mb-folder"><code>102_Pantoporia_assamica</code> (train)</div>
+                <div class="mb-path">1020003.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/105_Athyma_ranga/1050013.jpg" alt="pick" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>pick</strong> (49.7%)</div>
+                <div class="mb-species"><em>Athyma ranga</em></div>
+                <div class="mb-folder"><code>105_Athyma_ranga</code> (train)</div>
+                <div class="mb-path">1050013.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/107_Athyma_punctata/1070016.jpg" alt="African_chameleon" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>African_chameleon</strong> (87.8%)</div>
+                <div class="mb-species"><em>Athyma punctata</em></div>
+                <div class="mb-folder"><code>107_Athyma_punctata</code> (train)</div>
+                <div class="mb-path">1070016.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/109_Tajuria_maculata/1090005.jpg" alt="ear" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>ear</strong> (55.7%)</div>
+                <div class="mb-species"><em>Tajuria maculata</em></div>
+                <div class="mb-folder"><code>109_Tajuria_maculata</code> (train)</div>
+                <div class="mb-path">1090005.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/110_Tajuria_cippus/1100017.jpg" alt="tailed_frog" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>tailed_frog</strong> (92.2%)</div>
+                <div class="mb-species"><em>Tajuria cippus</em></div>
+                <div class="mb-folder"><code>110_Tajuria_cippus</code> (train)</div>
+                <div class="mb-path">1100017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/111_Pithecops_fulgens/1110015.jpg" alt="walking_stick" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>walking_stick</strong> (87.8%)</div>
+                <div class="mb-species"><em>Pithecops fulgens</em></div>
+                <div class="mb-folder"><code>111_Pithecops_fulgens</code> (train)</div>
+                <div class="mb-path">1110015.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/113_Arhopala_silhetensis/1130007.jpg" alt="indigo_bunting" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>indigo_bunting</strong> (90.8%)</div>
+                <div class="mb-species"><em>Arhopala silhetensis</em></div>
+                <div class="mb-folder"><code>113_Arhopala_silhetensis</code> (train)</div>
+                <div class="mb-path">1130007.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/115_Simiskina_phalena/1150003.jpg" alt="perfume" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>perfume</strong> (71.9%)</div>
+                <div class="mb-species"><em>Simiskina phalena</em></div>
+                <div class="mb-folder"><code>115_Simiskina_phalena</code> (train)</div>
+                <div class="mb-path">1150003.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/118_Capila_pieridoides/1180002.jpg" alt="suit" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>suit</strong> (72.5%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (train)</div>
+                <div class="mb-path">1180002.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/118_Capila_pieridoides/1180008.jpg" alt="bobsled" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>bobsled</strong> (51.4%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (train)</div>
+                <div class="mb-path">1180008.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/118_Capila_pieridoides/1180015.jpg" alt="theater_curtain" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>theater_curtain</strong> (49.9%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (train)</div>
+                <div class="mb-path">1180015.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/118_Capila_pieridoides/1180019.jpg" alt="switch" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>switch</strong> (75.1%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (train)</div>
+                <div class="mb-path">1180019.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/120_Darpa_pteria/1200003.jpg" alt="shower_curtain" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>shower_curtain</strong> (77.4%)</div>
+                <div class="mb-species"><em>Darpa pteria</em></div>
+                <div class="mb-folder"><code>120_Darpa_pteria</code> (train)</div>
+                <div class="mb-path">1200003.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/120_Darpa_pteria/1200022.jpg" alt="conch" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>conch</strong> (50.9%)</div>
+                <div class="mb-species"><em>Darpa pteria</em></div>
+                <div class="mb-folder"><code>120_Darpa_pteria</code> (train)</div>
+                <div class="mb-path">1200022.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/124_Scobura_woolletti/1240006.jpg" alt="lab_coat" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>lab_coat</strong> (61.1%)</div>
+                <div class="mb-species"><em>Scobura woolletti</em></div>
+                <div class="mb-folder"><code>124_Scobura_woolletti</code> (train)</div>
+                <div class="mb-path">1240006.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/train/125_Polytremis_minuta/1250028.jpg" alt="kite" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>kite</strong> (70.7%)</div>
+                <div class="mb-species"><em>Polytremis minuta</em></div>
+                <div class="mb-folder"><code>125_Polytremis_minuta</code> (train)</div>
+                <div class="mb-path">1250028.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/024_Cethosia_cyane/0240030.jpg" alt="handkerchief" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>handkerchief</strong> (51.7%)</div>
+                <div class="mb-species"><em>Cethosia cyane</em></div>
+                <div class="mb-folder"><code>024_Cethosia_cyane</code> (test)</div>
+                <div class="mb-path">0240030.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/034_Graphium_agamemnon/0340017.jpg" alt="brassiere" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>brassiere</strong> (58.5%)</div>
+                <div class="mb-species"><em>Graphium agamemnon</em></div>
+                <div class="mb-folder"><code>034_Graphium_agamemnon</code> (test)</div>
+                <div class="mb-path">0340017.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/045_Lethe_mekara_mekara/0450025.jpeg" alt="stinkhorn" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>stinkhorn</strong> (48.6%)</div>
+                <div class="mb-species"><em>Lethe mekara mekara</em></div>
+                <div class="mb-folder"><code>045_Lethe_mekara_mekara</code> (test)</div>
+                <div class="mb-path">0450025.jpeg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/056_Odontoptilum_angulata_angulata/0560048.png" alt="piggy_bank" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>piggy_bank</strong> (95.6%)</div>
+                <div class="mb-species"><em>Odontoptilum angulata angulata</em></div>
+                <div class="mb-folder"><code>056_Odontoptilum_angulata_angulata</code> (test)</div>
+                <div class="mb-path">0560048.png &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/070_Seseria_sambara_sambara/0700030.jpg" alt="buckeye" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>buckeye</strong> (49.5%)</div>
+                <div class="mb-species"><em>Seseria sambara sambara</em></div>
+                <div class="mb-folder"><code>070_Seseria_sambara_sambara</code> (test)</div>
+                <div class="mb-path">0700030.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/083_Papilio_paradoxa/0830035.jpg" alt="pinwheel" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>pinwheel</strong> (60.5%)</div>
+                <div class="mb-species"><em>Papilio paradoxa</em></div>
+                <div class="mb-folder"><code>083_Papilio_paradoxa</code> (test)</div>
+                <div class="mb-path">0830035.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/086_Lamproptera_curius/0860035.jpg" alt="spider_web" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>spider_web</strong> (52.6%)</div>
+                <div class="mb-species"><em>Lamproptera curius</em></div>
+                <div class="mb-folder"><code>086_Lamproptera_curius</code> (test)</div>
+                <div class="mb-path">0860035.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/087_Lamproptera_meges/0870030.jpg" alt="whiptail" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>whiptail</strong> (57.2%)</div>
+                <div class="mb-species"><em>Lamproptera meges</em></div>
+                <div class="mb-folder"><code>087_Lamproptera_meges</code> (test)</div>
+                <div class="mb-path">0870030.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/091_Byasa_nevilli/0910032.jpg" alt="crash_helmet" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>crash_helmet</strong> (63.2%)</div>
+                <div class="mb-species"><em>Byasa nevilli</em></div>
+                <div class="mb-folder"><code>091_Byasa_nevilli</code> (test)</div>
+                <div class="mb-path">0910032.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/116_Udara_selma/1160029.jpg" alt="orange" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>orange</strong> (66.8%)</div>
+                <div class="mb-species"><em>Udara selma</em></div>
+                <div class="mb-folder"><code>116_Udara_selma</code> (test)</div>
+                <div class="mb-path">1160029.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/118_Capila_pieridoides/1180029.jpg" alt="cellular_telephone" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>cellular_telephone</strong> (74.0%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (test)</div>
+                <div class="mb-path">1180029.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #e76f51;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/118_Capila_pieridoides/1180031.jpg" alt="space_bar" loading="lazy" />
+                <span class="mb-badge" style="background: #e76f51;">CONFIRMED NON INSECT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>space_bar</strong> (66.1%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (test)</div>
+                <div class="mb-path">1180031.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-card" style="border-top: 4px solid #2a9d8f;">
+              <div class="mb-img-wrap">
+                <img src="../../dataset/test/118_Capila_pieridoides/1180034.jpg" alt="Windsor_tie" loading="lazy" />
+                <span class="mb-badge" style="background: #2a9d8f;">SPECIMEN CONTEXT ARTIFACT</span>
+              </div>
+              <div class="mb-info">
+                <div class="mb-pred"><strong>Windsor_tie</strong> (85.0%)</div>
+                <div class="mb-species"><em>Capila pieridoides</em></div>
+                <div class="mb-folder"><code>118_Capila_pieridoides</code> (test)</div>
+                <div class="mb-path">1180034.jpg &bull; Active</div>
+                <div class="mb-action">
+                  <select>
+                    <option value="">Action...</option>
+                    <option value="KEEP">KEEP (Genuine Specimen)</option>
+                    <option value="PURGE">PURGE (Confirmed Junk)</option>
+                    <option value="REVIEW">Needs Taxonomist</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+  </div>
+</body>
+</html>

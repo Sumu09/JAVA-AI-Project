@@ -1,0 +1,126 @@
+class_id,folder_name,scientific_name,common_name,family
+001,001_Danaus_plexippus_Monarch,Danaus plexippus,Monarch,Nymphalidae
+002,002_Heliconius_charitonius_Zebra_Longwing,Heliconius charitonius,Zebra Longwing,Nymphalidae
+003,003_Heliconius_erato_Red_Passion,Heliconius erato,Red Passion,Nymphalidae
+004,004_Junonia_coenia_Common_Buckeye,Junonia coenia,Common Buckeye,Nymphalidae
+005,005_Lycaena_phlaeas_Small_Copper,Lycaena phlaeas,Small Copper,Lycaenidae
+006,006_Nymphalis_antiopa_Mourning_Cloak,Nymphalis antiopa,Mourning Cloak,Nymphalidae
+007,007_Papilio_cresphontes_Giant_Swallowtail,Papilio cresphontes,Giant Swallowtail,Papilionidae
+008,008_Pieris_rapae_Cabbage_White,Pieris rapae,Cabbage White,Pieridae
+009,009_Vanessa_atalanta_Red_Admiral,Vanessa atalanta,Red Admiral,Nymphalidae
+010,010_Vanessa_cardui_Painted_Lady,Vanessa cardui,Painted Lady,Nymphalidae
+011,011_Aeromachus_pygmaeus,Aeromachus pygmaeus,Pygmy Scrub Hopper,Hesperiidae
+012,012_Ampittia_dioscorides,Ampittia dioscorides,Bush Hopper,Hesperiidae
+013,013_Ancema_blanka_minturna,Ancema blanka minturna,Minturn Silverstreak,Lycaenidae
+014,014_Ancema_ctesia_ctesia,Ancema ctesia ctesia,Bi-spot Royal,Lycaenidae
+015,015_Anthene_emolus_emolus,Anthene emolus emolus,Ciliate Blue,Lycaenidae
+016,016_Anthene_lycaenina_lycambes,Anthene lycaenina lycambes,Pointed Ciliate Blue,Lycaenidae
+017,017_Athyma_perius,Athyma perius,Common Sergeant,Nymphalidae
+018,018_Badamia_exclamationis,Badamia exclamationis,Brown Awl,Hesperiidae
+019,019_Burara_jaina,Burara jaina,Orange Awlet,Hesperiidae
+020,020_Caleta_elna_noliteia,Caleta elna noliteia,Elbowed Pierrot,Lycaenidae
+021,021_Catochrysops_strabo_strabo,Catochrysops strabo strabo,Forget-me-not,Lycaenidae
+022,022_Celaenorrhinus_aurivittata_aurivittata,Celaenorrhinus aurivittata aurivittata,Yellow-banded Flat,Hesperiidae
+023,023_Celaenorrhinus_leucocera,Celaenorrhinus leucocera,Common Spotted Flat,Hesperiidae
+024,024_Cethosia_cyane,Cethosia cyane,Leopard Lacewing,Nymphalidae
+025,025_Charaxes_bernardus_hierax,Charaxes bernardus hierax,Tawny Rajah,Nymphalidae
+026,026_Charaxes_marmax_marmax,Charaxes marmax marmax,Yellow Rajah,Nymphalidae
+027,027_Chilades_lajus_lajus,Chilades lajus lajus,Lime Blue,Lycaenidae
+028,028_Choaspes_benjaminii_japonica,Choaspes benjaminii japonica,Indian Awlking,Hesperiidae
+029,029_Cupitha_purreea_purreea,Cupitha purreea purreea,Wax Dart,Hesperiidae
+030,030_Elymnias_hypermnestra_undularis,Elymnias hypermnestra undularis,Common Palmfly,Nymphalidae
+031,031_Elymnias_nesaea,Elymnias nesaea,Tiger Palmfly,Nymphalidae
+032,032_Ethope_himachala,Ethope himachala,Dusky Diadem,Nymphalidae
+033,033_Gerosis_phisara_phisara,Gerosis phisara phisara,Great Yellow Sailer,Hesperiidae
+034,034_Graphium_agamemnon,Graphium agamemnon,Tailed Jay,Papilionidae
+035,035_Halpe_aucma,Halpe aucma,Gold-spotted Ace,Hesperiidae
+036,036_Halpe_kusala,Halpe kusala,Plain Ace,Hesperiidae
+037,037_Halpe_porus_porus,Halpe porus porus,Moore's Ace,Hesperiidae
+038,038_Halpe_zema_zema,Halpe zema zema,Zema Ace,Hesperiidae
+039,039_Hasora_badra,Hasora badra,Common Awl,Hesperiidae
+040,040_Heliophorus_epicles_latilimbata,Heliophorus epicles latilimbata,Purple Sapphire,Lycaenidae
+041,041_Jamides_caerulea,Jamides caerulea,Sky Blue,Lycaenidae
+042,042_Jamides_celeno,Jamides celeno,Common Cerulean,Lycaenidae
+043,043_Jamides_elpis_pseudelpis,Jamides elpis pseudelpis,Glistening Cerulean,Lycaenidae
+044,044_Lethe_chandica_flanona,Lethe chandica flanona,Angled Red Forester,Nymphalidae
+045,045_Lethe_mekara_mekara,Lethe mekara mekara,Common Treebrown,Nymphalidae
+046,046_Lethe_satyavati,Lethe satyavati,Pallid Forester,Nymphalidae
+047,047_Lethe_vindhya_vindhya,Lethe vindhya vindhya,Black Forester,Nymphalidae
+048,048_Loxura_atymnus_continentalis,Loxura atymnus continentalis,Yamfly,Lycaenidae
+049,049_Megisba_malaya_sikkima,Megisba malaya sikkima,Malayan,Lycaenidae
+050,050_Mooreana_trichoneura_pralaya,Mooreana trichoneura pralaya,Yellow Flat,Hesperiidae
+051,051_Nacaduba_kurava_euplea,Nacaduba kurava euplea,Transparent 6-Line Blue,Lycaenidae
+052,052_Neopithecops_zalmora_zalmora,Neopithecops zalmora zalmora,Common Quaker,Lycaenidae
+053,053_Notocrypta_curvifascia_curvifascia,Notocrypta curvifascia curvifascia,Common Banded Demon,Hesperiidae
+054,054_Notocrypta_paralysos_asawa,Notocrypta paralysos asawa,Grass Demon,Hesperiidae
+055,055_Ochus_subvittatus_subradiatus,Ochus subvittatus subradiatus,Tiger Hopper,Hesperiidae
+056,056_Odontoptilum_angulata_angulata,Odontoptilum angulata angulata,Chestnut Angle,Hesperiidae
+057,057_Oriens_gola_pseudolus,Oriens gola pseudolus,Common Dartlet,Hesperiidae
+058,058_Papilio_paris,Papilio paris,Paris Peacock,Papilionidae
+059,059_Pithauria_stramineipennis,Pithauria stramineipennis,Light Straw Ace,Hesperiidae
+060,060_Potanthus_pseudomaesa,Potanthus pseudomaesa,Indian Dart,Hesperiidae
+061,061_Prosotas_aluta_coelestis,Prosotas aluta coelestis,Banded Lineblue,Lycaenidae
+062,062_Prosotas_bhutea,Prosotas bhutea,Bhutya Lineblue,Lycaenidae
+063,063_Prosotas_dubiosa_indica,Prosotas dubiosa indica,Tailless Lineblue,Lycaenidae
+064,064_Prosotas_nora_ardates,Prosotas nora ardates,Common Lineblue,Lycaenidae
+065,065_Pseudocoladenia_dan_fabia,Pseudocoladenia dan fabia,Fulvous Pied Flat,Hesperiidae
+066,066_Psolos_fuligo_subfasciatus,Psolos fuligo subfasciatus,Coon,Hesperiidae
+067,067_Remelana_jangala_ravata,Remelana jangala ravata,Chocolate Royal,Lycaenidae
+068,068_Sarangesa_dasahara_dasahara,Sarangesa dasahara dasahara,Common Small Flat,Hesperiidae
+069,069_Sebastonyma_dolopia,Sebastonyma dolopia,Tufted Ace,Hesperiidae
+070,070_Seseria_sambara_sambara,Seseria sambara sambara,Notched Flat,Hesperiidae
+071,071_Spindasis_lohita_himalayanus,Spindasis lohita himalayanus,Long-banded Silverline,Lycaenidae
+072,072_Surendra_quercetorum_quercetorum,Surendra quercetorum quercetorum,Common Acacia Blue,Lycaenidae
+073,073_Tagiades_dynamicus_ravi,Tagiades dynamicus ravi,Ravi Snow Flat,Hesperiidae
+074,074_Tagiades_gana_gana,Tagiades gana gana,Suffused Snow Flat,Hesperiidae
+075,075_Tagiades_litigiosa_litigiosa,Tagiades litigiosa litigiosa,Water Snow Flat,Hesperiidae
+076,076_Telicota_bambusae_bambusae,Telicota bambusae bambusae,Dark Palm Dart,Hesperiidae
+077,077_Telicota_colon,Telicota colon,Pale Palm Dart,Hesperiidae
+078,078_Thoressa_cerata,Thoressa cerata,Northern Spangle,Hesperiidae
+079,079_Troides_aeacus,Troides aeacus,Golden Birdwing,Papilionidae
+080,080_Yasuda_tripunctata_tripunctata,Yasuda tripunctata tripunctata,Three-spot Silverstreak,Lycaenidae
+081,081_Euthalia_zubeengargi,Euthalia zubeengargi,Zubeen's Baron,Nymphalidae
+082,082_Papilio_elephenor,Papilio elephenor,Yellow-crested Spangle,Papilionidae
+083,083_Papilio_paradoxa,Papilio paradoxa,Great Blue Mime,Papilionidae
+084,084_Papilio_bootes,Papilio bootes,Tailed Redbreast,Papilionidae
+085,085_Papilio_slateri,Papilio slateri,Blue-striped Mime,Papilionidae
+086,086_Lamproptera_curius,Lamproptera curius,White Dragontail,Papilionidae
+087,087_Lamproptera_meges,Lamproptera meges,Green Dragontail,Papilionidae
+088,088_Meandrusa_payeni,Meandrusa payeni,Yellow Gorgon,Papilionidae
+089,089_Meandrusa_lachinus,Meandrusa lachinus,Brown Gorgon,Papilionidae
+090,090_Byasa_crassipes,Byasa crassipes,Black Windmill,Papilionidae
+091,091_Byasa_nevilli,Byasa nevilli,Nevill's Windmill,Papilionidae
+092,092_Byasa_polla,Byasa polla,De Nicéville's Windmill,Papilionidae
+093,093_Graphium_agetes,Graphium agetes,Fourbar Swallowtail,Papilionidae
+094,094_Graphium_aristeus,Graphium aristeus,Chain Swordtail,Papilionidae
+095,095_Graphium_macareus,Graphium macareus,Lesser Zebra,Papilionidae
+096,096_Graphium_xenocles,Graphium xenocles,Great Zebra,Papilionidae
+097,097_Losaria_doubledayi,Losaria doubledayi,Common Clubtail,Papilionidae
+098,098_Teinopalpus_imperialis,Teinopalpus imperialis,Kaiser-i-Hind,Papilionidae
+099,099_Elymnias_peali,Elymnias peali,Peal's Palmfly,Nymphalidae
+100,100_Euthalia_telchinia,Euthalia telchinia,Blue Baron,Nymphalidae
+101,101_Charaxes_delphis,Charaxes delphis,Jewelled Nawab,Nymphalidae
+102,102_Pantoporia_assamica,Pantoporia assamica,Conjoined Lascar,Nymphalidae
+103,103_Pantoporia_bieti,Pantoporia bieti,Tytler's Lascar,Nymphalidae
+104,104_Chersonesia_rahria,Chersonesia rahria,Wavy Maplet,Nymphalidae
+105,105_Athyma_ranga,Athyma ranga,Blackvein Sergeant,Nymphalidae
+106,106_Athyma_pravara,Athyma pravara,Unbroken Sergeant,Nymphalidae
+107,107_Athyma_punctata,Athyma punctata,White-bordered Sergeant,Nymphalidae
+108,108_Polyura_schreiber,Polyura schreiber,Blue Nawab,Nymphalidae
+109,109_Tajuria_maculata,Tajuria maculata,Spotted Royal,Lycaenidae
+110,110_Tajuria_cippus,Tajuria cippus,Peacock Royal,Lycaenidae
+111,111_Pithecops_fulgens,Pithecops fulgens,Blue Quaker,Lycaenidae
+112,112_Shijimia_moorei,Shijimia moorei,Moore's Cupid,Lycaenidae
+113,113_Arhopala_silhetensis,Arhopala silhetensis,Sylhet Oakblue,Lycaenidae
+114,114_Arhopala_oenea,Arhopala oenea,Hewitson's Dull Oakblue,Lycaenidae
+115,115_Simiskina_phalena,Simiskina phalena,Broad-branded Brilliant,Lycaenidae
+116,116_Udara_selma,Udara selma,Bi-coloured Hedge Blue,Lycaenidae
+117,117_Poritia_hewitsoni,Poritia hewitsoni,Common Gem,Lycaenidae
+118,118_Capila_pieridoides,Capila pieridoides,White Dawnfly,Hesperiidae
+119,119_Pyroneura_margherita,Pyroneura margherita,Yellow-vein Lancer,Hesperiidae
+120,120_Darpa_pteria,Darpa pteria,Snowy Angle,Hesperiidae
+121,121_Hidari_bhawani,Hidari bhawani,Veined Palmer,Hesperiidae
+122,122_Plastingia_naga,Plastingia naga,Chequered Lancer,Hesperiidae
+123,123_Salanoemia_sala,Salanoemia sala,Maculate Lancer,Hesperiidae
+124,124_Scobura_woolletti,Scobura woolletti,Brown Forest Bob,Hesperiidae
+125,125_Polytremis_minuta,Polytremis minuta,Baby Swift,Hesperiidae

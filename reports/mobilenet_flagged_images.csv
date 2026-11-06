@@ -1,0 +1,156 @@
+filepath,split,folder_name,class_id,scientific_name,predicted_label,confidence,screening_category,manual_review_recommendation
+dataset/train/002_Heliconius_charitonius_Zebra_Longwing/0020143.png,train,002_Heliconius_charitonius_Zebra_Longwing,002,Heliconius charitonius,daisy,66.8%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/020_Caleta_elna_noliteia/0200003.jpg,train,020_Caleta_elna_noliteia,020,Caleta elna noliteia,Gila_monster,52.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/023_Celaenorrhinus_leucocera/0230037.jpg,train,023_Celaenorrhinus_leucocera,023,Celaenorrhinus leucocera,centipede,60.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/031_Elymnias_nesaea/0310017.jpg,train,031_Elymnias_nesaea,031,Elymnias nesaea,barn_spider,46.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/046_Lethe_satyavati/0460019.jpg,train,046_Lethe_satyavati,046,Lethe satyavati,hatchet,68.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/047_Lethe_vindhya_vindhya/0470008.jpg,train,047_Lethe_vindhya_vindhya,047,Lethe vindhya vindhya,hatchet,68.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/056_Odontoptilum_angulata_angulata/0560003.webp,train,056_Odontoptilum_angulata_angulata,056,Odontoptilum angulata angulata,comic_book,57.4%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/056_Odontoptilum_angulata_angulata/0560010.jpg,train,056_Odontoptilum_angulata_angulata,056,Odontoptilum angulata angulata,web_site,86.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/056_Odontoptilum_angulata_angulata/0560016.png,train,056_Odontoptilum_angulata_angulata,056,Odontoptilum angulata angulata,web_site,51.1%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/056_Odontoptilum_angulata_angulata/0560023.jpg,train,056_Odontoptilum_angulata_angulata,056,Odontoptilum angulata angulata,vine_snake,58.1%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/056_Odontoptilum_angulata_angulata/0560031.png,train,056_Odontoptilum_angulata_angulata,056,Odontoptilum angulata angulata,packet,74.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/056_Odontoptilum_angulata_angulata/0560034.jpg,train,056_Odontoptilum_angulata_angulata,056,Odontoptilum angulata angulata,gown,65.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/065_Pseudocoladenia_dan_fabia/0650017.jpg,train,065_Pseudocoladenia_dan_fabia,065,Pseudocoladenia dan fabia,maraca,98.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/068_Sarangesa_dasahara_dasahara/0680017.jpg,train,068_Sarangesa_dasahara_dasahara,068,Sarangesa dasahara dasahara,rule,57.9%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/068_Sarangesa_dasahara_dasahara/0680020.jpg,train,068_Sarangesa_dasahara_dasahara,068,Sarangesa dasahara dasahara,rule,57.9%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/068_Sarangesa_dasahara_dasahara/0680024.jpg,train,068_Sarangesa_dasahara_dasahara,068,Sarangesa dasahara dasahara,bolete,55.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/069_Sebastonyma_dolopia/0690007.jpg,train,069_Sebastonyma_dolopia,069,Sebastonyma dolopia,hair_slide,91.6%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/070_Seseria_sambara_sambara/0700025.jpg,train,070_Seseria_sambara_sambara,070,Seseria sambara sambara,jigsaw_puzzle,58.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/073_Tagiades_dynamicus_ravi/0730026.jpg,train,073_Tagiades_dynamicus_ravi,073,Tagiades dynamicus ravi,hummingbird,72.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/077_Telicota_colon/0770029.jpg,train,077_Telicota_colon,077,Telicota colon,snail,47.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/078_Thoressa_cerata/0780010.png,train,078_Thoressa_cerata,078,Thoressa cerata,hair_slide,57.5%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/078_Thoressa_cerata/0780030.png,train,078_Thoressa_cerata,078,Thoressa cerata,hair_slide,57.5%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/081_Euthalia_zubeengargi/0810026.jpg,train,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,sax,46.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/081_Euthalia_zubeengargi/0810036.jpg,train,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,comic_book,88.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/081_Euthalia_zubeengargi/0810045.jpg,train,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,bow_tie,96.5%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/081_Euthalia_zubeengargi/0810060.jpg,train,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,tree_frog,60.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/081_Euthalia_zubeengargi/0810063.jpg,train,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,web_site,84.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/081_Euthalia_zubeengargi/0810074.jpg,train,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,stage,60.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/081_Euthalia_zubeengargi/0810101.jpg,train,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,jersey,57.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/081_Euthalia_zubeengargi/0810103.jpg,train,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,jersey,46.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/082_Papilio_elephenor/0820019.jpg,train,082_Papilio_elephenor,082,Papilio elephenor,hair_slide,92.0%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/083_Papilio_paradoxa/0830017.jpg,train,083_Papilio_paradoxa,083,Papilio paradoxa,hair_slide,92.0%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/085_Papilio_slateri/0850002.jpg,train,085_Papilio_slateri,085,Papilio slateri,web_site,73.1%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/086_Lamproptera_curius/0860013.jpg,train,086_Lamproptera_curius,086,Lamproptera curius,barn_spider,63.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/086_Lamproptera_curius/0860015.jpg,train,086_Lamproptera_curius,086,Lamproptera curius,harvestman,59.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/086_Lamproptera_curius/0860021.jpg,train,086_Lamproptera_curius,086,Lamproptera curius,barn_spider,78.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/086_Lamproptera_curius/0860023.jpg,train,086_Lamproptera_curius,086,Lamproptera curius,barn_spider,70.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/087_Lamproptera_meges/0870003.jpg,train,087_Lamproptera_meges,087,Lamproptera meges,bolo_tie,47.5%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/087_Lamproptera_meges/0870004.jpg,train,087_Lamproptera_meges,087,Lamproptera meges,barn_spider,73.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/087_Lamproptera_meges/0870007.jpg,train,087_Lamproptera_meges,087,Lamproptera meges,scorpion,50.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/087_Lamproptera_meges/0870010.jpg,train,087_Lamproptera_meges,087,Lamproptera meges,wolf_spider,81.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/087_Lamproptera_meges/0870016.jpg,train,087_Lamproptera_meges,087,Lamproptera meges,wolf_spider,80.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/087_Lamproptera_meges/0870020.jpg,train,087_Lamproptera_meges,087,Lamproptera meges,barn_spider,59.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/087_Lamproptera_meges/0870028.jpg,train,087_Lamproptera_meges,087,Lamproptera meges,wolf_spider,65.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/089_Meandrusa_lachinus/0890025.jpg,train,089_Meandrusa_lachinus,089,Meandrusa lachinus,spotted_salamander,55.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/090_Byasa_crassipes/0900003.jpg,train,090_Byasa_crassipes,090,Byasa crassipes,pretzel,45.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/090_Byasa_crassipes/0900017.jpg,train,090_Byasa_crassipes,090,Byasa crassipes,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/091_Byasa_nevilli/0910002.jpg,train,091_Byasa_nevilli,091,Byasa nevilli,ocarina,91.4%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/091_Byasa_nevilli/0910008.jpg,train,091_Byasa_nevilli,091,Byasa nevilli,mousetrap,51.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/091_Byasa_nevilli/0910011.jpg,train,091_Byasa_nevilli,091,Byasa nevilli,hook,51.7%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/091_Byasa_nevilli/0910012.jpg,train,091_Byasa_nevilli,091,Byasa nevilli,puck,68.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/091_Byasa_nevilli/0910017.jpg,train,091_Byasa_nevilli,091,Byasa nevilli,safe,58.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/091_Byasa_nevilli/0910025.jpg,train,091_Byasa_nevilli,091,Byasa nevilli,safe,57.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/092_Byasa_polla/0920024.jpg,train,092_Byasa_polla,092,Byasa polla,pretzel,45.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/092_Byasa_polla/0920025.jpg,train,092_Byasa_polla,092,Byasa polla,umbrella,81.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/093_Graphium_agetes/0930016.jpg,train,093_Graphium_agetes,093,Graphium agetes,tray,71.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/093_Graphium_agetes/0930022.jpg,train,093_Graphium_agetes,093,Graphium agetes,daisy,48.4%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/097_Losaria_doubledayi/0970005.jpg,train,097_Losaria_doubledayi,097,Losaria doubledayi,freight_car,65.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/097_Losaria_doubledayi/0970008.jpg,train,097_Losaria_doubledayi,097,Losaria doubledayi,quill,50.0%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/097_Losaria_doubledayi/0970022.jpg,train,097_Losaria_doubledayi,097,Losaria doubledayi,hair_slide,54.8%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/097_Losaria_doubledayi/0970026.jpg,train,097_Losaria_doubledayi,097,Losaria doubledayi,hair_slide,53.4%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/098_Teinopalpus_imperialis/0980005.jpg,train,098_Teinopalpus_imperialis,098,Teinopalpus imperialis,vestment,71.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/098_Teinopalpus_imperialis/0980007.jpg,train,098_Teinopalpus_imperialis,098,Teinopalpus imperialis,pajama,60.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/098_Teinopalpus_imperialis/0980010.jpg,train,098_Teinopalpus_imperialis,098,Teinopalpus imperialis,sunglass,56.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/098_Teinopalpus_imperialis/0980025.jpg,train,098_Teinopalpus_imperialis,098,Teinopalpus imperialis,vestment,87.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/100_Euthalia_telchinia/1000012.jpg,train,100_Euthalia_telchinia,100,Euthalia telchinia,centipede,73.1%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/100_Euthalia_telchinia/1000017.jpg,train,100_Euthalia_telchinia,100,Euthalia telchinia,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/101_Charaxes_delphis/1010023.jpg,train,101_Charaxes_delphis,101,Charaxes delphis,bow_tie,72.4%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/101_Charaxes_delphis/1010028.jpg,train,101_Charaxes_delphis,101,Charaxes delphis,sandal,78.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/102_Pantoporia_assamica/1020003.jpg,train,102_Pantoporia_assamica,102,Pantoporia assamica,alligator_lizard,62.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/102_Pantoporia_assamica/1020007.jpg,train,102_Pantoporia_assamica,102,Pantoporia assamica,envelope,45.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/102_Pantoporia_assamica/1020022.jpg,train,102_Pantoporia_assamica,102,Pantoporia assamica,bow_tie,99.8%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/103_Pantoporia_bieti/1030010.jpg,train,103_Pantoporia_bieti,103,Pantoporia bieti,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/103_Pantoporia_bieti/1030018.jpg,train,103_Pantoporia_bieti,103,Pantoporia bieti,web_site,58.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/104_Chersonesia_rahria/1040019.jpg,train,104_Chersonesia_rahria,104,Chersonesia rahria,nematode,54.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/104_Chersonesia_rahria/1040023.jpg,train,104_Chersonesia_rahria,104,Chersonesia rahria,flatworm,86.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/105_Athyma_ranga/1050013.jpg,train,105_Athyma_ranga,105,Athyma ranga,pick,49.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/106_Athyma_pravara/1060008.jpg,train,106_Athyma_pravara,106,Athyma pravara,jersey,90.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/106_Athyma_pravara/1060017.jpg,train,106_Athyma_pravara,106,Athyma pravara,flatworm,66.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/107_Athyma_punctata/1070016.jpg,train,107_Athyma_punctata,107,Athyma punctata,African_chameleon,87.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/107_Athyma_punctata/1070017.jpg,train,107_Athyma_punctata,107,Athyma punctata,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/107_Athyma_punctata/1070028.jpg,train,107_Athyma_punctata,107,Athyma punctata,nematode,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/109_Tajuria_maculata/1090005.jpg,train,109_Tajuria_maculata,109,Tajuria maculata,ear,55.7%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/110_Tajuria_cippus/1100010.jpg,train,110_Tajuria_cippus,110,Tajuria cippus,rule,85.7%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/110_Tajuria_cippus/1100017.jpg,train,110_Tajuria_cippus,110,Tajuria cippus,tailed_frog,92.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/111_Pithecops_fulgens/1110004.jpg,train,111_Pithecops_fulgens,111,Pithecops fulgens,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/111_Pithecops_fulgens/1110015.jpg,train,111_Pithecops_fulgens,111,Pithecops fulgens,walking_stick,87.8%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/112_Shijimia_moorei/1120021.jpg,train,112_Shijimia_moorei,112,Shijimia moorei,web_site,64.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/113_Arhopala_silhetensis/1130007.jpg,train,113_Arhopala_silhetensis,113,Arhopala silhetensis,indigo_bunting,90.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/114_Arhopala_oenea/1140011.jpg,train,114_Arhopala_oenea,114,Arhopala oenea,rule,51.7%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/114_Arhopala_oenea/1140012.jpg,train,114_Arhopala_oenea,114,Arhopala oenea,hair_slide,89.0%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/115_Simiskina_phalena/1150003.jpg,train,115_Simiskina_phalena,115,Simiskina phalena,perfume,71.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/115_Simiskina_phalena/1150019.jpg,train,115_Simiskina_phalena,115,Simiskina phalena,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/116_Udara_selma/1160012.jpg,train,116_Udara_selma,116,Udara selma,web_site,89.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/116_Udara_selma/1160017.jpg,train,116_Udara_selma,116,Udara selma,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/118_Capila_pieridoides/1180001.jpg,train,118_Capila_pieridoides,118,Capila pieridoides,hook,50.1%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/train/118_Capila_pieridoides/1180002.jpg,train,118_Capila_pieridoides,118,Capila pieridoides,suit,72.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/118_Capila_pieridoides/1180003.jpg,train,118_Capila_pieridoides,118,Capila pieridoides,oxygen_mask,72.4%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/118_Capila_pieridoides/1180008.jpg,train,118_Capila_pieridoides,118,Capila pieridoides,bobsled,51.4%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/118_Capila_pieridoides/1180012.jpg,train,118_Capila_pieridoides,118,Capila pieridoides,envelope,54.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/118_Capila_pieridoides/1180015.jpg,train,118_Capila_pieridoides,118,Capila pieridoides,theater_curtain,49.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/118_Capila_pieridoides/1180019.jpg,train,118_Capila_pieridoides,118,Capila pieridoides,switch,75.1%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/119_Pyroneura_margherita/1190027.jpg,train,119_Pyroneura_margherita,119,Pyroneura margherita,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/120_Darpa_pteria/1200003.jpg,train,120_Darpa_pteria,120,Darpa pteria,shower_curtain,77.4%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/120_Darpa_pteria/1200006.jpg,train,120_Darpa_pteria,120,Darpa pteria,web_site,74.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/120_Darpa_pteria/1200019.jpg,train,120_Darpa_pteria,120,Darpa pteria,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/120_Darpa_pteria/1200021.jpg,train,120_Darpa_pteria,120,Darpa pteria,web_site,57.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/120_Darpa_pteria/1200022.jpg,train,120_Darpa_pteria,120,Darpa pteria,conch,50.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/120_Darpa_pteria/1200028.jpg,train,120_Darpa_pteria,120,Darpa pteria,flatworm,76.1%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/121_Hidari_bhawani/1210006.jpg,train,121_Hidari_bhawani,121,Hidari bhawani,isopod,90.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/121_Hidari_bhawani/1210019.jpg,train,121_Hidari_bhawani,121,Hidari bhawani,web_site,74.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/121_Hidari_bhawani/1210021.jpg,train,121_Hidari_bhawani,121,Hidari bhawani,web_site,83.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/121_Hidari_bhawani/1210026.jpg,train,121_Hidari_bhawani,121,Hidari bhawani,gown,77.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/122_Plastingia_naga/1220019.jpg,train,122_Plastingia_naga,122,Plastingia naga,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/123_Salanoemia_sala/1230002.jpg,train,123_Salanoemia_sala,123,Salanoemia sala,envelope,49.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/124_Scobura_woolletti/1240006.jpg,train,124_Scobura_woolletti,124,Scobura woolletti,lab_coat,61.1%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/124_Scobura_woolletti/1240012.jpg,train,124_Scobura_woolletti,124,Scobura woolletti,black_and_gold_garden_spider,64.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/124_Scobura_woolletti/1240022.jpg,train,124_Scobura_woolletti,124,Scobura woolletti,envelope,49.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/124_Scobura_woolletti/1240024.jpg,train,124_Scobura_woolletti,124,Scobura woolletti,oxygen_mask,67.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/124_Scobura_woolletti/1240027.jpg,train,124_Scobura_woolletti,124,Scobura woolletti,electric_guitar,53.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/train/125_Polytremis_minuta/1250028.jpg,train,125_Polytremis_minuta,125,Polytremis minuta,kite,70.7%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/024_Cethosia_cyane/0240030.jpg,test,024_Cethosia_cyane,024,Cethosia cyane,handkerchief,51.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/028_Choaspes_benjaminii_japonica/0280042.jpg,test,028_Choaspes_benjaminii_japonica,028,Choaspes benjaminii japonica,centipede,85.7%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/034_Graphium_agamemnon/0340017.jpg,test,034_Graphium_agamemnon,034,Graphium agamemnon,brassiere,58.5%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/041_Jamides_caerulea/0410024.jpg,test,041_Jamides_caerulea,041,Jamides caerulea,bow_tie,98.8%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/045_Lethe_mekara_mekara/0450025.jpeg,test,045_Lethe_mekara_mekara,045,Lethe mekara mekara,stinkhorn,48.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/054_Notocrypta_paralysos_asawa/0540019.jpg,test,054_Notocrypta_paralysos_asawa,054,Notocrypta paralysos asawa,hair_slide,72.5%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/056_Odontoptilum_angulata_angulata/0560048.png,test,056_Odontoptilum_angulata_angulata,056,Odontoptilum angulata angulata,piggy_bank,95.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/068_Sarangesa_dasahara_dasahara/0680023.jpg,test,068_Sarangesa_dasahara_dasahara,068,Sarangesa dasahara dasahara,bolete,55.9%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/070_Seseria_sambara_sambara/0700024.jpg,test,070_Seseria_sambara_sambara,070,Seseria sambara sambara,flatworm,61.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/070_Seseria_sambara_sambara/0700030.jpg,test,070_Seseria_sambara_sambara,070,Seseria sambara sambara,buckeye,49.5%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/073_Tagiades_dynamicus_ravi/0730043.jpg,test,073_Tagiades_dynamicus_ravi,073,Tagiades dynamicus ravi,hummingbird,72.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/077_Telicota_colon/0770020.jpg,test,077_Telicota_colon,077,Telicota colon,snail,47.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/081_Euthalia_zubeengargi/0810143.jpg,test,081_Euthalia_zubeengargi,081,Euthalia zubeengargi,jersey,58.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/083_Papilio_paradoxa/0830035.jpg,test,083_Papilio_paradoxa,083,Papilio paradoxa,pinwheel,60.5%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/086_Lamproptera_curius/0860031.jpg,test,086_Lamproptera_curius,086,Lamproptera curius,barn_spider,63.4%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/086_Lamproptera_curius/0860035.jpg,test,086_Lamproptera_curius,086,Lamproptera curius,spider_web,52.6%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/087_Lamproptera_meges/0870030.jpg,test,087_Lamproptera_meges,087,Lamproptera meges,whiptail,57.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/087_Lamproptera_meges/0870032.jpg,test,087_Lamproptera_meges,087,Lamproptera meges,wolf_spider,56.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/087_Lamproptera_meges/0870035.jpg,test,087_Lamproptera_meges,087,Lamproptera meges,black_and_gold_garden_spider,51.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/090_Byasa_crassipes/0900032.jpg,test,090_Byasa_crassipes,090,Byasa crassipes,hair_slide,49.0%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/091_Byasa_nevilli/0910032.jpg,test,091_Byasa_nevilli,091,Byasa nevilli,crash_helmet,63.2%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/092_Byasa_polla/0920034.jpg,test,092_Byasa_polla,092,Byasa polla,web_site,95.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/096_Graphium_xenocles/0960034.jpg,test,096_Graphium_xenocles,096,Graphium xenocles,bow_tie,95.0%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/099_Elymnias_peali/0990029.jpg,test,099_Elymnias_peali,099,Elymnias peali,hair_slide,69.9%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/103_Pantoporia_bieti/1030031.jpg,test,103_Pantoporia_bieti,103,Pantoporia bieti,web_site,68.4%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/107_Athyma_punctata/1070031.jpg,test,107_Athyma_punctata,107,Athyma punctata,hair_slide,58.0%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/116_Udara_selma/1160029.jpg,test,116_Udara_selma,116,Udara selma,orange,66.8%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/117_Poritia_hewitsoni/1170035.jpg,test,117_Poritia_hewitsoni,117,Poritia hewitsoni,hair_slide,72.9%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/118_Capila_pieridoides/1180029.jpg,test,118_Capila_pieridoides,118,Capila pieridoides,cellular_telephone,74.0%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/118_Capila_pieridoides/1180031.jpg,test,118_Capila_pieridoides,118,Capila pieridoides,space_bar,66.1%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/118_Capila_pieridoides/1180034.jpg,test,118_Capila_pieridoides,118,Capila pieridoides,Windsor_tie,85.0%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/121_Hidari_bhawani/1210032.jpg,test,121_Hidari_bhawani,121,Hidari bhawani,rule,46.8%,SPECIMEN_CONTEXT_ARTIFACT,Review for specimen pin/scale/flower context
+dataset/test/122_Plastingia_naga/1220033.jpg,test,122_Plastingia_naga,122,Plastingia naga,isopod,83.4%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
+dataset/test/125_Polytremis_minuta/1250034.jpg,test,125_Polytremis_minuta,125,Polytremis minuta,barn_spider,95.3%,CONFIRMED_NON_INSECT,Likely non-butterfly junk - verify and purge
